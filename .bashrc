@@ -1,5 +1,3 @@
-virtualenvwrapper_initialize
-
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -203,3 +201,5 @@ evil_git_prompt() {
 
 export PS1="$RED[\$(date +%H:%M)]$txtrst $LIGHTBLUE\u$txtrst@$LIGHTYELLOW\h $txtrst[/\$(PWD)] $LIGHTCYAN\$(evil_git_prompt)$txtrst\$ "
 export PS2="> "
+
+virtualenvwrapper_initialize
