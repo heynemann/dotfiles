@@ -13,3 +13,6 @@
 [submodule "vim/thirdparty/pathogen"]
 	path = vim/thirdparty/pathogen
 	url = git://github.com/tpope/vim-pathogen.git
+[submodule "vim/thirdparty/nerdcommenter"]
+	path = vim/thirdparty/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
