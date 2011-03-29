@@ -23,6 +23,8 @@ export PATH=$PATH:/usr/local/lib/node
 
 export NODE_PATH=/usr/local/lib/node
 
+export PYTHONPATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages:$PYTHONPATH
+
 function PWD {
 pwd | awk -F\/ '{if (NF>4) print "...", $(NF-2), $(NF-1), $(NF); else if (NF>3) print $(NF-2),$(NF-1),$(NF); else if (NF>2) print $(NF-1),$(NF); else if (NF>1) print $(NF);}' | sed -e 's# #\/#g'
 }
@@ -105,5 +107,26 @@ evil_git_prompt() {
   fi
 }
 
-export PS1="$RED[\$(date +%H:%M)]$txtrst $LIGHTBLUE\u$txtrst@$LIGHTYELLOW\h $txtrst[/\$(PWD)] (\$(totalmegs.sh)MB)$LIGHTCYAN\$(evil_git_prompt)$txtrst \$ "
+export PS1="$RED[\$(date +%H:%M)]$txtrst $LIGHTBLUE\u$txtrst@$LIGHTYELLOW\h $txtrst[/\$(PWD)] $LIGHTCYAN\$(evil_git_prompt)$txtrst \$ "
 export PS2="> "
+
+alias uuid="python -c 'from uuid import uuid4; import sys; sys.stdout.write(str(uuid4()))' | pbcopy"
+
+##
+# Your previous /Users/globo/.bash_profile file was backed up as /Users/globo/.bash_profile.macports-saved_2011-02-07_at_15:05:17
+##
+
+# MacPorts Installer addition on 2011-02-07_at_15:05:17: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/bin:/opt/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+#export PYTHONPATH=/usr/local/lib/python2.6/site-packages/:$PYTHONPATH
+
+##
+# Your previous /Users/globo/.bash_profile file was backed up as /Users/globo/.bash_profile.macports-saved_2011-03-18_at_18:45:52
+##
+
+# MacPorts Installer addition on 2011-03-18_at_18:45:52: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
