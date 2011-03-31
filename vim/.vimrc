@@ -1,5 +1,5 @@
 set t_vb= 
-colorscheme molokai
+colorscheme oceanblack
 
 if has("gui_running")
   if has("gui_gtk2")
