@@ -17,3 +17,6 @@
 [submodule "vim/.vim/thirdparty/nerdcommenter"]
 	path = vim/.vim/thirdparty/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/.vim/thirdparty/xmledit"]
+	path = vim/.vim/thirdparty/xmledit
+	url = git://github.com/sukima/xmledit.git
