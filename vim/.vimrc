@@ -131,17 +131,3 @@ inoremap <C-j> <Esc>:m+<CR>==gi
 inoremap <C-k> <Esc>:m-2<CR>==gi
 vnoremap <C-j> :m'>+<CR>gv=gv
 vnoremap <C-k> :m-2<CR>gv=gv
-
-"function! ConditionalPairMap(open, close)
-  "let line = getline('.')
-  "let col = col('.')
-  "if col < col('$') || stridx(line, a:close, col + 1) != -1
-    "return a:open
-  "else
-    "return a:open . a:close . repeat("\<left>", len(a:close))
-  "endif
-"endf
-"inoremap <expr> ( ConditionalPairMap('(', ')')
-"inoremap <expr> { ConditionalPairMap('{', '}')
-"inoremap <expr> [ ConditionalPairMap('[', ']')
-
