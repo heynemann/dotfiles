@@ -20,3 +20,6 @@
 [submodule "vim/.vim/thirdparty/xmledit"]
 	path = vim/.vim/thirdparty/xmledit
 	url = git://github.com/sukima/xmledit.git
+[submodule "vim/.vim/thirdparty/vim-javascript"]
+	path = vim/.vim/thirdparty/vim-javascript
+	url = git://github.com/pangloss/vim-javascript.git
