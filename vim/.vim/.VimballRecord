@@ -1,0 +1,1 @@
+download_script.php?src_id=14758: call delete('/Users/globo/.vim/plugin/delimitMate.vim')|call delete('/Users/globo/.vim/autoload/delimitMate.vim')|call delete('/Users/globo/.vim/doc/delimitMate.txt')

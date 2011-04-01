@@ -23,3 +23,6 @@
 [submodule "vim/.vim/thirdparty/vim-javascript"]
 	path = vim/.vim/thirdparty/vim-javascript
 	url = git://github.com/pangloss/vim-javascript.git
+[submodule "vim/.vim/thirdparty/delimitMate"]
+	path = vim/.vim/thirdparty/delimitMate
+	url = git://github.com/Raimondi/delimitMate.git
