@@ -20,11 +20,9 @@ highlight SpecialKey guifg=#4a4a59
 
 filetype off
 call pathogen#runtime_append_all_bundles()
-filetype on
-filetype plugin on
 filetype plugin indent on
 
-autocmd FileType python compiler pylint
+"autocmd FileType python compiler pylint
 
 set nocompatible
 
@@ -133,3 +131,5 @@ inoremap <C-j> <Esc>:m+<CR>==gi
 inoremap <C-k> <Esc>:m-2<CR>==gi
 vnoremap <C-j> :m'>+<CR>gv=gv
 vnoremap <C-k> :m-2<CR>gv=gv
+
+let g:pyflakes_use_quickfix = 0
