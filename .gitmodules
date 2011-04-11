@@ -26,3 +26,9 @@
 [submodule "vim/.vim/thirdparty/delimitMate"]
 	path = vim/.vim/thirdparty/delimitMate
 	url = git://github.com/Raimondi/delimitMate.git
+[submodule "vim/.vim/thirdparty/vimpdb"]
+	path = vim/.vim/thirdparty/vimpdb
+	url = git://github.com/vim-scripts/VimPdb.git
+[submodule "vim/.vim/thirdparty/pyflakes-vim"]
+	path = vim/.vim/thirdparty/pyflakes-vim
+	url = git://github.com/kevinw/pyflakes-vim.git

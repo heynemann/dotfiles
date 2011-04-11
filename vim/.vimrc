@@ -20,6 +20,8 @@ highlight SpecialKey guifg=#4a4a59
 
 filetype off
 call pathogen#runtime_append_all_bundles()
+filetype on
+filetype plugin on
 filetype plugin indent on
 
 autocmd FileType python compiler pylint
