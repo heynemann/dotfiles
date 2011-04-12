@@ -203,3 +203,5 @@ export PS1="$RED[\$(date +%H:%M)]$txtrst $LIGHTBLUE\u$txtrst@$LIGHTYELLOW\h $txt
 export PS2="> "
 
 virtualenvwrapper_initialize
+
+export PATH=$PATH:/usr/lib/ruby/gems/1.8/gems
