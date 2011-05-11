@@ -113,3 +113,8 @@ export PS2="> "
 alias uuid="python -c 'from uuid import uuid4; import sys; sys.stdout.write(str(uuid4()))' | pbcopy"
 
 export PYTHONPATH="/usr/local/lib/python2.6/site-packages/:$PYTHONPATH"
+
+export PATH=$PATH:~/dev/android-sdk-mac_x86/platform-tools
+export PATH=$PATH:~/dev/android-sdk-mac_x86/tools
+
+export PATH=$PATH:~/dev/Cordova
