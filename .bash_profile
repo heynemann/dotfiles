@@ -1,3 +1,5 @@
+export WORKON_HOME=~/.virtualenvs
+
 source /usr/local/bin/virtualenvwrapper.sh
 
 # pip bash completion start
@@ -21,7 +23,7 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 export PATH=$PATH:/usr/local/share/npm/bin
 export PATH=$PATH:/usr/local/lib/node
 
-export NODE_PATH=/usr/local/lib/node
+export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
 
 export PYTHONPATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages:$PYTHONPATH
 
@@ -117,4 +119,3 @@ export PYTHONPATH="/usr/local/lib/python2.6/site-packages/:$PYTHONPATH"
 export PATH=$PATH:~/dev/android-sdk-mac_x86/platform-tools
 export PATH=$PATH:~/dev/android-sdk-mac_x86/tools
 
-export PATH=$PATH:~/dev/Cordova
