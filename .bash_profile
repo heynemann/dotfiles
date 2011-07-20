@@ -25,8 +25,6 @@ export PATH=$PATH:/usr/local/lib/node
 
 export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
 
-export PYTHONPATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages:$PYTHONPATH
-
 function PWD {
 pwd | awk -F\/ '{if (NF>4) print "...", $(NF-2), $(NF-1), $(NF); else if (NF>3) print $(NF-2),$(NF-1),$(NF); else if (NF>2) print $(NF-1),$(NF); else if (NF>1) print $(NF);}' | sed -e 's# #\/#g'
 }
