@@ -67,7 +67,7 @@ evil_git_prompt() {
   fi
 }
 
-export PS1="$LIGHTYELLOW$(echo $VIRTUAL_ENV | sed s#$WORKON_HOME/##g)$txtrst $RED[\$(date +%H:%M)]$txtrst [/\$(PWD)] $LIGHTCYAN\$(evil_git_prompt)$txtrst \$ "
+export PS1="($(echo $VIRTUAL_ENV | sed s#$WORKON_HOME/##g))$txtrst$RED[\$(date +%H:%M)]$txtrst [/\$(PWD)] $LIGHTCYAN\$(evil_git_prompt)$txtrst \$ "
 export PS2="> "
 
 alias uuid="python -c 'from uuid import uuid4; import sys; sys.stdout.write(str(uuid4()))' | pbcopy"
