@@ -48,46 +48,6 @@ function evil_git_dirty {
   [[ $(git diff --shortstat 2>/dev/null | tail -n1) != "" ]] && echo "*"
 }
 
-# Returns the number of untracked files.
-function evil_git_num_untracked_files {
-  expr `git status --porcelain 2>/dev/null| grep "^??" | wc -l`
-}
-
-# Returns the number of untracked files.
-function evil_git_num_dirty_files {
-  expr `git status --porcelain 2>/dev/null | egrep "^(M| M)" | wc -l`
-}
-
-# Returns "|shashed:N" where N is the number of stashed states (if any).
-function evil_git_stash {
-  local stash=`expr $(git stash list 2>/dev/null| wc -l)`
-  if [ "$stash" != "0" ]
-  then
-    echo "|stashed:$stash"
-  fi
-}
-
-# Returns "|unmerged:N" where N is the number of unmerged local and remote
-# branches (if any).
-function evil_git_unmerged {
-  local unmerged=`expr $(git branch --no-color -a --no-merged | grep -v HEAD | wc -l)`
-  if [ "$unmerged" != "0" ]
-  then
-    echo "|unmerged:$unmerged"
-  fi
-}
-
-# Returns "|unpushed:N" where N is the number of unpushed local and remote
-# branches (if any).
-function evil_git_unpushed {
-  local unpushed=`expr $( (git branch --no-color -r --contains HEAD; \
-    git branch --no-color -r) | grep -v HEAD | sort | uniq -u | wc -l )`
-  if [ "$unpushed" != "0" ]
-  then
-    echo "|unpushed:$unpushed"
-  fi
-}
-
 function git_untracked {
   local untracked=`git status --porcelain 2>/dev/null | grep ^?? | wc -l | sed 's# ##g'`
   if [ "$untracked" != "0" ]
@@ -103,11 +63,11 @@ evil_git_prompt() {
 
   if [ "$ref" != "" ]
   then
-    echo " ($ref$(evil_git_dirty)$(evil_git_stash)$(evil_git_unmerged)$(evil_git_unpushed)$(git_untracked)) "
+    echo " ($ref$(evil_git_dirty)$(git_untracked)) "
   fi
 }
 
-export PS1="$RED[\$(date +%H:%M)]$txtrst $LIGHTBLUE\u$txtrst@$LIGHTYELLOW\h $txtrst[/\$(PWD)] $LIGHTCYAN\$(evil_git_prompt)$txtrst \$ "
+export PS1="$LIGHTYELLOW$(echo $VIRTUAL_ENV | sed s#$WORKON_HOME/##g)$txtrst $RED[\$(date +%H:%M)]$txtrst [/\$(PWD)] $LIGHTCYAN\$(evil_git_prompt)$txtrst \$ "
 export PS2="> "
 
 alias uuid="python -c 'from uuid import uuid4; import sys; sys.stdout.write(str(uuid4()))' | pbcopy"
