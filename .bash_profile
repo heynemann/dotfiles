@@ -86,3 +86,7 @@ export PYTHONPATH="/usr/local/lib/python2.6/site-packages/:$PYTHONPATH"
 export PATH=$PATH:~/dev/android-sdk-mac_x86/platform-tools
 export PATH=$PATH:~/dev/android-sdk-mac_x86/tools
 
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
