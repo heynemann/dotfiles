@@ -195,11 +195,20 @@ evil_git_prompt() {
 
   if [ "$ref" != "" ]
   then
-    echo " ($ref$(evil_git_dirty)$(evil_git_stash)$(evil_git_unmerged)$(evil_git_unpushed)$(git_untracked)) "
+    echo " ($ref$(evil_git_dirty)$(git_untracked)) "
   fi
 }
 
-export PS1="$RED[\$(date +%H:%M)]$txtrst $LIGHTBLUE\u$txtrst@$LIGHTYELLOW\h $txtrst[/\$(PWD)] $LIGHTCYAN\$(evil_git_prompt)$txtrst\$ "
+venv_prompt() {
+  local ref=$(echo $VIRTUAL_ENV | sed s#$WORKON_HOME/##g)
+
+  if [ "$ref" != "" ]
+  then
+    echo "($ref)"
+  fi
+}
+
+export PS1="$(venv_prompt)$txtrst$RED[\$(date +%H:%M)]$txtrst [/\$(PWD)] $LIGHTCYAN\$(evil_git_prompt)$txtrst \$ "
 export PS2="> "
 
 virtualenvwrapper_initialize
