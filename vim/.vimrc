@@ -117,7 +117,8 @@ nmap <silent> <Leader>y :CommandTFlush<CR>
 nmap <silent> <Leader>t :CommandT<CR>
 
 " Removes trailing spaces
-function TrimWhiteSpace()
+function! TrimWhiteSpace()
+  :retab
   %s/\s*$//
   ''
 :endfunction

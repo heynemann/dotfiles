@@ -1,3 +1,5 @@
+export WORKON_HOME=~/.virtualenvs
+
 source /usr/local/bin/virtualenvwrapper.sh
 
 # pip bash completion start
@@ -21,9 +23,7 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 export PATH=$PATH:/usr/local/share/npm/bin
 export PATH=$PATH:/usr/local/lib/node
 
-export NODE_PATH=/usr/local/lib/node
-
-export PYTHONPATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.6/lib/python2.6/site-packages:$PYTHONPATH
+export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
 
 function PWD {
 pwd | awk -F\/ '{if (NF>4) print "...", $(NF-2), $(NF-1), $(NF); else if (NF>3) print $(NF-2),$(NF-1),$(NF); else if (NF>2) print $(NF-1),$(NF); else if (NF>1) print $(NF);}' | sed -e 's# #\/#g'
@@ -48,46 +48,6 @@ function evil_git_dirty {
   [[ $(git diff --shortstat 2>/dev/null | tail -n1) != "" ]] && echo "*"
 }
 
-# Returns the number of untracked files.
-function evil_git_num_untracked_files {
-  expr `git status --porcelain 2>/dev/null| grep "^??" | wc -l`
-}
-
-# Returns the number of untracked files.
-function evil_git_num_dirty_files {
-  expr `git status --porcelain 2>/dev/null | egrep "^(M| M)" | wc -l`
-}
-
-# Returns "|shashed:N" where N is the number of stashed states (if any).
-function evil_git_stash {
-  local stash=`expr $(git stash list 2>/dev/null| wc -l)`
-  if [ "$stash" != "0" ]
-  then
-    echo "|stashed:$stash"
-  fi
-}
-
-# Returns "|unmerged:N" where N is the number of unmerged local and remote
-# branches (if any).
-function evil_git_unmerged {
-  local unmerged=`expr $(git branch --no-color -a --no-merged | grep -v HEAD | wc -l)`
-  if [ "$unmerged" != "0" ]
-  then
-    echo "|unmerged:$unmerged"
-  fi
-}
-
-# Returns "|unpushed:N" where N is the number of unpushed local and remote
-# branches (if any).
-function evil_git_unpushed {
-  local unpushed=`expr $( (git branch --no-color -r --contains HEAD; \
-    git branch --no-color -r) | grep -v HEAD | sort | uniq -u | wc -l )`
-  if [ "$unpushed" != "0" ]
-  then
-    echo "|unpushed:$unpushed"
-  fi
-}
-
 function git_untracked {
   local untracked=`git status --porcelain 2>/dev/null | grep ^?? | wc -l | sed 's# ##g'`
   if [ "$untracked" != "0" ]
@@ -103,13 +63,31 @@ evil_git_prompt() {
 
   if [ "$ref" != "" ]
   then
-    echo " ($ref$(evil_git_dirty)$(evil_git_stash)$(evil_git_unmerged)$(evil_git_unpushed)$(git_untracked)) "
+    echo " ($ref$(evil_git_dirty)$(git_untracked)) "
   fi
 }
 
-export PS1="$RED[\$(date +%H:%M)]$txtrst $LIGHTBLUE\u$txtrst@$LIGHTYELLOW\h $txtrst[/\$(PWD)] $LIGHTCYAN\$(evil_git_prompt)$txtrst \$ "
+venv_prompt() {
+  local ref=$(echo $VIRTUAL_ENV | sed s#$WORKON_HOME/##g)
+
+  if [ "$ref" != "" ]
+  then
+    echo "($ref)"
+  fi
+}
+
+export PS1="$(venv_prompt)$txtrst$RED[\$(date +%H:%M)]$txtrst [/\$(PWD)] $LIGHTCYAN\$(evil_git_prompt)$txtrst \$ "
 export PS2="> "
 
 alias uuid="python -c 'from uuid import uuid4; import sys; sys.stdout.write(str(uuid4()))' | pbcopy"
 
 export PYTHONPATH="/usr/local/lib/python2.6/site-packages/:$PYTHONPATH"
+
+export PATH=$PATH:~/dev/android-sdk-mac_x86/platform-tools
+export PATH=$PATH:~/dev/android-sdk-mac_x86/tools
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
+
+ulimit -n 2048
