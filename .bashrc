@@ -205,3 +205,11 @@ export PS2="> "
 virtualenvwrapper_initialize
 
 export PATH=$PATH:/usr/lib/ruby/gems/1.8/gems
+export PATH=$HOME/local/bin:$PATH
+export NODE_PATH=~/local/lib/node_modules/
+
+export EC2_KEYPAIR=heynemann
+export EC2_URL=https://ec2.us-west-1.amazonaws.com
+export EC2_PRIVATE_KEY=$HOME/Desktop/pk.pem
+export EC2_CERT=$HOME/Desktop/cert.pem
+export JAVA_HOME=/usr/lib/jvm/java-6-openjdk/
