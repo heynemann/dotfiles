@@ -38,7 +38,8 @@ LIGHTCYAN="\[\033[1;36m\]"
 
 txtrst='\[\e[0m\]'    # Text Reset
 
-source ~/git-completion.bash
+source /usr/local/etc/bash_completion.d
+# source ~/git-completion.bash
 
 # Git support functions for Evil Tomato
 # Mohit Cheppudira <mohit@muthanna.com>
@@ -91,3 +92,6 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 
 ulimit -n 2048
+
+export PATH=/usr/local/Cellar/bash/4.2.10/bin/bash:$PATH
+[[ -s "/Users/bernardo/.rvm/scripts/rvm" ]] && source "/Users/bernardo/.rvm/scripts/rvm"  # This loads RVM into a shell session.
