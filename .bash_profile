@@ -12,7 +12,7 @@ _pip_completion()
 complete -o default -F _pip_completion pip
 # pip bash completion end
 
-export PIP_REQUIRE_VIRTUALENV=true
+#export PIP_REQUIRE_VIRTUALENV=true
 export PIP_RESPECT_VIRTUALENV=true
 
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
@@ -95,3 +95,8 @@ ulimit -n 2048
 
 export PATH=/usr/local/Cellar/bash/4.2.10/bin/bash:$PATH
 [[ -s "/Users/bernardo/.rvm/scripts/rvm" ]] && source "/Users/bernardo/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+
+# Setting PATH for Python 2.7
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH
