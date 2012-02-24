@@ -31,3 +31,6 @@
 [submodule "vim/.vim/thirdparty/pyflakes-vim"]
 	path = vim/.vim/thirdparty/pyflakes-vim
 	url = git://github.com/kevinw/pyflakes-vim.git
+[submodule "vim/.vim/thirdparty/jslint"]
+	path = vim/.vim/thirdparty/jslint
+	url = https://github.com/hallettj/jslint.vim
