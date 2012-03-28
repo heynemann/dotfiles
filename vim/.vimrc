@@ -123,8 +123,8 @@ augroup mkd
     autocmd BufRead,BufEnter *.markdown set ai formatoptions=tcroqn2 comments=n:&gt;
 augroup END
 
-nmap <silent> <Leader>y :CommandTFlush<CR>
-nmap <silent> <Leader>t :CommandT<CR>
+"nmap <silent> <Leader>y :CommandTFlush<CR>
+nmap <silent> <Leader>t :CtrlP<CR>
 
 " Removes trailing spaces
 function! TrimWhiteSpace()
