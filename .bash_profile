@@ -38,8 +38,7 @@ LIGHTCYAN="\[\033[1;36m\]"
 
 txtrst='\[\e[0m\]'    # Text Reset
 
-source /usr/local/etc/bash_completion.d
-# source ~/git-completion.bash
+source /usr/local/etc/bash_completion.d/git-completion.bash
 
 # Git support functions for Evil Tomato
 # Mohit Cheppudira <mohit@muthanna.com>
