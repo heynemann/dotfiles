@@ -55,7 +55,10 @@ set noswapfile
 
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
+
 set wildignore=*.swp,*.bak,*.pyc,*.class
+set wildignore+=*/tmp/*,*.so,*.zip   " Linux/MacOSX
+
 set title                " change the terminal's title
 set visualbell           " don't beep
 set noerrorbells         " don't beep
@@ -123,7 +126,7 @@ augroup mkd
     autocmd BufRead,BufEnter *.markdown set ai formatoptions=tcroqn2 comments=n:&gt;
 augroup END
 
-"nmap <silent> <Leader>y :CommandTFlush<CR>
+nmap <silent> <Leader>y :CtrlPMRU<CR>
 nmap <silent> <Leader>t :CtrlP<CR>
 
 " Removes trailing spaces
