@@ -50,6 +50,16 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 
+set nobackup
+set noswapfile
+
+set history=1000         " remember more commands and search history
+set undolevels=1000      " use many muchos levels of undo
+set wildignore=*.swp,*.bak,*.pyc,*.class
+set title                " change the terminal's title
+set visualbell           " don't beep
+set noerrorbells         " don't beep
+
 nnoremap / /\v
 vnoremap / /\v
 set ignorecase
@@ -136,3 +146,6 @@ vnoremap <C-k> :m-2<CR>gv=gv
 let g:pyflakes_use_quickfix = 0
 
 let $JS_CMD='node'
+
+cmap w!! w !sudo tee % >/dev/null
+
