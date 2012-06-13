@@ -112,7 +112,7 @@ _pip_completion()
 complete -o default -F _pip_completion pip
 # pip bash completion end
 
-export PIP_REQUIRE_VIRTUALENV=true
+export PIP_REQUIRE_VIRTUALENV=false
 export PIP_RESPECT_VIRTUALENV=true
 
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
@@ -208,10 +208,10 @@ venv_prompt() {
   fi
 }
 
+source /usr/local/bin/virtualenvwrapper.sh
+
 export PS1="$(venv_prompt)$txtrst$RED[\$(date +%H:%M)]$txtrst [/\$(PWD)] $LIGHTCYAN\$(evil_git_prompt)$txtrst \$ "
 export PS2="> "
-
-virtualenvwrapper_initialize
 
 export PATH=$PATH:/usr/lib/ruby/gems/1.8/gems
 export PATH=$HOME/local/bin:$PATH
