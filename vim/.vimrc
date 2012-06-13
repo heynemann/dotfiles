@@ -129,6 +129,8 @@ augroup END
 nmap <silent> <Leader>y :CtrlPMRU<CR>
 nmap <silent> <Leader>t :CtrlP<CR>
 
+let g:ctrlp_max_height = 30
+
 " Removes trailing spaces
 function! TrimWhiteSpace()
   :retab
