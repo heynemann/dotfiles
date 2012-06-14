@@ -56,7 +56,7 @@ set noswapfile
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
 
-set wildignore=*.swp,*.bak,*.pyc,*.class
+set wildignore=*.swp,*.bak,*.pyc,*/.git/*
 set wildignore+=*/tmp/*,*.so,*.zip   " Linux/MacOSX
 
 set title                " change the terminal's title
@@ -128,6 +128,16 @@ augroup END
 
 nmap <silent> <Leader>y :CtrlPMRU<CR>
 nmap <silent> <Leader>t :CtrlP<CR>
+let g:ctrlp_open_new_file = 't'
+let g:ctrlp_lazy_update = 100
+let g:ctrlp_max_height = 30
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_mruf_relative = 1
+let g:ctrlp_custom_ignore = {
+	\ 'dir':  '\.git$\|\.hg$\|\.svn$\|.*\.egg-info.*$',
+	\ 'file': '\.DS_Store$\|\.so$\|\.jpg|\.gif|\.png|\.psd$',
+	\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+	\ }
 
 let g:ctrlp_max_height = 30
 
