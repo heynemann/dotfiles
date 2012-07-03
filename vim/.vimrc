@@ -162,3 +162,4 @@ let $JS_CMD='node'
 
 cmap w!! w !sudo tee % >/dev/null
 
+nnoremap <bs> :Ack! '\b<c-r><c-w>\b'<cr>
