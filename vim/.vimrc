@@ -139,6 +139,8 @@ let g:ctrlp_custom_ignore = {
 	\ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
 	\ }
 
+let g:ctrlp_max_height = 30
+
 " Removes trailing spaces
 function! TrimWhiteSpace()
   :retab
