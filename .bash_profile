@@ -29,6 +29,10 @@ function PWD {
 pwd | awk -F\/ '{if (NF>4) print "...", $(NF-2), $(NF-1), $(NF); else if (NF>3) print $(NF-2),$(NF-1),$(NF); else if (NF>2) print $(NF-1),$(NF); else if (NF>1) print $(NF);}' | sed -e 's# #\/#g'
 }
 
+function FULLPWD {
+    pwd
+}
+
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
@@ -72,12 +76,23 @@ venv_prompt() {
 
   if [ "$ref" != "" ]
   then
-    echo "($ref)"
+    echo " $LIGHTCYAN($ref)$txtrst"
   fi
 }
 
-export PS1="$(venv_prompt)$txtrst$RED[\$(date +%H:%M)]$txtrst [/\$(PWD)] $LIGHTCYAN\$(evil_git_prompt)$txtrst \$ "
-export PS2="> "
+rvm_prompt() {
+  local version=$(rvm-prompt i v g)
+  if [ "$version" != "" ]
+  then
+    echo " $LIGHTBLUE($version)$txtrst"
+  fi
+}
+
+ps1_update() {
+    local separator=∴
+    export PS1="$RED[\$(date +%H:%M)]$txtrst$(venv_prompt)$(rvm_prompt)$txtrst $(FULLPWD)$LIGHTCYAN\$(evil_git_prompt)$txtrst \n $RED$separator$txtrst "
+    export PS2="> "
+}
 
 alias uuid="python -c 'from uuid import uuid4; import sys; sys.stdout.write(str(uuid4()))' | pbcopy"
 
@@ -110,3 +125,5 @@ shopt -s histappend
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 export DYLD_FALLBACK_LIBRARY_PATH=/usr/local:/usr/local/lib:$DYLD_FALLBACK_LIBRARY _PATH
+
+PROMPT_COMMAND="ps1_update"
