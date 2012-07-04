@@ -208,7 +208,7 @@ venv_prompt() {
 
   if [ "$ref" != "" ]
   then
-    echo " $LIGHTBLUE($ref)$txtrst"
+    echo " $LIGHTCYAN($ref)$txtrst"
   fi
 }
 
