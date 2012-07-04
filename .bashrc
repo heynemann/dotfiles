@@ -224,3 +224,5 @@ export EC2_CERT=$HOME/Desktop/cert.pem
 export JAVA_HOME=/usr/lib/jvm/java-6-openjdk/
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+source ~/.rvm/scripts/rvm
