@@ -121,6 +121,10 @@ function PWD {
 pwd | awk -F\/ '{if (NF>4) print "...", $(NF-2), $(NF-1), $(NF); else if (NF>3) print $(NF-2),$(NF-1),$(NF); else if (NF>2) print $(NF-1),$(NF); else if (NF>1) print $(NF);}' | sed -e 's# #\/#g'
 }
 
+function FULLPWD {
+    pwd
+}
+
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
@@ -204,14 +208,25 @@ venv_prompt() {
 
   if [ "$ref" != "" ]
   then
-    echo "($ref)"
+    echo " $LIGHTBLUE($ref)$txtrst"
   fi
 }
 
-source /usr/local/bin/virtualenvwrapper.sh
+rvm_prompt() {
+  local version=$(rvm-prompt i v g)
+  if [ "$version" != "" ]
+  then
+    echo " $LIGHTBLUE($version)$txtrst"
+  fi
+}
 
-export PS1="$(venv_prompt)$txtrst$RED[\$(date +%H:%M)]$txtrst [/\$(PWD)] $LIGHTCYAN\$(evil_git_prompt)$txtrst \$ "
-export PS2="> "
+ps1_update() {
+    export PS1="$RED[\$(date +%H:%M)]$txtrst$(venv_prompt)$(rvm_prompt)$txtrst $(FULLPWD)$LIGHTCYAN\$(evil_git_prompt)$txtrst \n $RED∴$txtrst "
+    export PS2="> "
+}
+
+
+source /usr/local/bin/virtualenvwrapper.sh
 
 export PATH=$PATH:/usr/lib/ruby/gems/1.8/gems
 export PATH=$HOME/local/bin:$PATH
@@ -226,3 +241,5 @@ export JAVA_HOME=/usr/lib/jvm/java-6-openjdk/
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 source ~/.rvm/scripts/rvm
+
+PROMPT_COMMAND="ps1_update"
