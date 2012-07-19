@@ -96,8 +96,6 @@ ps1_update() {
 
 alias uuid="python -c 'from uuid import uuid4; import sys; sys.stdout.write(str(uuid4()))' | pbcopy"
 
-export PYTHONPATH="/usr/local/lib/python2.6/site-packages/:$PYTHONPATH"
-
 export PATH=$PATH:~/dev/android-sdk-mac_x86/platform-tools
 export PATH=$PATH:~/dev/android-sdk-mac_x86/tools
 
@@ -109,11 +107,6 @@ ulimit -n 2048
 
 export PATH=/usr/local/Cellar/bash/4.2.10/bin/bash:$PATH
 [[ -s "/Users/bernardo/.rvm/scripts/rvm" ]] && source "/Users/bernardo/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-
-# Setting PATH for Python 2.7
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-export PATH
 
 export EDITOR='mvim -f'
 export PATH=$PATH:/usr/local/sbin
@@ -127,3 +120,6 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 export DYLD_FALLBACK_LIBRARY_PATH=/usr/local:/usr/local/lib:$DYLD_FALLBACK_LIBRARY _PATH
 
 PROMPT_COMMAND="ps1_update"
+
+alias ipip='pip install --extra-index-url="http://ipypi.globoi.com" --extra-index-url="http://pypi.globoi.com"'
+export PATH=/usr/local/bin:$PATH
