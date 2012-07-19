@@ -2,10 +2,6 @@ export PATH=/usr/local/bin:$PATH
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
-#export PATH=$PATH:/usr/local/share/npm/bin
-#export PATH=$PATH:/usr/local/lib/node
-#export NODE_PATH=/usr/local/lib/node:/usr/local/lib/node_modules
-
 function FULLPWD {
     pwd
 }
@@ -13,14 +9,9 @@ function FULLPWD {
 source /usr/local/etc/bash_completion.d/git-completion.bash
 source .ps1
 
-## Git support functions for Evil Tomato
-## Mohit Cheppudira <mohit@muthanna.com>
-
-# Returns "*" if the current git branch is dirty.
 function evil_git_dirty {
   $(git diff --no-ext-diff --quiet --exit-code)
   local dirty=$?
-  #[[ $(git diff --shortstat 2>/dev/null | tail -n1) != "" ]] && echo "*"
   if [ "$dirty" != "0" ]
   then
       echo "*"
@@ -29,7 +20,6 @@ function evil_git_dirty {
 
 function git_untracked {
   local untracked=$(git ls-files --others --exclude-standard|wc -l|sed 's# ##g')
-  #local untracked=`git status --porcelain 2>/dev/null | grep ^?? | wc -l | sed 's# ##g'`
   if [ "$untracked" != "0" ]
   then
       echo "|untracked:$untracked"
@@ -41,9 +31,6 @@ evil_git_prompt() {
   local ref=$(git symbolic-ref HEAD 2>/dev/null | sed 's#refs/heads/##g' \
     || git rev-parse HEAD 2>/dev/null | cut -c1-10 | sed 's#refs/heads/##g' \
   )
-  # local ref=$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f3)
-  #local ref=$(git branch 2>/dev/null | grep '^\*' | cut -b 3- | sed 's/[\(\)]//g')
-  #local ref="master"
 
   if [ "$ref" != "" ]
   then
@@ -75,29 +62,22 @@ ps1_update() {
 }
 PROMPT_COMMAND="ps1_update"
 
-#if [ -f `brew --prefix`/etc/bash_completion ]; then
-    #. `brew --prefix`/etc/bash_completion
-#fi
+ulimit -n 2048
 
-#ulimit -n 2048
-
-#export PATH=/usr/local/Cellar/bash/4.2.10/bin/bash:$PATH
 #[[ -s "/Users/bernardo/.rvm/scripts/rvm" ]] && source "/Users/bernardo/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 #export EDITOR='mvim -f'
 #export PATH=$PATH:/usr/local/sbin
 
-#export HISTCONTROL=erasedups
-#export HISTSIZE=10000
-#shopt -s histappend
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
+shopt -s histappend
 
-#export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 #export DYLD_FALLBACK_LIBRARY_PATH=/usr/local:/usr/local/lib:$DYLD_FALLBACK_LIBRARY _PATH
 
-
 #alias ipip='pip install --extra-index-url="http://ipypi.globoi.com" --extra-index-url="http://pypi.globoi.com"'
-#export PATH=/usr/local/bin:$PATH
 
 # export WORKON_HOME=~/.virtualenvs
 # source /usr/local/bin/virtualenvwrapper.sh
