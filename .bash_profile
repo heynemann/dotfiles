@@ -1,13 +1,15 @@
 export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/share/python:$PATH
+
+# COLORS
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
+source ~/.ps1
 
 function FULLPWD {
     pwd
 }
 
-source /usr/local/etc/bash_completion.d/git-completion.bash
-source .ps1
 
 function evil_git_dirty {
   $(git diff --no-ext-diff --quiet --exit-code)
@@ -75,26 +77,28 @@ shopt -s histappend
 
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
+# GIT BASH COMPLETION
+source /usr/local/etc/bash_completion.d/git-completion.bash
+
 #export DYLD_FALLBACK_LIBRARY_PATH=/usr/local:/usr/local/lib:$DYLD_FALLBACK_LIBRARY _PATH
 
-#alias ipip='pip install --extra-index-url="http://ipypi.globoi.com" --extra-index-url="http://pypi.globoi.com"'
+alias ipip='pip install --extra-index-url="http://ipypi.globoi.com" --extra-index-url="http://pypi.globoi.com"'
 
-# export WORKON_HOME=~/.virtualenvs
-# source /usr/local/bin/virtualenvwrapper.sh
+export WORKON_HOME=~/.virtualenvs
+source $(which virtualenvwrapper.sh)
 
 # pip bash completion start
-#_pip_completion()
-#{
-    #COMPREPLY=( $( COMP_WORDS="${COMP_WORDS[*]}" \
-                   #COMP_CWORD=$COMP_CWORD \
-                   #PIP_AUTO_COMPLETE=1 $1 ) )
-#}
-#complete -o default -F _pip_completion pip
+_pip_completion()
+{
+    COMPREPLY=( $( COMP_WORDS="${COMP_WORDS[*]}" \
+                   COMP_CWORD=$COMP_CWORD \
+                   PIP_AUTO_COMPLETE=1 $1 ) )
+}
+complete -o default -F _pip_completion pip
 # pip bash completion end
 
 #export PIP_REQUIRE_VIRTUALENV=true
-#export PIP_RESPECT_VIRTUALENV=true
-
-#export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
 
