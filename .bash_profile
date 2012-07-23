@@ -10,7 +10,6 @@ function FULLPWD {
     pwd
 }
 
-
 function evil_git_dirty {
   $(git diff --no-ext-diff --quiet --exit-code)
   local dirty=$?
@@ -40,33 +39,33 @@ evil_git_prompt() {
   fi
 }
 
-#venv_prompt() {
-  #local ref=$(echo $VIRTUAL_ENV | sed s#$WORKON_HOME/##g)
+venv_prompt() {
+  local ref=$(echo $VIRTUAL_ENV | sed s#$WORKON_HOME/##g)
 
-  #if [ "$ref" != "" ]
-  #then
-    #echo " $LIGHTCYAN($ref)$txtrst"
-  #fi
-#}
+  if [ "$ref" != "" ]
+  then
+    echo " $BIGreen($ref)$Color_Off"
+  fi
+}
 
-#rvm_prompt() {
-  #local version=$(rvm-prompt i v g)
-  #if [ "$version" != "" ]
-  #then
-    #echo " $LIGHTBLUE($version)$txtrst"
-  #fi
-#}
+rvm_prompt() {
+  local version=$(rvm-prompt i v g)
+  if [ "$version" != "" ]
+  then
+    echo " $BIYellow($version)$Color_Off "
+  fi
+}
 
 ps1_update() {
     local separator=∴
-    export PS1="$IBlack[\$(date +%H:%M)]$Color_Off $(FULLPWD)$Cyan$(evil_git_prompt)$Color_Off\n $IRed$separator$Color_Off "
+    export PS1="$IBlack[\$(date +%H:%M)]$Color_Off$(venv_prompt)$(rvm_prompt)$(FULLPWD)$Cyan$(evil_git_prompt)$Color_Off\n $IRed$separator$Color_Off "
     export PS2="> "
 }
 PROMPT_COMMAND="ps1_update"
 
 ulimit -n 2048
 
-#[[ -s "/Users/bernardo/.rvm/scripts/rvm" ]] && source "/Users/bernardo/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+source "/Users/heynemann/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 #export EDITOR='mvim -f'
 #export PATH=$PATH:/usr/local/sbin
