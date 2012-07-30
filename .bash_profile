@@ -1,6 +1,31 @@
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/share/python:$PATH
 
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob
+
+# Append to the Bash history file, rather than overwriting it
+shopt -s histappend
+
+# Autocorrect typos in path names when using `cd`
+shopt -s cdspell
+
+# Enable some Bash 4 features when possible:
+# * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
+# * Recursive globbing, e.g. `echo **/*.txt`
+for option in autocd globstar; do
+    shopt -s "$option" 2> /dev/null
+done
+
+# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
+
+# Add `killall` tab completion for common apps
+complete -o "nospace" -W "Finder Dock Mail Safari iTunes iCal Address\ Book SystemUIServer" killall
+
+# If possible, add tab completion for many more commands
+[ -f /etc/bash_completion ] && source /etc/bash_completion
+
 # COLORS
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
@@ -67,11 +92,19 @@ ulimit -n 2048
 
 source "/Users/heynemann/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
-#export EDITOR='mvim -f'
-#export PATH=$PATH:/usr/local/sbin
+# Make vim the default editor
+export EDITOR="mvim -f"
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="$Cyan"
 
-export HISTCONTROL=erasedups
-export HISTSIZE=10000
+# Larger bash history (allow 32³ entries; default is 500)
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL=ignoredups
+# Make some commands not show up in history
+export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 shopt -s histappend
 
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
@@ -100,4 +133,6 @@ complete -o default -F _pip_completion pip
 export PIP_RESPECT_VIRTUALENV=true
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
-
+# ANDROID
+export ANDROID_HOME=~/dev/android-sdk
+export PATH=$PATH:~/dev/android-sdk/tools:~/dev/android-sdk/platform-tools/
