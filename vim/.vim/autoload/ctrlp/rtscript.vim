@@ -10,21 +10,26 @@ if exists('g:loaded_ctrlp_rtscript') && g:loaded_ctrlp_rtscript
 en
 let [g:loaded_ctrlp_rtscript, g:ctrlp_newrts] = [1, 0]
 
-let s:rtscript_var = {
-	\ 'init': 'ctrlp#rtscript#init()',
+cal add(g:ctrlp_ext_vars, {
+	\ 'init': 'ctrlp#rtscript#init(s:caching)',
 	\ 'accept': 'ctrlp#acceptfile',
 	\ 'lname': 'runtime scripts',
 	\ 'sname': 'rts',
 	\ 'type': 'path',
-	\ }
-
-let g:ctrlp_ext_vars = exists('g:ctrlp_ext_vars') && !empty(g:ctrlp_ext_vars)
-	\ ? add(g:ctrlp_ext_vars, s:rtscript_var) : [s:rtscript_var]
+	\ 'opmul': 1,
+	\ })
 
 let s:id = g:ctrlp_builtins + len(g:ctrlp_ext_vars)
+
+let s:filecounts = {}
+" Utilities {{{1
+fu! s:nocache()
+	retu !s:caching || ( s:caching > 1 && get(s:filecounts, s:cwd) < s:caching )
+endf
 " Public {{{1
-fu! ctrlp#rtscript#init()
-	if g:ctrlp_newrts
+fu! ctrlp#rtscript#init(caching)
+	let [s:caching, s:cwd] = [a:caching, getcwd()]
+	if g:ctrlp_newrts || s:nocache()
 		\ || !( exists('g:ctrlp_rtscache') && g:ctrlp_rtscache[0] == &rtp )
 		sil! cal ctrlp#progress('Indexing...')
 		let entries = split(globpath(&rtp, '**/*.*'), "\n")
@@ -33,13 +38,13 @@ fu! ctrlp#rtscript#init()
 	el
 		let [entries, results] = g:ctrlp_rtscache[2:3]
 	en
-	let cwd = getcwd()
-	if g:ctrlp_newrts
-		\ || !( exists('g:ctrlp_rtscache') && g:ctrlp_rtscache[:1] == [&rtp, cwd] )
+	if g:ctrlp_newrts || s:nocache()
+		\ || !( exists('g:ctrlp_rtscache') && g:ctrlp_rtscache[:1] == [&rtp, s:cwd] )
 		if !exists('echoed') | sil! cal ctrlp#progress('Processing...') | en
 		let results = map(copy(entries), 'fnamemodify(v:val, '':.'')')
 	en
-	let [g:ctrlp_rtscache, g:ctrlp_newrts] = [[&rtp, cwd, entries, results], 0]
+	let [g:ctrlp_rtscache, g:ctrlp_newrts] = [[&rtp, s:cwd, entries, results], 0]
+	cal extend(s:filecounts, { s:cwd : len(results) })
 	retu results
 endf
 
