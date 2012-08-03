@@ -52,6 +52,14 @@ function git_untracked {
   fi
 }
 
+function git_tag {
+  local tags=$(git tag|tail -1)
+  if [ "$tags" != "" ]
+  then
+      echo "|last-tag:$tags"
+  fi
+}
+
 # Get the current git branch name (if available)
 evil_git_prompt() {
   local ref=$(git symbolic-ref HEAD 2>/dev/null | sed 's#refs/heads/##g' \
@@ -60,7 +68,7 @@ evil_git_prompt() {
 
   if [ "$ref" != "" ]
   then
-    echo " ($ref$(evil_git_dirty)$(git_untracked)) "
+    echo " ($ref$(evil_git_dirty)$(git_untracked)$(git_tag)) "
   fi
 }
 
@@ -135,4 +143,4 @@ export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
 # ANDROID
 export ANDROID_HOME=~/dev/android-sdk
-export PATH=$PATH:~/dev/android-sdk/tools:~/dev/android-sdk/platform-tools/
+export PATH=$PATH:~/dev/android-sdk/tools:~/dev/android-sdk/platform-tools
