@@ -53,7 +53,7 @@ function git_untracked {
 }
 
 function git_tag {
-  local tags=$(git tag|tail -1)
+  local tags=$(git for-each-ref --format '%(refname) %(taggerdate)' refs/tags | sed s#refs/tags/## | tr -d ' ' | tail -1)
   if [ "$tags" != "" ]
   then
       echo "|last-tag:$tags"
