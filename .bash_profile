@@ -53,7 +53,7 @@ function git_untracked {
 }
 
 function git_tag {
-  local tags=$(git for-each-ref --format '%(refname) %(taggerdate)' refs/tags | sed s#refs/tags/## | tr -d ' ' | tail -1)
+  local tags=$(git for-each-ref --sort committerdate --format '%(refname)' refs/tags| sed s#refs/tags/## | tr -d ' ' | tail -1)
   if [ "$tags" != "" ]
   then
       echo "|last-tag:$tags"
@@ -137,7 +137,7 @@ _pip_completion()
 complete -o default -F _pip_completion pip
 # pip bash completion end
 
-#export PIP_REQUIRE_VIRTUALENV=true
+export PIP_REQUIRE_VIRTUALENV=true
 export PIP_RESPECT_VIRTUALENV=true
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
