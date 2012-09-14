@@ -68,7 +68,7 @@ evil_git_prompt() {
 
   if [ "$ref" != "" ]
   then
-    echo " ($ref$(evil_git_dirty)$(git_untracked)$(git_tag)) "
+    echo " $ref$(evil_git_dirty)$(git_untracked)$(git_tag) "
   fi
 }
 
@@ -77,7 +77,7 @@ venv_prompt() {
 
   if [ "$ref" != "" ]
   then
-    echo " $BIGreen($ref)$Color_Off"
+    echo " $BIGreen#$ref$Color_Off"
   fi
 }
 
@@ -85,7 +85,7 @@ rvm_prompt() {
   local version=$(rvm-prompt i v g)
   if [ "$version" != "" ]
   then
-    echo " $BIYellow($version)$Color_Off "
+    echo " $BIYellow@$version$Color_Off "
   fi
 }
 
