@@ -1,4 +1,4 @@
-setup bootstrap config: brew git rvm symlinks
+setup bootstrap config: osx brew git rvm symlinks
 	@git submodule update --init
 
 brew:
@@ -21,7 +21,15 @@ rvm:
 	@echo ">>>>>>>>>>>>> RVM <<<<<<<<<<<<<<<"
 	@if [ ! -f ~/.rvm/bin/rvm ]; then curl -L https://get.rvm.io | bash -s stable --ruby; fi
 	@if [ -f ~/.rvm/bin/rvm ]; then echo 'RVM already installed. Skipping...' ; fi
-	@echo ">>>>>>>>>>RVM FINISHED<<<<<<<<<<<"
+	@echo ">>>>>>>>> RVM FINISHED <<<<<<<<<<"
+	@echo
+
+osx:
+	@echo ">>>>>>>>>>>>> OSX <<<<<<<<<<<<<<<"
+	@if [ ! -f ~/.has_sourced_osx ]; then source `pwd`/.osx; fi
+	@if [ -f ~/.has_sourced_osx ]; then echo 'Already configured MAC OS X. Skipping...' ; fi
+	@touch ~/.has_sourced_osx
+	@echo ">>>>>>>>> OSX FINISHED <<<<<<<<<<"
 	@echo
 
 symlinks:
