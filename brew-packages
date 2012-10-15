@@ -13,3 +13,9 @@ libjpeg
 libtiff
 freetype
 graphicsmagick
+libev
+ssh-copy-id
+htop-osx
+bash-completion
+git-extras
+git-now
