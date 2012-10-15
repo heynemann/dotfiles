@@ -1,6 +1,6 @@
-
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/usr/local/share/python:$PATH
+export PATH=/usr/local/share/npm/bin:$PATH
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
