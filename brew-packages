@@ -1,5 +1,6 @@
 macvim
 git
+mercurial
 the_silver_searcher
 mysql
 redis
@@ -19,3 +20,4 @@ htop-osx
 bash-completion
 git-extras
 git-now
+msgpack

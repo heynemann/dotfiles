@@ -1,5 +1,18 @@
-setup bootstrap config: osx brew git rvm python opencv mysql symlinks
+setup bootstrap config: osx memcached brew git rvm python opencv htop mysql symlinks
 	@git submodule update --init
+
+memcached:
+	@echo ">>>>>>>>>>>>> MEMCACHED <<<<<<<<<<<<<<<"
+	@brew update
+	@-brew uninstall -y libev
+	@-brew install libevent
+	@brew link libevent
+	@-brew install memcached
+	@-brew upgrade memcached
+	@brew unlink libevent
+	@brew linkapps
+	@echo ">>>>>>>>> MEMCACHED FINISHED <<<<<<<<<<"
+	@echo
 
 brew:
 	@echo ">>>>>>>>>>>>> BREW <<<<<<<<<<<<<<<"
@@ -9,6 +22,9 @@ brew:
 	@brew linkapps
 	@echo ">>>>>>>>> BREW FINISHED <<<<<<<<<<"
 	@echo
+
+htop:
+	@sudo chown root:wheel /usr/local/Cellar/htop-osx/0.8.2/bin/htop && sudo chmod u+s /usr/local/Cellar/htop-osx/0.8.2/bin/htop
 
 git:
 	@git config --global user.name "Bernardo Heynemann"
@@ -40,7 +56,8 @@ python:
 
 opencv:
 	@echo ">>>>>>>>>>>>> OpenCV <<<<<<<<<<<<<<<"
-	@brew install opencv
+	@-brew install opencv
+	@-brew upgrade opencv
 	@brew linkapps
 	@echo ">>>>>>>>> OpenCV FINISHED <<<<<<<<<<"
 	@echo
@@ -69,4 +86,4 @@ symlinks:
 	@ln -sf `pwd`/.bash_profile ~/.bash_profile
 	@ln -sf `pwd`/.ps1 ~/.ps1
 	@ln -sf `pwd`/git-completion.bash ~/git-completion.bash
-	@ln -sf `pwd`/virtualenv.ini ~/.virtualenv/virtualenv.ini
+	@ln -sf `pwd`/virtualenv.ini ~/.virtualenvs/virtualenv.ini
