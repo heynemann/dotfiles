@@ -1,4 +1,4 @@
-setup bootstrap config: osx memcached brew git rvm python opencv htop mysql symlinks
+setup bootstrap config: osx memcached brew git rvm python opencv htop mysql vbox symlinks
 	@git submodule update --init
 
 memcached:
@@ -22,6 +22,14 @@ brew:
 	@brew linkapps
 	@echo ">>>>>>>>> BREW FINISHED <<<<<<<<<<"
 	@echo
+
+vbox:
+	@echo ">>>>>>>>>>>>> VBox <<<<<<<<<<<<<<<"
+	@if [ ! -f /usr/bin/VBoxManage ]; then rm -rf /tmp/vboxinstall && mkdir -p /tmp/vboxinstall && cd /tmp/vboxinstall && wget http://download.virtualbox.org/virtualbox/4.2.0/$(shell curl -s http://download.virtualbox.org/virtualbox/4.2.0/ | egrep -i osx | sed "s#[<]A HREF\=\"##" | sed "s#\" NAME.*##" | tail -n1) && hdiutil attach VirtualBox-*.dmg && sudo installer -pkg /Volumes/VirtualBox/VirtualBox.pkg -target /Volumes/HD && hdiutil detach /Volumes/VirtualBox ; fi
+	@if [ -f /usr/bin/VBoxManage ]; then echo 'VBox already installed. Skipping...' ; fi
+	@echo ">>>>>>>>> VBox FINISHED <<<<<<<<<<"
+	@echo
+
 
 htop:
 	@sudo chown root:wheel /usr/local/Cellar/htop-osx/0.8.2/bin/htop && sudo chmod u+s /usr/local/Cellar/htop-osx/0.8.2/bin/htop
