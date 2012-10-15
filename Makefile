@@ -1,4 +1,4 @@
-setup bootstrap config: osx brew git rvm python mysql symlinks
+setup bootstrap config: osx brew git rvm python opencv mysql symlinks
 	@git submodule update --init
 
 brew:
@@ -26,11 +26,23 @@ rvm:
 
 python:
 	@echo ">>>>>>>>>>>>> PYTHON <<<<<<<<<<<<<<<"
-	@pip install --upgrade distribute
-	@pip install --upgrade pip
-	@pip install --upgrade virtualenv
-	@pip install --upgrade virtualenvwrapper
+	@-brew install python --framework --universal
+	@brew upgrade python --framework --universal
+	@brew linkapps
+	@cd /System/Library/Frameworks/Python.framework/Versions && sudo rm -f Current && sudo ln -s /usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Versions/Current
+	@CC=gcc pip install --upgrade -r python-packages
+	@CC=gcc pip install -e "git+https://github.com/numpy/numpy.git#egg=numpy-dev"
+	@CC=gcc pip install -e "git+https://github.com/scipy/scipy#egg=scipy-dev"
+	@CC=gcc pip install -e "git+https://github.com/matplotlib/matplotlib.git#egg=matplotlib-dev"
+	
 	@echo ">>>>>>>>> PYTHON FINISHED <<<<<<<<<<"
+	@echo
+
+opencv:
+	@echo ">>>>>>>>>>>>> OpenCV <<<<<<<<<<<<<<<"
+	@brew install opencv
+	@brew linkapps
+	@echo ">>>>>>>>> OpenCV FINISHED <<<<<<<<<<"
 	@echo
 
 osx:
@@ -57,3 +69,4 @@ symlinks:
 	@ln -sf `pwd`/.bash_profile ~/.bash_profile
 	@ln -sf `pwd`/.ps1 ~/.ps1
 	@ln -sf `pwd`/git-completion.bash ~/git-completion.bash
+	@ln -sf `pwd`/virtualenv.ini ~/.virtualenv/virtualenv.ini

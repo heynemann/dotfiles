@@ -5,4 +5,10 @@ mysql
 redis
 hiredis
 mongodb
-python
+gfortran
+umfpack
+swig
+libpng
+libjpeg
+libtiff
+freetype

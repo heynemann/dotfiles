@@ -1,0 +1,4 @@
+distribute
+pip
+virtualenv
+virtualenvwrapper

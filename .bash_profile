@@ -1,3 +1,4 @@
+
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=/usr/local/share/python:$PATH
 
@@ -100,6 +101,8 @@ ulimit -n 2048
 
 source ~/.rvm/scripts/rvm
 
+export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages/
+
 # Make vim the default editor
 export EDITOR="mvim -f"
 # Don’t clear the screen after quitting a manual page
@@ -112,7 +115,7 @@ export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 # Make some commands not show up in history
-export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
+export HISTIGNORE=""
 shopt -s histappend
 
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
