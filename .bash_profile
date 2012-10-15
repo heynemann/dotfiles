@@ -98,7 +98,7 @@ PROMPT_COMMAND="ps1_update"
 
 ulimit -n 2048
 
-source "/Users/heynemann/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+source ~/.rvm/scripts/rvm
 
 # Make vim the default editor
 export EDITOR="mvim -f"
