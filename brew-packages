@@ -1,3 +1,7 @@
 macvim
 git
 the_silver_searcher
+mysql
+redis
+hiredis
+mongodb

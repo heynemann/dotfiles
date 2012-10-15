@@ -1,4 +1,4 @@
-setup bootstrap config: osx brew git rvm symlinks
+setup bootstrap config: osx brew git rvm mysql symlinks
 	@git submodule update --init
 
 brew:
@@ -30,6 +30,14 @@ osx:
 	@if [ -f ~/.has_sourced_osx ]; then echo 'Already configured MAC OS X. Skipping...' ; fi
 	@touch ~/.has_sourced_osx
 	@echo ">>>>>>>>> OSX FINISHED <<<<<<<<<<"
+	@echo
+
+mysql:
+	@echo ">>>>>>>>>>>>> mySQL <<<<<<<<<<<<<<<"
+	@if [ ! -f ~/.has_configured_mysql ]; then unset TMPDIR && mysql_install_db --verbose --user=`whoami` --basedir="`brew --prefix mysql`" --datadir=/usr/local/var/mysql --tmpdir=/tmp && mkdir -p ~/Library/LaunchAgents && cp /usr/local/Cellar/mysql/5.*/homebrew.mxcl.mysql.plist ~/Library/LaunchAgents/ && launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist ; fi
+	@if [ -f ~/.has_configured_mysql ]; then echo 'Already configured mySQL. Skipping...' ; fi
+	@touch ~/.has_configured_mysql
+	@echo ">>>>>>>>> mySQL FINISHED <<<<<<<<<<"
 	@echo
 
 symlinks:
