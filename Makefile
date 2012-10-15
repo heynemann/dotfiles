@@ -1,4 +1,4 @@
-setup bootstrap config: osx brew git rvm mysql symlinks
+setup bootstrap config: osx brew git rvm python mysql symlinks
 	@git submodule update --init
 
 brew:
@@ -22,6 +22,15 @@ rvm:
 	@if [ ! -f ~/.rvm/bin/rvm ]; then curl -L https://get.rvm.io | bash -s stable --ruby; fi
 	@if [ -f ~/.rvm/bin/rvm ]; then echo 'RVM already installed. Skipping...' ; fi
 	@echo ">>>>>>>>> RVM FINISHED <<<<<<<<<<"
+	@echo
+
+python:
+	@echo ">>>>>>>>>>>>> PYTHON <<<<<<<<<<<<<<<"
+	@pip install --upgrade distribute
+	@pip install --upgrade pip
+	@pip install --upgrade virtualenv
+	@pip install --upgrade virtualenvwrapper
+	@echo ">>>>>>>>> PYTHON FINISHED <<<<<<<<<<"
 	@echo
 
 osx:

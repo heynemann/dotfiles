@@ -137,7 +137,7 @@ _pip_completion()
 complete -o default -F _pip_completion pip
 # pip bash completion end
 
-export PIP_REQUIRE_VIRTUALENV=true
+export PIP_REQUIRE_VIRTUALENV=false
 export PIP_RESPECT_VIRTUALENV=true
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 

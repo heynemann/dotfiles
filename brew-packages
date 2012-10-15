@@ -5,3 +5,4 @@ mysql
 redis
 hiredis
 mongodb
+python
