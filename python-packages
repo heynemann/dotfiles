@@ -2,3 +2,4 @@ distribute
 pip
 virtualenv
 virtualenvwrapper
+pyflakes
