@@ -144,5 +144,5 @@ export PIP_RESPECT_VIRTUALENV=true
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
 # ANDROID
-#export ANDROID_HOME=~/dev/android-sdk
-#export PATH=$PATH:~/dev/android-sdk/tools:~/dev/android-sdk/platform-tools
+export ANDROID_HOME=~/dev/android-sdk
+export PATH=$PATH:~/dev/android-sdk/tools:~/dev/android-sdk/platform-tools
