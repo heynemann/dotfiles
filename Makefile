@@ -8,7 +8,9 @@ memcached:
 	@-brew install libevent
 	@brew link libevent
 	@-brew install memcached
+	@-brew install libmemcached
 	@-brew upgrade memcached
+	@-brew upgrade libmemcached
 	@brew unlink libevent
 	@brew linkapps
 	@echo ">>>>>>>>> MEMCACHED FINISHED <<<<<<<<<<"
