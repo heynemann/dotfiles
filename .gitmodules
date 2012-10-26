@@ -34,3 +34,6 @@
 [submodule "vim/.vim/thirdparty/jslint"]
 	path = vim/.vim/thirdparty/jslint
 	url = https://github.com/hallettj/jslint.vim
+[submodule "vim/.vim/thirdparty/vim-fugitive"]
+	path = vim/.vim/thirdparty/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
