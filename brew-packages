@@ -24,3 +24,5 @@ msgpack
 nodejs
 wget
 tree
+boost
+v8
