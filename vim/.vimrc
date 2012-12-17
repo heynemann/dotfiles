@@ -160,8 +160,6 @@ inoremap <C-k> <Esc>:m-2<CR>==gi
 vnoremap <C-j> :m'>+<CR>gv=gv
 vnoremap <C-k> :m-2<CR>gv=gv
 
-let g:pyflakes_use_quickfix = 0
-
 let $JS_CMD='node'
 
 cmap w!! w !sudo tee % >/dev/null

@@ -40,3 +40,6 @@
 [submodule "vim/.vim/bundle/vim-coffee-script"]
 	path = vim/.vim/bundle/vim-coffee-script
 	url = git://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/.vim/thirdparty/synctastic"]
+	path = vim/.vim/thirdparty/synctastic
+	url = https://github.com/scrooloose/syntastic.git
