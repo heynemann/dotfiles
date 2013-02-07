@@ -1,5 +1,6 @@
 nmap <silent> <Leader>y :CtrlPMRU<CR>
 nmap <silent> <Leader>t :CtrlP<CR>
+nmap <silent> <Leader>r :CtrlPClearCache<CR>
 let g:ctrlp_open_new_file = 't'
 let g:ctrlp_lazy_update = 100
 let g:ctrlp_max_height = 30

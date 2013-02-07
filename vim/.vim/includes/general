@@ -5,12 +5,16 @@ if has("gui_running")
     set guifont=Inconsolata\ 18
   elseif has("gui_photon")
     set guifont=Inconsolata:s18
+    set fuopt=maxvert,maxhorz
   elseif has("gui_kde")
     set guifont=Inconsolata/18/-1/5/50/0/0/0/1/0
+    set fuopt=maxvert,maxhorz
   elseif has("x11")
     set guifont=-*-inconsolata-medium-r-normal-*-*-180-*-*-m-*-*
+    set fuopt=maxvert,maxhorz
   else
     set guifont=Inconsolata:h18
+    set fuopt=maxvert,maxhorz
   endif
 endif
 
@@ -72,7 +76,6 @@ vnoremap <tab> %
 "set wrap
 "set textwidth=79
 set formatoptions=qrn1
-set fuopt=maxvert,maxhorz
 
 nmap <leader>l :set list!<CR>
 set list
@@ -106,3 +109,4 @@ nnoremap <leader>w <C-w>v<C-w>l
 
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)
 
+map <F1> :tabnew<CR>
