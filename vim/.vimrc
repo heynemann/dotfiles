@@ -29,7 +29,7 @@ function! TrimWhiteSpace()
   ''
 :endfunction
 
-map <F2> :call TrimWhiteSpace()<CR>
+nmap <silent> <Leader>n :call TrimWhiteSpace()<CR>
 map <F1> :tabnew<CR> 
 
 nnoremap <C-j> :m+<CR>==
