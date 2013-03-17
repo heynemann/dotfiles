@@ -243,3 +243,5 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 source ~/.rvm/scripts/rvm
 
 PROMPT_COMMAND="ps1_update"
+
+alias update-dotfiles="cd ~/dev/dotfiles && git stash && git pull --rebase && git stash apply"
