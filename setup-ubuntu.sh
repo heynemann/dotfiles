@@ -1,4 +1,4 @@
-sudo aptitude install git-core
+sudo aptitude install -y git-core
 cd ~
 DEV_DIR="`pwd`/dev"
 if [ ! -d "$DEV_DIR" ]; then
