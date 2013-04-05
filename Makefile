@@ -1,6 +1,13 @@
 setup bootstrap config: osx memcached brew git rvm python opencv htop mysql vbox symlinks
 	@git submodule update --init
 
+setup-ubuntu: apt git rvm python-ubuntu symlinks
+
+apt:
+	@sudo aptitude update
+	@sudo aptitude safe-upgrade -y
+	@cat ubuntu-packages.apt | xargs sudo aptitude install -y
+
 memcached:
 	@echo ">>>>>>>>>>>>> MEMCACHED <<<<<<<<<<<<<<<"
 	@brew update
@@ -48,6 +55,13 @@ rvm:
 	@if [ -f ~/.rvm/bin/rvm ]; then echo 'RVM already installed. Skipping...' ; fi
 	@echo ">>>>>>>>> RVM FINISHED <<<<<<<<<<"
 	@echo
+
+python-ubuntu:
+	@echo ">>>>>>>>>>>>> PYTHON <<<<<<<<<<<<<<<"
+	@sudo aptitude install python2.7-dev python-pip -y
+	@CC=gcc sudo pip install --upgrade -r python-packages
+	@CC=gcc sudo pip install -e "git+https://github.com/numpy/numpy.git#egg=numpy-dev"
+	@echo ">>>>>>>>> PYTHON FINISHED <<<<<<<<<<"
 
 python:
 	@echo ">>>>>>>>>>>>> PYTHON <<<<<<<<<<<<<<<"
