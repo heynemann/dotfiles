@@ -102,6 +102,7 @@ mysql:
 	@echo
 
 symlinks:
+	@mkdir -p ~/.virtualenvs
 	@rm -rf ~/.vim
 	@ln -sf `pwd`/vim/.vim ~/.vim
 	@ln -sf `pwd`/vim/.vimrc ~/.vimrc
