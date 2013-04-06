@@ -1,4 +1,4 @@
-setup bootstrap config: osx memcached brew git rvm python opencv htop mysql vbox symlinks
+setup bootstrap config: osx memcached brew git rvm python opencv htop mysl vbox symlinks
 	@git submodule update --init
 
 setup-ubuntu: apt git rvm python-ubuntu symlinks
@@ -110,3 +110,6 @@ symlinks:
 	@ln -sf `pwd`/.ps1 ~/.ps1
 	@ln -sf `pwd`/git-completion.bash ~/git-completion.bash
 	@ln -sf `pwd`/virtualenv.ini ~/.virtualenvs/virtualenv.ini
+	@git submodule update --init
+	@mkdir -p `pwd`/vim/.vim/bundle
+	@ln -sf `pwd`/vim/.vim/thirdparty/vundle `pwd`/vim/.vim/bundle/vundle 
