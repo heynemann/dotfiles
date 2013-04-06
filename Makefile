@@ -60,7 +60,6 @@ python-ubuntu:
 	@echo ">>>>>>>>>>>>> PYTHON <<<<<<<<<<<<<<<"
 	@sudo aptitude install python2.7-dev python-pip -y
 	@CC=gcc sudo pip install --upgrade -r python-packages
-	@CC=gcc sudo pip install -e "git+https://github.com/numpy/numpy.git#egg=numpy-dev"
 	@echo ">>>>>>>>> PYTHON FINISHED <<<<<<<<<<"
 
 python:
