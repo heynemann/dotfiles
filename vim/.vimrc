@@ -42,10 +42,10 @@ vnoremap <C-k> :m-2<CR>gv=gv
 
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
+let g:syntastic_python_checkers=['flake8']
 
 let g:syntastic_mode_map = { 'mode': 'active',
    \ 'active_filetypes': ['ruby', 'python'],
    \ 'passive_filetypes': [] }
 
-let g:syntastic_python_checker_args='--ignore=E501'
-
+let g:syntastic_python_flake8_post_args='--ignore=E501'
