@@ -44,3 +44,4 @@ libffi-dev
 python-scipy
 postgresql
 postgresql-server-dev-all
+pgadmin3

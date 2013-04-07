@@ -1,7 +1,7 @@
 setup bootstrap config: osx memcached brew git rvm python opencv htop mysl vbox symlinks
 	@git submodule update --init
 
-setup-ubuntu: apt git rvm python-ubuntu nodejs symlinks
+setup-ubuntu: apt git rvm python-ubuntu nodejs postgresql symlinks
 
 apt:
 	@sudo aptitude update
@@ -59,6 +59,7 @@ rvm:
 python-ubuntu:
 	@echo ">>>>>>>>>>>>> PYTHON <<<<<<<<<<<<<<<"
 	@sudo aptitude install python2.7-dev python-pip -y
+	@CC=gcc sudo pip install --upgrade pip
 	@CC=gcc sudo pip install --upgrade -r python-packages
 	@echo ">>>>>>>>> PYTHON FINISHED <<<<<<<<<<"
 
@@ -68,6 +69,7 @@ python:
 	@brew upgrade python --framework --universal
 	@brew linkapps
 	@cd /System/Library/Frameworks/Python.framework/Versions && sudo rm -f Current && sudo ln -s /usr/local/Cellar/python/2.7.3/Frameworks/Python.framework/Versions/Current
+	@CC=gcc sudo pip install --upgrade pip
 	@CC=gcc pip install --upgrade -r python-packages
 	@CC=gcc pip install -e "git+https://github.com/numpy/numpy.git#egg=numpy-dev"
 	@CC=gcc pip install -e "git+https://github.com/scipy/scipy#egg=scipy-dev"
@@ -108,6 +110,10 @@ mysql:
 	@touch ~/.has_configured_mysql
 	@echo ">>>>>>>>> mySQL FINISHED <<<<<<<<<<"
 	@echo
+
+postgresql:
+	@echo "Please enter postgres default password:"
+	@sudo -u postgres psql postgres -c "\password postgres"
 
 symlinks:
 	@mkdir -p ~/.virtualenvs
