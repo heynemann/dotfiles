@@ -61,6 +61,8 @@ python-ubuntu:
 	@sudo aptitude install python2.7-dev python-pip -y
 	@CC=gcc sudo pip install --upgrade pip
 	@CC=gcc sudo pip install --upgrade -r python-packages
+	@mkdir -p ~/.config
+	@cp ./pep8 ~/.config
 	@echo ">>>>>>>>> PYTHON FINISHED <<<<<<<<<<"
 
 python:
@@ -74,7 +76,9 @@ python:
 	@CC=gcc pip install -e "git+https://github.com/numpy/numpy.git#egg=numpy-dev"
 	@CC=gcc pip install -e "git+https://github.com/scipy/scipy#egg=scipy-dev"
 	@CC=gcc pip install -e "git+https://github.com/matplotlib/matplotlib.git#egg=matplotlib-dev"
-	
+	@mkdir -p ~/.config
+	@cp ./pep8 ~/.config
+
 	@echo ">>>>>>>>> PYTHON FINISHED <<<<<<<<<<"
 	@echo
 
