@@ -110,3 +110,5 @@ nnoremap <leader>w <C-w>v<C-w>l
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)
 
 map <F1> :tabnew<CR>
+
+set rtp += "`python -c "import powerline, os; print os.path.dirname(powerline.__file__)"`/bindings/vim"
