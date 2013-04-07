@@ -114,6 +114,8 @@ mysql:
 postgresql:
 	@echo "Please enter postgres default password:"
 	@sudo -u postgres psql postgres -c "\password postgres"
+	@sudo cp ./pg_hba.conf /etc/postgresql/*/main/pg_hba.conf
+	@sudo /etc/init.d/postgresql restart
 
 symlinks:
 	@mkdir -p ~/.virtualenvs
