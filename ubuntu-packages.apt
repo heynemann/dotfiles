@@ -42,3 +42,5 @@ automake
 bison
 libffi-dev
 python-scipy
+postgresql
+postgresql-server-dev-all
