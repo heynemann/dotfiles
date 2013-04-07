@@ -1,7 +1,7 @@
 setup bootstrap config: osx memcached brew git rvm python opencv htop mysl vbox symlinks
 	@git submodule update --init
 
-setup-ubuntu: apt git rvm python-ubuntu symlinks
+setup-ubuntu: apt git rvm python-ubuntu nodejs symlinks
 
 apt:
 	@sudo aptitude update
@@ -74,6 +74,15 @@ python:
 	@CC=gcc pip install -e "git+https://github.com/matplotlib/matplotlib.git#egg=matplotlib-dev"
 	
 	@echo ">>>>>>>>> PYTHON FINISHED <<<<<<<<<<"
+	@echo
+
+nodejs:
+	@echo ">>>>>>>>>>>>> NODE JS <<<<<<<<<<<<<<<"
+	@sudo apt-get install python-software-properties python g++ make -y
+	@sudo add-apt-repository ppa:chris-lea/node.js
+	@sudo apt-get update
+	@sudo apt-get install nodejs -y
+	@echo ">>>>>>>>> NODE JS FINISHED <<<<<<<<<<"
 	@echo
 
 opencv:
