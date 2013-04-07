@@ -18,7 +18,8 @@ let g:neocomplcache_enable_at_startup = 1
 let g:acp_enableAtStartup = 1
 let g:neocomplcache_enable_auto_select = 1
 
-python from powerline.bindings.vim import source_plugin; source_plugin()
+" python from powerline.bindings.vim import source_plugin; source_plugin()
+" set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 nmap <silent> <Leader>m :NERDTreeToggle<CR>
 
