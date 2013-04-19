@@ -1,7 +1,5 @@
-setup bootstrap config: osx memcached brew git rvm python opencv htop mysl vbox symlinks
-	@git submodule update --init
-
-setup-ubuntu: apt git rvm python-ubuntu nodejs postgresql symlinks
+setup bootstrap config: osx memcached brew git pythonbrew rvm python opencv htop mysql vbox symlinks
+setup-ubuntu: apt git rvm pythonbrew python-ubuntu nodejs postgresql symlinks
 
 apt:
 	@sudo aptitude update
@@ -90,6 +88,17 @@ nodejs:
 	@sudo apt-get install nodejs -y
 	@echo ">>>>>>>>> NODE JS FINISHED <<<<<<<<<<"
 	@echo
+
+pythonbrew:
+	@if [ ! -d "$$HOME/.pythonbrew" ]; then curl -kL http://xrl.us/pythonbrewinstall | bash; fi
+	@-[[ -s "$$HOME/.pythonbrew/etc/bashrc" ]] && source "$$HOME/.pythonbrew/etc/bashrc"
+	@pythonbrew install 2.5.6
+	@pythonbrew install 2.6.8
+	@pythonbrew install 2.7.3
+	@pythonbrew install 3.0.1
+	@pythonbrew install 3.1.4
+	@pythonbrew install 3.2.3
+	@pythonbrew install 3.3.0
 
 opencv:
 	@echo ">>>>>>>>>>>>> OpenCV <<<<<<<<<<<<<<<"

@@ -49,3 +49,15 @@ let g:syntastic_mode_map = { 'mode': 'active',
    \ 'passive_filetypes': [] }
 
 let g:syntastic_python_flake8_post_args='--ignore=E501'
+
+function! TwoSpace()
+  setlocal tabstop=2
+  setlocal shiftwidth=2
+  setlocal softtabstop=2
+endfunction
+
+au FileType ruby call TwoSpace()
+au FileType coffee call TwoSpace()
+au FileType yaml call TwoSpace()
+au FileType vim call TwoSpace()
+au BufNewFile,BufRead *.erb call TwoSpace()
