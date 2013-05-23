@@ -1,5 +1,5 @@
 setup bootstrap config: osx memcached brew git pythonbrew rvm python opencv htop mysql vbox symlinks
-setup-ubuntu: apt git rvm pythonbrew python-ubuntu nodejs postgresql symlinks
+setup-ubuntu: apt git rvm python-ubuntu nodejs postgresql symlinks pythonbrew
 
 apt:
 	@sudo aptitude update
