@@ -126,6 +126,7 @@ fi
 
 alias ipip='pip install --index-url="http://pypi.globoi.com/proxy" --extra-index-url="http://ipypi.globoi.com" --extra-index-url="http://pypi.globoi.com"'
 alias glb-update='mkdir -p ~/Desktop/glb07/2013; mkdir -p /Volumes/_criacao && mount -t smbfs //glb07.glb.com:139/_criacao /Volumes/_criacao; rsync --verbose -rax --exclude="/.gvfs" /Volumes/_criacao/00_padroes/04_projetos/17_HOME_GCOM/2013/ ~/Desktop/glb07/2013 && echo "glb07 updated!!!"'
+alias update-dev='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;'
 
 export WORKON_HOME=~/.virtualenvs
 source $(which virtualenvwrapper.sh)
