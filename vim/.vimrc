@@ -40,6 +40,11 @@ inoremap <C-k> <Esc>:m-2<CR>==gi
 vnoremap <C-j> :m'>+<CR>gv=gv
 vnoremap <C-k> :m-2<CR>gv=gv
 
+nmap <silent> z :lnext<CR>
+nmap <silent> Z :lprev<CR>
+nmap <silent> <Leader>e :Errors<CR>
+
+let g:syntastic_always_populate_loc_list=1
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_python_checkers=['flake8']
