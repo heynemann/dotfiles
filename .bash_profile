@@ -102,10 +102,16 @@ export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages/
 
 # Make vim the default editor
 export EDITOR="mvim -f"
-# Don’t clear the screen after quitting a manual page
-export MANPAGER="less -X"
 # Highlight section titles in manual pages
-export LESS_TERMCAP_md="$Cyan"
+#export LESS_TERMCAP_md="$Cyan"
+
+export LESS_TERMCAP_mb=$'\E[01;31m' # begin blinking
+export LESS_TERMCAP_md=$'\E[01;38;5;74m' # begin bold
+export LESS_TERMCAP_me=$'\E[0m' # end mode
+export LESS_TERMCAP_se=$'\E[0m' # end standout-mode
+export LESS_TERMCAP_so=$'\E[38;5;246m' # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\E[0m' # end underline
+export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
@@ -125,7 +131,7 @@ fi
 #export DYLD_FALLBACK_LIBRARY_PATH=/usr/local:/usr/local/lib:$DYLD_FALLBACK_LIBRARY _PATH
 
 alias ipip='pip install --index-url="http://pypi.globoi.com/proxy" --extra-index-url="http://ipypi.globoi.com" --extra-index-url="http://pypi.globoi.com"'
-alias glb-update='mkdir -p ~/Desktop/glb07/2013; mkdir -p /Volumes/_criacao && mount -t smbfs //glb07.glb.com:139/_criacao /Volumes/_criacao; rsync --verbose -rax --exclude="/.gvfs" /Volumes/_criacao/00_padroes/04_projetos/17_HOME_GCOM/2013/ ~/Desktop/glb07/2013 && echo "glb07 updated!!!"'
+alias glb-update='mkdir -p ~/Desktop/glb07/2013; mkdir -p /Volumes/_criacao && mount -t smbfs "//corp.globoi.com;bernardo@glb07.glb.com:139/_criacao" /Volumes/_criacao; rsync --verbose -rax --progress --exclude="/.gvfs" /Volumes/_criacao/00_padroes/04_projetos/17_HOME_GCOM/2013/ ~/Desktop/glb07/2013'
 alias update-dev='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;'
 
 export WORKON_HOME=~/.virtualenvs
@@ -151,3 +157,4 @@ export PATH=$PATH:~/dev/android-sdk/tools:~/dev/android-sdk/platform-tools
 
 alias release_ipypi='python setup.py sdist upload -r ipypi'
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
+. `brew --prefix`/etc/profile.d/z.sh
