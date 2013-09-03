@@ -158,3 +158,4 @@ export PATH=$PATH:~/dev/android-sdk/tools:~/dev/android-sdk/platform-tools
 alias release_ipypi='python setup.py sdist upload -r ipypi'
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
 . `brew --prefix`/etc/profile.d/z.sh
+source /usr/local/opt/autoenv/activate.sh
