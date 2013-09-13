@@ -76,6 +76,7 @@ python:
 	@CC=gcc pip install -e "git+https://github.com/matplotlib/matplotlib.git#egg=matplotlib-dev"
 	@mkdir -p ~/.config
 	@cp ./pep8 ~/.config
+	@cp ./flake8 ~/.config
 
 	@echo ">>>>>>>>> PYTHON FINISHED <<<<<<<<<<"
 	@echo
@@ -140,6 +141,3 @@ symlinks:
 	@ln -sf `pwd`/.ps1 ~/.ps1
 	@ln -sf `pwd`/git-completion.bash ~/git-completion.bash
 	@ln -sf `pwd`/virtualenv.ini ~/.virtualenvs/virtualenv.ini
-	#@git submodule update --init
-	#@mkdir -p `pwd`/vim/.vim/bundle
-	#@ln -sf `pwd`/vim/.vim/thirdparty/vundle `pwd`/vim/.vim/bundle/vundle 
