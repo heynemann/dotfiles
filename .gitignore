@@ -4,3 +4,4 @@
 *.pyc
 src
 vim/.vim/bundle
+vim/.vim/undo
