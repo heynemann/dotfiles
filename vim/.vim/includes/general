@@ -1,4 +1,4 @@
-set t_vb= 
+set t_vb=
 
 if has("gui_running")
   if has("gui_gtk2")
@@ -97,7 +97,6 @@ nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
 nnoremap ; :
-au FocusLost * :wa
 
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)
 
@@ -129,3 +128,37 @@ function! FourSpace()
 endfunction
 
 au FileType python call FourSpace()
+
+" http://vimbits.com/bits/92
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+nnoremap <silent> * *zz
+nnoremap <silent> # #zz
+nnoremap <silent> g* g*zz
+nnoremap <silent> g# g#zz
+
+if exists("+undofile")
+  " undofile - This allows you to use undos after exiting and restarting
+  " This, like swap and backups, uses .vim-undo first, then ~/.vim/undo
+  " :help undo-persistence
+  " This is only present in 7.3+
+  if isdirectory($HOME . '/.vim/undo') == 0
+    :silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
+  endif
+  set undodir=./.vim-undo//
+  set undodir+=~/.vim/undo//
+  set undofile
+endif
+
+if exists('+colorcolumn')
+  set colorcolumn=80
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
+
+" http://vimbits.com/bits/144
+" ****************** SCROLLING *********************
+
+set scrolloff=8         " Number of lines from vertical edge to start scrolling
+set sidescrolloff=15    " Number of cols from horizontal edge to start scrolling
+set sidescroll=1        " Number of cols to scroll at a time

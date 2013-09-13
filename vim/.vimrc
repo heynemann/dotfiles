@@ -20,3 +20,4 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 source ~/.vim/includes/ctrlp
+source ~/.vim/includes/nerdtree
