@@ -63,6 +63,12 @@ python-ubuntu:
 	@cp ./pep8 ~/.config
 	@echo ">>>>>>>>> PYTHON FINISHED <<<<<<<<<<"
 
+pyenv:
+	@cd ~ && if [ ! -d ~/.pyenv ]; then git clone git://github.com/yyuu/pyenv.git .pyenv; fi
+	@pyenv install 2.7.6
+	@pyenv install 3.3.3
+	@pyenv install pypy-2.2
+
 python:
 	@echo ">>>>>>>>>>>>> PYTHON <<<<<<<<<<<<<<<"
 	@-brew install python --framework --universal

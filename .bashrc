@@ -246,3 +246,7 @@ PROMPT_COMMAND="ps1_update"
 
 alias update-dotfiles="cd ~/dev/dotfiles && git stash && git pull --rebase && git stash apply"
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
