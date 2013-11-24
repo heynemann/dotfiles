@@ -250,3 +250,6 @@ alias update-dotfiles="cd ~/dev/dotfiles && git stash && git pull --rebase && gi
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
