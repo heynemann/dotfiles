@@ -1,6 +1,5 @@
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-export PATH=/usr/local/share/python:$PATH
-export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=$PATH:/usr/local/bin:/usr/local/sbin
+export PATH=$PATH:/usr/local/share/npm/bin
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
@@ -71,11 +70,12 @@ evil_git_prompt() {
 }
 
 venv_prompt() {
-  local ref=$(echo $VIRTUAL_ENV | sed s#$WORKON_HOME/##g)
+  local ref=$(echo $VIRTUAL_ENV | sed s#$WORKON_HOME/##g | sed s#$PYENV_ROOT/versions/##)
+  local pythonv=$(python -c 'import sys; print (".".join([str(item) for item in sys.version_info[:3]]))')
 
   if [ "$ref" != "" ]
   then
-    echo " $BIGreen#$ref$Color_Off"
+    echo " $BIGreen#$ref ($pythonv)$Color_Off"
   fi
 }
 
@@ -95,8 +95,6 @@ ps1_update() {
 PROMPT_COMMAND="ps1_update"
 
 ulimit -n 2048
-
-source ~/.rvm/scripts/rvm
 
 export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages/
 
@@ -131,7 +129,8 @@ fi
 #export DYLD_FALLBACK_LIBRARY_PATH=/usr/local:/usr/local/lib:$DYLD_FALLBACK_LIBRARY _PATH
 
 alias ipip='pip install --index-url="http://pypi.globoi.com/proxy" --extra-index-url="http://ipypi.globoi.com" --extra-index-url="http://pypi.globoi.com"'
-alias glb-update='mkdir -p ~/Desktop/glb07/2013; mkdir -p /Volumes/_criacao && mount -t smbfs "//corp.globoi.com;bernardo@glb07.glb.com:139/_criacao" /Volumes/_criacao; rsync --verbose -rax --progress --exclude="/.gvfs" /Volumes/_criacao/00_padroes/04_projetos/17_HOME_GCOM/2013/ ~/Desktop/glb07/2013'
+alias glb-update='mkdir -p ~/Desktop/glb07/2014; mkdir -p /Volumes/_criacao && mount -t smbfs "//corp.globoi.com;bernardo@fileserver.corp.globoi.com/_criacao" /Volumes/_criacao; rsync -rax --progress --exclude="*.key" --exclude="/.gvfs" /Volumes/_criacao/00_padroes/04_projetos/17_HOME_GCOM/2014/ux/ ~/Desktop/glb07/2014/ux'
+alias holmes-update='mkdir -p ~/Desktop/glb07/holmes; mkdir -p /Volumes/_criacao_holmes && mount -t smbfs "//corp.globoi.com;bernardo@fileserver.corp.globoi.com/_criacao" /Volumes/_criacao_holmes; rsync -rax --progress --exclude="*.key" --exclude="/.gvfs" /Volumes/_criacao_holmes/00_padroes/04_projetos/Holmes ~/Desktop/glb07/holmes'
 alias update-dev='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;'
 
 export WORKON_HOME=~/.virtualenvs
@@ -151,11 +150,18 @@ export PIP_REQUIRE_VIRTUALENV=false
 export PIP_RESPECT_VIRTUALENV=true
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
-# ANDROID
-export ANDROID_HOME=~/dev/android-sdk
-export PATH=$PATH:~/dev/android-sdk/tools:~/dev/android-sdk/platform-tools
-
 alias release_ipypi='python setup.py sdist upload -r ipypi'
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
 . `brew --prefix`/etc/profile.d/z.sh
 source /usr/local/opt/autoenv/activate.sh
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+export PYENV_ROOT="${HOME}/.pyenv"
+
+if [ -d "${PYENV_ROOT}" ]; then
+  export PATH="${PYENV_ROOT}/bin:${PATH}"
+  eval "$(pyenv init -)"
+fi
