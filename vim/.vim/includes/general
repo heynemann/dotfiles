@@ -171,3 +171,5 @@ augroup detect_indent
   au BufEnter *     let g:detectindent_preferred_indent = 2
   au BufEnter *.py  let g:detectindent_preferred_indent = 4
 augroup END
+
+let g:syntastic_python_checkers = ['pyflakes', 'pep8', 'pylint']

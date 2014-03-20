@@ -96,7 +96,6 @@ PROMPT_COMMAND="ps1_update"
 
 ulimit -n 2048
 
-export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages/
 
 # Make vim the default editor
 export EDITOR="mvim -f"
@@ -115,11 +114,11 @@ export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 export HISTSIZE=32768
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
-# Make some commands not show up in history
+## Make some commands not show up in history
 export HISTIGNORE=""
 shopt -s histappend
 
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+#export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # GIT BASH COMPLETION
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
@@ -134,6 +133,7 @@ alias holmes-update='mkdir -p ~/Desktop/glb07/holmes; mkdir -p /Volumes/_criacao
 alias update-dev='find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;'
 
 export WORKON_HOME=~/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
 source $(which virtualenvwrapper.sh)
 
 # pip bash completion start
@@ -151,17 +151,12 @@ export PIP_RESPECT_VIRTUALENV=true
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
 alias release_ipypi='python setup.py sdist upload -r ipypi'
-[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
-. `brew --prefix`/etc/profile.d/z.sh
-source /usr/local/opt/autoenv/activate.sh
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/local/Cellar/go/1.2.1/libexec/bin
+export GOPATH=$HOME/dev/go
+export PATH=$PATH:$GOPATH/bin
 
-export PYENV_ROOT="${HOME}/.pyenv"
-
-if [ -d "${PYENV_ROOT}" ]; then
-  export PATH="${PYENV_ROOT}/bin:${PATH}"
-  eval "$(pyenv init -)"
-fi
+#export PYTHONPATH=/usr/local/lib/python2.7/site-packages/

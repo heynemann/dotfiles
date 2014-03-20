@@ -29,3 +29,5 @@ function! InsertLine()
   let trace = expand("import ipdb; ipdb.set_trace()")
   execute "normal o".trace
 endfunction
+
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
