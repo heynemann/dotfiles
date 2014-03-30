@@ -253,3 +253,5 @@ eval "$(pyenv init -)"
 
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+
+export GOPATH=$HOME/dev/go
