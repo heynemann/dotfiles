@@ -204,7 +204,7 @@ evil_git_prompt() {
 }
 
 venv_prompt() {
-  local ref=$(echo $VIRTUAL_ENV | sed s#$WORKON_HOME/##g)
+  local ref=$(echo $VIRTUAL_ENV | sed s#$WORKON_HOME/##g | sed s#homeheynemann.pyenvversions##g | sed s#$PYENV_ROOT/versions/##g)
 
   if [ "$ref" != "" ]
   then
@@ -228,7 +228,7 @@ ps1_update() {
 
 #source /usr/local/bin/virtualenvwrapper.sh
 
-export NODE_PATH=~/local/lib/node_modules/
+export NODE_PATH=~/local/lib/node_modules/:/usr/lib/node_modules/
 export PATH=$PATH:/usr/lib/ruby/gems/1.8/gems
 export PATH=$HOME/local/bin:$PATH
 export PATH=/usr/local/bin/:$PATH
@@ -250,3 +250,4 @@ alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
 export GOPATH=$HOME/dev/go
+export PATH=$PATH:$GOPATH/bin
