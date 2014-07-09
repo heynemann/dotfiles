@@ -19,6 +19,7 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
+source ~/.vim/includes/haskell
 source ~/.vim/includes/ctrlp
 source ~/.vim/includes/nerdtree
 source ~/.vim/includes/neocomplcache

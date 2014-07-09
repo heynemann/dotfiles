@@ -251,3 +251,6 @@ alias pbpaste='xclip -selection clipboard -o'
 
 export GOPATH=$HOME/dev/go
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$HOME/.cabal/bin
+
+alias workon='pyenv activate'
