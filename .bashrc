@@ -224,3 +224,4 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$HOME/.cabal/bin:$PATH
 
 alias workon='pyenv activate'
+alias mkvirtualenv='pyenv virtualenv'

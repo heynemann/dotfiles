@@ -25,6 +25,7 @@ source ~/.vim/includes/nerdtree
 source ~/.vim/includes/neocomplcache
 
 map <Leader>b :call InsertLine()<CR>
+noremap <F3> :Autoformat<CR><CR>
 
 function! InsertLine()
   let trace = expand("import ipdb; ipdb.set_trace()")
