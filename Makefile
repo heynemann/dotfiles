@@ -147,3 +147,9 @@ symlinks:
 	@ln -sf `pwd`/.ps1 ~/.ps1
 	@ln -sf `pwd`/git-completion.bash ~/git-completion.bash
 	@ln -sf `pwd`/virtualenv.ini ~/.virtualenvs/virtualenv.ini
+	@ln -sf `pwd`/flake8 ~/.config/flake8
+	@ln -sf `pwd`/pep8 ~/.config/pep8
+
+vundle:
+	@rm ~/.vim/bundle/vundle
+	@ln -sf ~/.vim/vendor/vundle ~/.vim/bundle/vundle
