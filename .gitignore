@@ -5,3 +5,5 @@
 src
 vim/.vim/bundle
 vim/.vim/undo
+fish/fish_history
+fish/fishd.*

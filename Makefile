@@ -153,3 +153,7 @@ symlinks:
 vundle:
 	@rm ~/.vim/bundle/vundle
 	@ln -sf ~/.vim/vendor/vundle ~/.vim/bundle/vundle
+
+fishlinks:
+	@rm -rf ~/.config/fish/
+	@ln -s ~/dev/dotfiles/fish ~/.config/fish
