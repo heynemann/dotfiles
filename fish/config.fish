@@ -1,3 +1,20 @@
+# Path to your oh-my-fish.
+set fish_path $HOME/.config/fish
+
+# Theme
+set fish_theme robbyrussell
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
+# Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
+# Example format: set fish_plugins autojump bundler
+set fish_plugins rvm python
+
+# Path to your custom folder (default path is $FISH/custom)
+#set fish_custom $HOME/dotfiles/oh-my-fish
+
+# Load oh-my-fish configuration.
+. $fish_path/oh-my-fish.fish
+
 function fish_title;end
 
 set fish_color_error ff8a00
@@ -26,12 +43,10 @@ set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
 set -g __fish_git_prompt_color_cleanstate green bold
 
 set -g VIRTUALFISH_COMPAT_ALIASES # uncomment for virtualenvwrapper-style commands
-. $fish_function_path/virtual.fish
+source $fish_function_path/virtual.fish
 # optional plugins
-. $fish_function_path/auto_activation.fish
-. $fish_function_path/global_requirements.fish
-. $fish_function_path/projects.fish
-
-#. $fish_path/oh-my-fish/oh-my-fish.fish
+source $fish_function_path/auto_activation.fish
+source $fish_function_path/global_requirements.fish
+source $fish_function_path/projects.fish
 
 setenv EDITOR vim

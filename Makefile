@@ -162,8 +162,8 @@ update-virtual-fish:
 update-oh-my-fish:
 	@rm -rf /tmp/oh-my-fish*
 	@cd /tmp && wget https://github.com/bpinto/oh-my-fish/archive/master.zip -O omf.zip && unzip omf.zip
-	@cp -r /tmp/oh-my-fish*/* ./fish/
+	@cp -r /tmp/oh-my-fish* ./fish
 
-fishlinks: update-virtual-fish
+fishlinks: update-virtual-fish update-oh-my-fish
 	@rm -rf ~/.config/fish/
 	@ln -s ~/dev/dotfiles/fish ~/.config/fish

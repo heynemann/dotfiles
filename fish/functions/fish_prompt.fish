@@ -43,11 +43,10 @@ function fish_prompt --description 'Write out the prompt'
 		set_color normal
 	end
 
-	if test $RVM
-		set_color ff9000
-		printf "☠%s☠ " (basename $RVM)
-		set_color normal
-	end
+	set_color ff9000
+	set -l rvm (rvm-prompt v g)
+	printf "☠%s☠ " $rvm
+	set_color normal
 
 	echo
 
