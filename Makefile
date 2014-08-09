@@ -154,6 +154,11 @@ vundle:
 	@rm ~/.vim/bundle/vundle
 	@ln -sf ~/.vim/vendor/vundle ~/.vim/bundle/vundle
 
-fishlinks:
+update-virtual-fish:
+	@rm -rf /tmp/virtualfish-master
+	@cd /tmp && wget https://github.com/adambrenecki/virtualfish/archive/master.zip -O virtualfish.zip && unzip virtualfish.zip
+	@cp /tmp/virtualfish-master/*.fish ./fish/functions/
+
+fishlinks: update-virtual-fish
 	@rm -rf ~/.config/fish/
 	@ln -s ~/dev/dotfiles/fish ~/.config/fish

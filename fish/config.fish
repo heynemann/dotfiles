@@ -24,3 +24,12 @@ set -g __fish_git_prompt_color_stagedstate yellow
 set -g __fish_git_prompt_color_invalidstate red
 set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
 set -g __fish_git_prompt_color_cleanstate green bold
+
+set -g VIRTUALFISH_COMPAT_ALIASES # uncomment for virtualenvwrapper-style commands
+. $fish_function_path/virtual.fish
+# optional plugins
+. $fish_function_path/auto_activation.fish
+. $fish_function_path/global_requirements.fish
+. $fish_function_path/projects.fish
+
+setenv EDITOR vim

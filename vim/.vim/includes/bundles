@@ -20,3 +20,5 @@ Bundle 'eagletmt/ghcmod-vim'
 Bundle 'eagletmt/neco-ghc'
 Bundle 'JuliaLang/julia-vim'
 Bundle 'tell-k/vim-autopep8'
+Bundle 'dag/vim-fish'
+
