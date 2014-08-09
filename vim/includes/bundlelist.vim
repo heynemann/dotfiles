@@ -5,10 +5,9 @@ NeoBundle 'jmcantrell/vim-virtualenv'
 NeoBundle 'Colour-Sampler-Pack'
 NeoBundle 'ScrollColors'
 NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/syntastic'
 
 
-" Bundle 'kien/ctrlp.vim'
-" Bundle 'scrooloose/nerdcommenter'
 " Bundle 'scrooloose/nerdtree'
 " Bundle 'scrooloose/syntastic'
 " Bundle 'pangloss/vim-javascript'

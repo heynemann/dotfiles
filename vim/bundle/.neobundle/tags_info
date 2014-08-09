@@ -3,6 +3,7 @@ ScrollColors
 ctrlp.vim
 neobundle.vim
 nerdcommenter
+syntastic
 vim-airline
 vim-fugitive
 vim-virtualenv
