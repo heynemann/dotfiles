@@ -7,6 +7,7 @@ neobundle.vim
 neocomplcache.vim
 nerdcommenter
 rainbow_parentheses.vim
+sparkup
 supertab
 syntastic
 vim-airline
@@ -14,6 +15,7 @@ vim-coffee-script
 vim-css-color
 vim-css3-syntax
 vim-dispatch
+vim-easymotion
 vim-fish
 vim-fugitive
 vim-golang

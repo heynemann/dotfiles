@@ -33,11 +33,7 @@ NeoBundle 'kien/rainbow_parentheses.vim'
 
 " Integrations
 NeoBundle 'tpope/vim-dispatch'
+NeoBundle 'Lokaltog/vim-easymotion'
 
-" Bundle 'rstacruz/sparkup'
-" Bundle 'vim-indent-object'
-" Bundle 'Shougo/neocomplcache'
-" Bundle 'ciaranm/detectindent'
-" Bundle 'eagletmt/ghcmod-vim'
-" Bundle 'eagletmt/neco-ghc'
-" Bundle 'tell-k/vim-autopep8'
+" HTML Zen
+NeoBundle 'rstacruz/sparkup'
