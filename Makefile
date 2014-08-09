@@ -154,6 +154,9 @@ vundle:
 	@rm ~/.vim/bundle/vundle
 	@ln -sf ~/.vim/vendor/vundle ~/.vim/bundle/vundle
 
+neobundle:
+	@curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+
 update-virtual-fish:
 	@rm -rf /tmp/virtualfish-master
 	@cd /tmp && wget https://github.com/adambrenecki/virtualfish/archive/master.zip -O virtualfish.zip && unzip virtualfish.zip
