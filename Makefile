@@ -154,6 +154,10 @@ vundle:
 	@rm ~/.vim/bundle/vundle
 	@ln -sf ~/.vim/vendor/vundle ~/.vim/bundle/vundle
 
+vim:
+	@mkdir -p ~/.fonts
+	@cp fonts/* ~/.fonts
+
 neobundle:
 	@curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 

@@ -2,18 +2,18 @@ set t_vb=
 
 if has("gui_running")
   if has("gui_gtk2")
-    set guifont=Inconsolata\ 18
+    set guifont=Inconsolata\ for\ Powerline\ 17
   elseif has("gui_photon")
-    set guifont=Inconsolata:s18
+    set guifont=Inconsolata:s17
     set fuopt=maxvert,maxhorz
   elseif has("gui_kde")
-    set guifont=Inconsolata/18/-1/5/50/0/0/0/1/0
+    set guifont=Inconsolata/17/-1/5/50/0/0/0/1/0
     set fuopt=maxvert,maxhorz
   elseif has("x11")
-    set guifont=-*-inconsolata-medium-r-normal-*-*-180-*-*-m-*-*
+    set guifont=-*-inconsolata-medium-r-normal-*-*-170-*-*-m-*-*
     set fuopt=maxvert,maxhorz
   else
-    set guifont=Inconsolata:h18
+    set guifont=Inconsolata:h17
     set fuopt=maxvert,maxhorz
   endif
 endif
