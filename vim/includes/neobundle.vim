@@ -23,7 +23,7 @@ NeoBundle 'Shougo/vimproc.vim', {
       \    },
       \ }
 
-source ~/.vim/includes/bundles.vim
+source ~/.vim/includes/bundlelist.vim
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
