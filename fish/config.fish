@@ -50,3 +50,4 @@ source $fish_function_path/global_requirements.fish
 source $fish_function_path/projects.fish
 
 setenv EDITOR vim
+set fish_greeting
