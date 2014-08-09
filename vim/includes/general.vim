@@ -67,6 +67,8 @@ set incsearch
 set showmatch
 set hlsearch
 nnoremap <leader><space> :noh<cr>
+nnoremap <tab> %
+vnoremap <tab> %
 
 set formatoptions=qrn1
 
@@ -136,3 +138,19 @@ set sidescroll=1        " Number of cols to scroll at a time
 
 map <silent><F3> :NEXTCOLOR<cr>
 map <silent><F2> :PREVCOLOR<cr>
+map <silent><F12> :cclose<cr>
+
+map <Leader>b :call InsertPdb()<CR>
+map <Leader>f :call InsertFocus()<CR>
+
+function! InsertPdb()
+  let trace = expand("import ipdb; ipdb.set_trace()")
+  execute "normal o".trace
+endfunction
+
+function! InsertFocus()
+  let trace = expand("from nose_focus import focus")
+  execute "normal o".trace
+  let trace = expand("@focus")
+  execute "normal o".trace
+endfunction

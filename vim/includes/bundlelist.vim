@@ -21,25 +21,23 @@ NeoBundle 'othree/html5.vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'ap/vim-css-color'
 NeoBundle 'jnwhiteh/vim-golang'
+NeoBundle 'rodjek/vim-puppet.git'
+NeoBundle 'dag/vim-fish'
 
 " Completion
 NeoBundle 'ervandew/supertab'
 NeoBundle 'Shougo/neocomplcache.vim'
 
-" Bundle 'pangloss/vim-javascript'
-" Bundle 'kchmck/vim-coffee-script'
-" Bundle 'rodjek/vim-puppet.git'
-" Bundle 'jnwhiteh/vim-golang'
+" Code Display
+NeoBundle 'kien/rainbow_parentheses.vim'
+
+" Integrations
+NeoBundle 'tpope/vim-dispatch'
+
 " Bundle 'rstacruz/sparkup'
 " Bundle 'vim-indent-object'
 " Bundle 'Shougo/neocomplcache'
-" Bundle 'ervandew/supertab'
-" Bundle 'tpope/vim-fugitive'
 " Bundle 'ciaranm/detectindent'
-" Bundle 'terryma/vim-multiple-cursors'
-" Bundle 'Shougo/vimproc.vim'
 " Bundle 'eagletmt/ghcmod-vim'
 " Bundle 'eagletmt/neco-ghc'
-" Bundle 'JuliaLang/julia-vim'
 " Bundle 'tell-k/vim-autopep8'
-" Bundle 'dag/vim-fish'

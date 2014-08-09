@@ -6,12 +6,15 @@ html5.vim
 neobundle.vim
 neocomplcache.vim
 nerdcommenter
+rainbow_parentheses.vim
 supertab
 syntastic
 vim-airline
 vim-coffee-script
 vim-css-color
 vim-css3-syntax
+vim-dispatch
+vim-fish
 vim-fugitive
 vim-golang
 vim-haml
@@ -19,6 +22,7 @@ vim-indent-guides
 vim-javascript
 vim-markdown
 vim-multiple-cursors
+vim-puppet
 vim-ruby
 vim-virtualenv
 vimproc.vim

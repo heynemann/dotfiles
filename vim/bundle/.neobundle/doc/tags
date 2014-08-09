@@ -347,7 +347,9 @@ airline-whitespace	airline.txt	/*airline-whitespace*
 airline-writing-extensions	airline.txt	/*airline-writing-extensions*
 airline.txt	airline.txt	/*airline.txt*
 any-item-example	yankring.txt	/*any-item-example*
+b:dispatch	dispatch.txt	/*b:dispatch*
 b:neocomplcache_sources_list	neocomplcache.txt	/*b:neocomplcache_sources_list*
+b:start	dispatch.txt	/*b:start*
 buffer_complete	neocomplcache.txt	/*buffer_complete*
 ctrlp-changelog	ctrlp.txt	/*ctrlp-changelog*
 ctrlp-commands	ctrlp.txt	/*ctrlp-commands*
@@ -362,6 +364,16 @@ ctrlp-miscellaneous-configs	ctrlp.txt	/*ctrlp-miscellaneous-configs*
 ctrlp-options	ctrlp.txt	/*ctrlp-options*
 ctrlp.txt	ctrlp.txt	/*ctrlp.txt*
 dictionary_complete	neocomplcache.txt	/*dictionary_complete*
+dispatch	dispatch.txt	/*dispatch*
+dispatch-:Copen	dispatch.txt	/*dispatch-:Copen*
+dispatch-:Dispatch	dispatch.txt	/*dispatch-:Dispatch*
+dispatch-:FocusDispatch	dispatch.txt	/*dispatch-:FocusDispatch*
+dispatch-:Make	dispatch.txt	/*dispatch-:Make*
+dispatch-:Spawn	dispatch.txt	/*dispatch-:Spawn*
+dispatch-:Start	dispatch.txt	/*dispatch-:Start*
+dispatch-commands	dispatch.txt	/*dispatch-commands*
+dispatch-strategies	dispatch.txt	/*dispatch-strategies*
+dispatch.txt	dispatch.txt	/*dispatch.txt*
 filename_complete	neocomplcache.txt	/*filename_complete*
 filename_include	neocomplcache.txt	/*filename_include*
 filter-overrides	syntastic.txt	/*filter-overrides*
@@ -451,6 +463,7 @@ g:ctrlp_mru_files	ctrlp.txt	/*g:ctrlp_mru_files*
 g:ctrlp_open_multi	ctrlp.txt	/*g:ctrlp_open_multi*
 g:ctrlp_persistent_input	ctrlp.txt	/*g:ctrlp_persistent_input*
 g:ctrlp_regexp_search	ctrlp.txt	/*g:ctrlp_regexp_search*
+g:dispatch_compilers	dispatch.txt	/*g:dispatch_compilers*
 g:multi_cursor_exit_from_insert_mode	multiple_cursors.txt	/*g:multi_cursor_exit_from_insert_mode*
 g:multi_cursor_exit_from_visual_mode	multiple_cursors.txt	/*g:multi_cursor_exit_from_visual_mode*
 g:multi_cursor_next_key	multiple_cursors.txt	/*g:multi_cursor_next_key*
