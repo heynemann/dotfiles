@@ -8,3 +8,4 @@ vim/.vim/undo
 fish/fish_history
 fish/fishd.*
 fish/generated_completions
+vim/undo
