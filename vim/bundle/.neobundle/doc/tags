@@ -111,6 +111,9 @@
 :VimShellSendString	vimshell.txt	/*:VimShellSendString*
 :VimShellTab	vimshell.txt	/*:VimShellTab*
 :VimShellTerminal	vimshell.txt	/*:VimShellTerminal*
+:VirtualEnvActivate	virtualenv.txt	/*:VirtualEnvActivate*
+:VirtualEnvDeactivate	virtualenv.txt	/*:VirtualEnvDeactivate*
+:VirtualEnvList	virtualenv.txt	/*:VirtualEnvList*
 <Plug>(vimshell_append_end)	vimshell.txt	/*<Plug>(vimshell_append_end)*
 <Plug>(vimshell_append_enter)	vimshell.txt	/*<Plug>(vimshell_append_enter)*
 <Plug>(vimshell_change_line)	vimshell.txt	/*<Plug>(vimshell_change_line)*
@@ -337,6 +340,10 @@ g:vimshell_terminal_cursor	vimshell.txt	/*g:vimshell_terminal_cursor*
 g:vimshell_use_ckw	vimshell.txt	/*g:vimshell_use_ckw*
 g:vimshell_user_prompt	vimshell.txt	/*g:vimshell_user_prompt*
 g:vimshell_vimshrc_path	vimshell.txt	/*g:vimshell_vimshrc_path*
+g:virtualenv_auto_activate	virtualenv.txt	/*g:virtualenv_auto_activate*
+g:virtualenv_directory	virtualenv.txt	/*g:virtualenv_directory*
+g:virtualenv_loaded	virtualenv.txt	/*g:virtualenv_loaded*
+g:virtualenv_stl_format	virtualenv.txt	/*g:virtualenv_stl_format*
 i_<Plug>(vimshell_another_delete_backward_char)	vimshell.txt	/*i_<Plug>(vimshell_another_delete_backward_char)*
 i_<Plug>(vimshell_clear)	vimshell.txt	/*i_<Plug>(vimshell_clear)*
 i_<Plug>(vimshell_command_complete)	vimshell.txt	/*i_<Plug>(vimshell_command_complete)*
@@ -569,3 +576,9 @@ vimshell-unite-sources	vimshell.txt	/*vimshell-unite-sources*
 vimshell-usage	vimshell.txt	/*vimshell-usage*
 vimshell-variables	vimshell.txt	/*vimshell-variables*
 vimshell.txt	vimshell.txt	/*vimshell.txt*
+virtualenv	virtualenv.txt	/*virtualenv*
+virtualenv-author	virtualenv.txt	/*virtualenv-author*
+virtualenv-commands	virtualenv.txt	/*virtualenv-commands*
+virtualenv-configuration	virtualenv.txt	/*virtualenv-configuration*
+virtualenv.txt	virtualenv.txt	/*virtualenv.txt*
+virtualenv.vim	virtualenv.txt	/*virtualenv.vim*

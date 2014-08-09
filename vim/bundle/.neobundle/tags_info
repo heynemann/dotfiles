@@ -2,5 +2,6 @@ ctrlp.vim
 neobundle.vim
 vim-airline
 vim-fugitive
+vim-virtualenv
 vimproc.vim
 vimshell
