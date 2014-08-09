@@ -1,0 +1,24 @@
+#function _path_index
+#  if test $PATH[$argv[1]] = $argv[2]
+#    echo 'Path index correct'
+#  end
+#end
+
+set -l brew_paths /usr/local/bin /usr/bin /bin /usr/local/sbin /usr/sbin /sbin
+for brew_path in $brew_paths[-1..1]
+  if test -d $brew_path
+    set PATH $brew_path $PATH
+  end
+end
+
+set -l local_loop 7 #7 should be a variable derived from $brew_paths count + 1
+for i in (seq (count $PATH))[7..-1]
+  if contains $PATH[$local_loop] $brew_paths
+    set -e PATH[$local_loop]
+  else
+    set local_loop (math "$local_loop + 1")
+  end
+end
+
+set -e brew_paths
+set -e local_loop
