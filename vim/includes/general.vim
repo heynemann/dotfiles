@@ -133,3 +133,6 @@ endif
 set scrolloff=8         " Number of lines from vertical edge to start scrolling
 set sidescrolloff=15    " Number of cols from horizontal edge to start scrolling
 set sidescroll=1        " Number of cols to scroll at a time
+
+map <silent><F3> :NEXTCOLOR<cr>
+map <silent><F2> :PREVCOLOR<cr>
