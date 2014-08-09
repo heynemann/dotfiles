@@ -18,16 +18,13 @@ if has("gui_running")
   endif
 endif
 
-highlight NonText guifg=#4a4a59
-highlight SpecialKey guifg=#4a4a59
-
 set nocompatible
 
 set modelines=0
 
-" set tabstop=4
-" set shiftwidth=4
-" set softtabstop=4
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set number
 set expandtab
 set clipboard=unnamed
@@ -70,16 +67,8 @@ set incsearch
 set showmatch
 set hlsearch
 nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
 
-"set wrap
-"set textwidth=79
 set formatoptions=qrn1
-
-nmap <leader>l :set list!<CR>
-set list
-set listchars=tab:▸\ ,eol:¬
 
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -98,17 +87,7 @@ vnoremap <F1> <ESC>
 
 nnoremap ; :
 
-set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)
-
 map <F1> :tabnew<CR>
-
-function! TrimWhiteSpace()
-  :retab
-  %s/\s*$//
-  ''
-:endfunction
-
-nmap <silent> <Leader>n :call TrimWhiteSpace()<CR>
 
 nnoremap <C-j> :m+<CR>==
 nnoremap <C-k> :m-2<CR>==
@@ -120,14 +99,6 @@ vnoremap <C-k> :m-2<CR>gv=gv
 nmap <silent> q :lnext<CR>
 nmap <silent> Q :lprev<CR>
 nmap <silent> <Leader>q :Errors<CR>
-
-function! FourSpace()
-  setlocal tabstop=4
-  setlocal shiftwidth=4
-  setlocal softtabstop=4
-endfunction
-
-" au FileType python call FourSpace()
 
 " http://vimbits.com/bits/92
 nnoremap <silent> n nzz
@@ -162,14 +133,3 @@ endif
 set scrolloff=8         " Number of lines from vertical edge to start scrolling
 set sidescrolloff=15    " Number of cols from horizontal edge to start scrolling
 set sidescroll=1        " Number of cols to scroll at a time
-
-:autocmd BufReadPost * :DetectIndent
-
-:let g:detectindent_preferred_expandtab = 1
-
-augroup detect_indent
-  au BufEnter *     let g:detectindent_preferred_indent = 2
-  au BufEnter *.py  let g:detectindent_preferred_indent = 4
-augroup END
-
-let g:syntastic_python_checkers = ['pyflakes', 'pep8', 'pylint']
