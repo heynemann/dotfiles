@@ -32,4 +32,6 @@ set -g VIRTUALFISH_COMPAT_ALIASES # uncomment for virtualenvwrapper-style comman
 . $fish_function_path/global_requirements.fish
 . $fish_function_path/projects.fish
 
+#. $fish_path/oh-my-fish/oh-my-fish.fish
+
 setenv EDITOR vim
