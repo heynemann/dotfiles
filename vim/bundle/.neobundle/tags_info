@@ -2,6 +2,7 @@ Colour-Sampler-Pack
 ScrollColors
 ctrlp.vim
 neobundle.vim
+nerdcommenter
 vim-airline
 vim-fugitive
 vim-virtualenv
