@@ -50,7 +50,8 @@ function fish_prompt --description 'Write out the prompt'
 
 	echo
 
-	printf '↪ '
+	set_color a90c0c
+	printf ' ❄ '
 	set_color normal
 
 end
