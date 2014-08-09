@@ -43,6 +43,19 @@ function fish_prompt --description 'Write out the prompt'
 		set_color normal
 	end
 
+	# Show loadavg when too high
+	set -l load1m (uptime | grep -o '[0-9]\+\.[0-9]\+' | head -n1)
+	set -l load1m_test (math $load1m \* 100 / 1)
+	if test $load1m_test -gt 100
+			error load $load1m
+	end
+
+	# Show disk usage when low
+	set -l du (df / | tail -n1 | sed "s/  */ /g" | cut -d' ' -f 5 | cut -d'%' -f1)
+	if test $du -gt 80
+			error du $du%%
+	end
+
 	echo
 
 	printf '↪ '
