@@ -10,10 +10,16 @@ function fish_prompt --description 'Write out the prompt'
 		set -g __fish_whoami (whoami)
 	end
 
+    # icons from:
+	# http://panmental.de/symbols/info.htm
+
 	# Date
 	set_color 666666
 	printf '[⌚ %s] ' (date "+%H:%M:%S")
 	set_color normal
+
+    printf '%s' (get_virtualenv)
+    printf '%s' (get_rvm)
 
 	# PWD
 	set_color $fish_color_cwd
@@ -21,7 +27,7 @@ function fish_prompt --description 'Write out the prompt'
 	set_color 999999
 	printf '@'
 	set_color $fish_color_cwd
-	printf '%s' (pwd)
+	printf '%s' (prompt_pwd)
 	set_color normal
 
     printf '%s ' (__fish_git_prompt)
@@ -30,18 +36,6 @@ function fish_prompt --description 'Write out the prompt'
 	if not test $last_status -eq 0
 		set_color $fish_color_error
 	end
-
-	# http://panmental.de/symbols/info.htm
-	if test $VIRTUAL_ENV
-		set_color ff9000
-		printf "★%s★ " (basename $VIRTUAL_ENV)
-		set_color normal
-	end
-
-	set_color 67f867
-	set -l rvm (rvm-prompt v g)
-	printf "☠%s☠ " $rvm
-	set_color normal
 
 	echo
 
