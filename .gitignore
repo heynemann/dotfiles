@@ -9,3 +9,4 @@ fish/fish_history
 fish/fishd.*
 fish/generated_completions
 vim/undo
+vim/bundle/
