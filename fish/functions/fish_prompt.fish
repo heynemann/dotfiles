@@ -15,12 +15,6 @@ function fish_prompt --description 'Write out the prompt'
 	printf '[⌚ %s] ' (date "+%H:%M:%S")
 	set_color normal
 
-	# Show disk usage when low
-	set -l du (df / | tail -n1 | sed "s/  */ /g" | cut -d' ' -f 5 | cut -d'%' -f1)
-	if test $du -gt 80
-			error du $du%%
-	end
-
 	# PWD
 	set_color $fish_color_cwd
 	printf '%s' $__fish_whoami
@@ -30,16 +24,8 @@ function fish_prompt --description 'Write out the prompt'
 	printf '%s' (pwd)
 	set_color normal
 
-    printf '%s' (__fish_git_prompt)
-
-    set -l last_tag (git for-each-ref --sort committerdate --format '%(refname)' refs/tags | sed s/refs[/]tags[/]//g | tr -d ' ' | tail -1)
-    if test $last_tag
-        set_color 008aff
-        printf " ✦%s✦ " $last_tag
-        set_color normal
-    else
-        printf " "
-    end
+    printf '%s ' (__fish_git_prompt)
+    printf '%s' (get_last_tag)
 
 	if not test $last_status -eq 0
 		set_color $fish_color_error
