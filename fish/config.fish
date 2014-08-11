@@ -51,3 +51,7 @@ source $fish_function_path/projects.fish
 
 setenv EDITOR vim
 set fish_greeting
+
+set -x GOPATH $HOME/dev/go
+set -gx PATH $PATH /usr/local/Cellar/go/1.2.1/libexec/bin $GOPATH/bin
+set -gx PROJECT_HOME ~/dev
