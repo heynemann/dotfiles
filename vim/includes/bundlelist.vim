@@ -2,14 +2,11 @@
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'bling/vim-airline'
-NeoBundle 'jmcantrell/vim-virtualenv'
 NeoBundle 'Colour-Sampler-Pack'
 NeoBundle 'ScrollColors'
 NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'scrooloose/syntastic'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'terryma/vim-multiple-cursors'
-NeoBundle 'YankRing.vim'
 
 " Languages
 NeoBundle 'kchmck/vim-coffee-script'
@@ -23,6 +20,7 @@ NeoBundle 'ap/vim-css-color'
 NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle 'rodjek/vim-puppet.git'
 NeoBundle 'dag/vim-fish'
+NeoBundle 'klen/python-mode'
 
 " Completion
 NeoBundle 'ervandew/supertab'

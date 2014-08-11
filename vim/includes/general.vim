@@ -58,57 +58,14 @@ set title                " change the terminal's title
 set visualbell           " don't beep
 set noerrorbells         " don't beep
 
-nnoremap / /\v
-vnoremap / /\v
 set ignorecase
 set smartcase
 set gdefault
 set incsearch
 set showmatch
 set hlsearch
-nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
 
 set formatoptions=qrn1
-
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-nnoremap j gj
-nnoremap k gk
-
-inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
-vnoremap <F1> <ESC>
-
-nnoremap ; :
-
-map <F1> :tabnew<CR>
-
-nnoremap <C-j> :m+<CR>==
-nnoremap <C-k> :m-2<CR>==
-inoremap <C-j> <Esc>:m+<CR>==gi
-inoremap <C-k> <Esc>:m-2<CR>==gi
-vnoremap <C-j> :m'>+<CR>gv=gv
-vnoremap <C-k> :m-2<CR>gv=gv
-
-nmap <silent> q :lnext<CR>
-nmap <silent> Q :lprev<CR>
-nmap <silent> <Leader>q :Errors<CR>
-
-" http://vimbits.com/bits/92
-nnoremap <silent> n nzz
-nnoremap <silent> N Nzz
-nnoremap <silent> * *zz
-nnoremap <silent> # #zz
-nnoremap <silent> g* g*zz
-nnoremap <silent> g# g#zz
 
 if exists("+undofile")
   " undofile - This allows you to use undos after exiting and restarting
@@ -135,22 +92,3 @@ endif
 set scrolloff=8         " Number of lines from vertical edge to start scrolling
 set sidescrolloff=15    " Number of cols from horizontal edge to start scrolling
 set sidescroll=1        " Number of cols to scroll at a time
-
-map <silent><F3> :NEXTCOLOR<cr>
-map <silent><F2> :PREVCOLOR<cr>
-map <silent><F12> :cclose<cr>
-
-map <Leader>b :call InsertPdb()<CR>
-map <Leader>f :call InsertFocus()<CR>
-
-function! InsertPdb()
-  let trace = expand("import ipdb; ipdb.set_trace()")
-  execute "normal o".trace
-endfunction
-
-function! InsertFocus()
-  let trace = expand("from nose_focus import focus")
-  execute "normal o".trace
-  let trace = expand("@focus")
-  execute "normal o".trace
-endfunction
