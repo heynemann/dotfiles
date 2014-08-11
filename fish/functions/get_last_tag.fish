@@ -1,4 +1,4 @@
-function get_last_tag
+function get_last_tag --description="Gets the last tag chronologically"
     set -l repo_info (command git rev-parse --git-dir --is-inside-git-dir --is-bare-repository --is-inside-work-tree --short HEAD ^/dev/null)
 	test -n "$repo_info"; or return
     set -l last_tag (git for-each-ref --sort committerdate --format '%(refname)' refs/tags | sed s/refs[/]tags[/]//g | tr -d ' ' | tail -1)
