@@ -7,6 +7,7 @@ NeoBundle 'ScrollColors'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'bronson/vim-trailing-whitespace'
 
 " Languages
 NeoBundle 'kchmck/vim-coffee-script'

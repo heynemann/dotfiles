@@ -68,3 +68,6 @@ function! InsertFocus()
   let trace = expand("@focus")
   execute "normal o".trace
 endfunction
+
+" whitespace
+map <Leader>m :FixWhitespace<CR>
