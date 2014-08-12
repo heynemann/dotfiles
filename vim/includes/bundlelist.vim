@@ -21,7 +21,7 @@ NeoBundle 'ap/vim-css-color'
 NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle 'rodjek/vim-puppet.git'
 NeoBundle 'dag/vim-fish'
-NeoBundle 'klen/python-mode'
+NeoBundle 'klen/python-mode', '0.8.1'
 
 " Completion
 NeoBundle 'ervandew/supertab'
@@ -36,3 +36,5 @@ NeoBundle 'Lokaltog/vim-easymotion'
 
 " HTML Zen
 NeoBundle 'rstacruz/sparkup'
+
+NeoBundle 'Gist.vim', '7.1'
