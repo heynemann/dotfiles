@@ -49,9 +49,17 @@ source $fish_function_path/auto_activation.fish
 source $fish_function_path/global_requirements.fish
 source $fish_function_path/projects.fish
 
-setenv EDITOR vim
+setenv EDITOR mvim
 set fish_greeting
 
 set -x GOPATH $HOME/dev/go
 set -gx PATH $PATH /usr/local/Cellar/go/1.2.1/libexec/bin $GOPATH/bin
 set -gx PROJECT_HOME ~/dev
+
+set -x PIP_REQUIRE_VIRTUALENV 1
+set -x PIP_RESPECT_VIRTUALENV 1
+set -x PIP_LOG_FILE '~/.cache/pip-log.txt'
+set -x PIP_DOWNLOAD_CACHE '~/.cache/pip_cache'
+if test $HOMEBREW
+    set -x VIRTUALENVWRAPPER_PYTHON /usr/local/bin/python
+end
