@@ -13,11 +13,6 @@ function fish_prompt --description 'Write out the prompt'
     # icons from:
 	# http://panmental.de/symbols/info.htm
 
-	# Date
-	set_color 666666
-	printf '[⌚ %s] ' (date "+%H:%M:%S")
-	set_color normal
-
     printf '%s' (get_virtualenv)
     printf '%s' (get_rvm)
 
@@ -43,4 +38,11 @@ function fish_prompt --description 'Write out the prompt'
 	printf ' ❄ '
 	set_color normal
 
+end
+
+function fish_right_prompt -d "Write out the right prompt"
+	# Date
+	set_color 666666
+	printf '[⌚ %s]' (date "+%H:%M:%S")
+	set_color normal
 end

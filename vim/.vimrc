@@ -11,3 +11,12 @@ source ~/.vim/includes/pymode.vim
 
 " gotta be last thing because bundles must be loaded
 colorscheme molokai
+
+" Set up :make to use fish for syntax checking.
+autocmd FileType fish compiler fish
+
+" Set this to have long lines wrap inside comments.
+autocmd FileType fish setlocal textwidth=79
+
+" Enable folding of block structures in fish.
+autocmd FileType fish setlocal foldmethod=expr

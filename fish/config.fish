@@ -49,7 +49,7 @@ source $fish_function_path/auto_activation.fish
 source $fish_function_path/global_requirements.fish
 source $fish_function_path/projects.fish
 
-setenv EDITOR mvim
+setenv EDITOR vim
 set fish_greeting
 
 set -x GOPATH $HOME/dev/go
@@ -59,6 +59,9 @@ end
 if test -d /usr/lib/node_modules/bower/bin
     set -gx PATH /usr/lib/node_modules/bower/bin $PATH
 end
+set -gx PATH /usr/local/bin $PATH
+set -gx PATH /usr/local/sbin $PATH
+set -gx PATH $PATH /usr/local/Cellar/go/1.2.1/libexec/bin $GOPATH/bin
 set -gx PROJECT_HOME ~/dev
 
 set -x PIP_REQUIRE_VIRTUALENV 1
