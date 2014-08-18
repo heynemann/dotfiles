@@ -53,7 +53,12 @@ setenv EDITOR mvim
 set fish_greeting
 
 set -x GOPATH $HOME/dev/go
-set -gx PATH $PATH /usr/local/Cellar/go/1.2.1/libexec/bin $GOPATH/bin
+if test -d /usr/local/Cellar/go/1.2.1/libexec/bin
+    set -gx PATH $PATH /usr/local/Cellar/go/1.2.1/libexec/bin $GOPATH/bin
+end
+if test -d /usr/lib/node_modules/bower/bin
+    set -gx PATH /usr/lib/node_modules/bower/bin $PATH
+end
 set -gx PROJECT_HOME ~/dev
 
 set -x PIP_REQUIRE_VIRTUALENV 1
@@ -63,3 +68,7 @@ set -x PIP_DOWNLOAD_CACHE '~/.cache/pip_cache'
 if test $HOMEBREW
     set -x VIRTUALENVWRAPPER_PYTHON /usr/local/bin/python
 end
+
+set -gx fish_function_path $fish_function_path ~/.config/fish/bundles/functions/
+
+fish_bundle "heynemann/git-support-fish-bundle"
