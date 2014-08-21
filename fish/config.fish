@@ -1,5 +1,6 @@
 # Path to your oh-my-fish.
 set fish_path $HOME/.config/fish
+set -gx fish_function_path ~/.config/fish/functions /etc/fish/functions /usr/share/fish/functions
 
 # Theme
 set fish_theme robbyrussell
@@ -43,11 +44,11 @@ set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
 set -g __fish_git_prompt_color_cleanstate green bold
 
 set -g VIRTUALFISH_COMPAT_ALIASES # uncomment for virtualenvwrapper-style commands
-source $fish_function_path/virtual.fish
+source $fish_path/functions/virtual.fish
 # optional plugins
-source $fish_function_path/auto_activation.fish
-source $fish_function_path/global_requirements.fish
-source $fish_function_path/projects.fish
+source $fish_path/functions/auto_activation.fish
+source $fish_path/functions/global_requirements.fish
+source $fish_path/functions/projects.fish
 
 setenv EDITOR vim
 set fish_greeting
@@ -72,6 +73,5 @@ if test $HOMEBREW
     set -x VIRTUALENVWRAPPER_PYTHON /usr/local/bin/python
 end
 
-set -gx fish_function_path $fish_function_path ~/.config/fish/bundles/functions/
-
+fish_bundles_init
 fish_bundle "heynemann/git-support-fish-bundle"
