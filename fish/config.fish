@@ -1,6 +1,7 @@
 # Path to your oh-my-fish.
 set fish_path $HOME/.config/fish
 set -gx fish_function_path ~/.config/fish/functions /etc/fish/functions /usr/share/fish/functions
+set -gx fish_function_path $fish_function_path /usr/local/Cellar/fish/2.1.0/etc/fish/functions /usr/local/Cellar/fish/2.1.0/share/fish/functions
 
 # Theme
 set fish_theme robbyrussell
