@@ -25,6 +25,9 @@ set modelines=0
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set foldmethod=syntax
+set foldlevel=20
+set foldlevelstart=20
 set number
 set expandtab
 set clipboard=unnamed

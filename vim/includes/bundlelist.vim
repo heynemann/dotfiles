@@ -22,6 +22,8 @@ NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle 'rodjek/vim-puppet.git'
 NeoBundle 'dag/vim-fish'
 NeoBundle 'klen/python-mode', '0.8.1'
+NeoBundle 'klen/python-mode', '0.8.1'
+NeoBundle 'scrooloose/syntastic'
 
 " Completion
 NeoBundle 'ervandew/supertab'
