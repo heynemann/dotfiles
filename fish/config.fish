@@ -44,12 +44,12 @@ set -g __fish_git_prompt_color_invalidstate red
 set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
 set -g __fish_git_prompt_color_cleanstate green bold
 
-set -g VIRTUALFISH_COMPAT_ALIASES # uncomment for virtualenvwrapper-style commands
-source $fish_path/functions/virtual.fish
-# optional plugins
-source $fish_path/functions/auto_activation.fish
-source $fish_path/functions/global_requirements.fish
-source $fish_path/functions/projects.fish
+#set -g VIRTUALFISH_COMPAT_ALIASES # uncomment for virtualenvwrapper-style commands
+#source $fish_path/functions/virtual.fish
+## optional plugins
+#source $fish_path/functions/auto_activation.fish
+#source $fish_path/functions/global_requirements.fish
+#source $fish_path/functions/projects.fish
 
 setenv EDITOR vim
 set fish_greeting
