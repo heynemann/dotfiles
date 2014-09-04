@@ -21,3 +21,5 @@ autocmd FileType fish setlocal textwidth=79
 
 " Enable folding of block structures in fish.
 autocmd FileType fish setlocal foldmethod=expr
+
+:hi TabLineFill ctermbg=black
