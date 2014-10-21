@@ -14,7 +14,7 @@ function fish_prompt --description 'Write out the prompt'
 	# http://panmental.de/symbols/info.htm
 
     printf '%s' (get_virtualenv)
-    printf '%s' (get_rvm)
+    #printf '%s' (get_rvm)
 
 	# PWD
 	set_color $fish_color_cwd
@@ -22,11 +22,11 @@ function fish_prompt --description 'Write out the prompt'
 	set_color 999999
 	printf '@'
 	set_color $fish_color_cwd
-    printf '%s' (prompt_pwd)
+	#printf '%s' (prompt_pwd)
 	set_color normal
 
-    printf '%s ' (__fish_git_prompt)
-    printf '%s' (get_last_tag)
+    #printf '%s ' (__fish_git_prompt)
+    #printf '%s' (get_last_tag)
 
 	if not test $last_status -eq 0
 		set_color $fish_color_error

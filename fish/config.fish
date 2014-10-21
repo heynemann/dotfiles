@@ -1,21 +1,7 @@
-# Path to your oh-my-fish.
 set fish_path $HOME/.config/fish
-set -gx fish_function_path ~/.config/fish/functions /etc/fish/functions /usr/share/fish/functions
-set -gx fish_function_path $fish_function_path /usr/local/Cellar/fish/2.1.0/etc/fish/functions /usr/local/Cellar/fish/2.1.0/share/fish/functions
 
 # Theme
 set fish_theme robbyrussell
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
-# Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
-# Example format: set fish_plugins autojump bundler
-set fish_plugins rvm python
-
-# Path to your custom folder (default path is $FISH/custom)
-#set fish_custom $HOME/dotfiles/oh-my-fish
-
-# Load oh-my-fish configuration.
-. $fish_path/oh-my-fish.fish
 
 function fish_title;end
 
@@ -44,29 +30,38 @@ set -g __fish_git_prompt_color_invalidstate red
 set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
 set -g __fish_git_prompt_color_cleanstate green bold
 
-#set -g VIRTUALFISH_COMPAT_ALIASES # uncomment for virtualenvwrapper-style commands
-#source $fish_path/functions/virtual.fish
-## optional plugins
-#source $fish_path/functions/auto_activation.fish
-#source $fish_path/functions/global_requirements.fish
-#source $fish_path/functions/projects.fish
+# uncomment for virtualenvwrapper-style commands
+set -g VIRTUALFISH_COMPAT_ALIASES
+source $fish_path/functions/virtual.fish
+# optional plugins
+source $fish_path/functions/auto_activation.fish
+source $fish_path/functions/global_requirements.fish
+source $fish_path/functions/projects.fish
 
-setenv EDITOR vim
+# setenv EDITOR vim
 set fish_greeting
 
 set -x GOPATH $HOME/dev/go
-if test -d /usr/local/Cellar/go/1.2.1/libexec/bin
-    set -gx PATH $PATH /usr/local/Cellar/go/1.2.1/libexec/bin $GOPATH/bin
+if test -d /usr/local/Cellar/go/1.3.3/libexec/bin
+    set -gx PATH $PATH /usr/local/Cellar/go/1.3.3/libexec/bin $GOPATH/bin
 end
+
+# node.js
 if test -d /usr/lib/node_modules/bower/bin
     set -gx PATH /usr/lib/node_modules/bower/bin $PATH
 end
+
 set -gx PATH /usr/local/bin $PATH
-set -gx PATH /usr/local/sbin $PATH
-set -gx PATH $PATH /usr/local/Cellar/go/1.2.1/libexec/bin $GOPATH/bin
+
+# rvm path
+set -gx PATH $PATH $HOME/.rvm/bin
+
+# golang path
+set -gx PATH $PATH /usr/local/Cellar/go/1.3.3/libexec/bin $GOPATH/bin
 set -gx PROJECT_HOME ~/dev
 
-set -x PIP_REQUIRE_VIRTUALENV 1
+# pip
+set -x PIP_REQUIRE_VIRTUALENV 0
 set -x PIP_RESPECT_VIRTUALENV 1
 set -x PIP_LOG_FILE '~/.cache/pip-log.txt'
 set -x PIP_DOWNLOAD_CACHE '~/.cache/pip_cache'
