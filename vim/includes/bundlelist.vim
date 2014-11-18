@@ -24,6 +24,16 @@ NeoBundle 'dag/vim-fish'
 NeoBundle 'klen/python-mode', '0.8.1'
 NeoBundle 'scrooloose/syntastic'
 
+" C++
+NeoBundle 'Valloric/YouCompleteMe', {
+      \ 'build' : {
+      \     'mac' : './install.sh',
+      \     'unix' : './install.sh --clang-completer',
+      \    },
+      \ }
+NeoBundle 'rhysd/vim-clang-format'
+NeoBundle 'kana/vim-operator-user'
+
 " Completion
 NeoBundle 'ervandew/supertab'
 NeoBundle 'Shougo/neocomplcache.vim'
@@ -39,3 +49,5 @@ NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'rstacruz/sparkup'
 
 NeoBundle 'Gist.vim', '7.1'
+
+

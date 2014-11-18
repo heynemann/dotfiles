@@ -31,6 +31,8 @@ set foldlevelstart=20
 set number
 set expandtab
 set clipboard=unnamed
+set exrc
+set secure
 
 let mapleader = ","
 

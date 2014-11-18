@@ -9,6 +9,7 @@ source ~/.vim/includes/dispatch.vim
 source ~/.vim/includes/easymotion.vim
 source ~/.vim/includes/pymode.vim
 source ~/.vim/includes/syntastic.vim
+source ~/.vim/includes/clangformat.vim
 
 " gotta be last thing because bundles must be loaded
 colorscheme molokai
