@@ -25,12 +25,12 @@ NeoBundle 'klen/python-mode', '0.8.1'
 NeoBundle 'scrooloose/syntastic'
 
 " C++
-NeoBundle 'Valloric/YouCompleteMe', {
-      \ 'build' : {
-      \     'mac' : './install.sh',
-      \     'unix' : './install.sh --clang-completer',
-      \    },
-      \ }
+"NeoBundle 'Valloric/YouCompleteMe', {
+      "\ 'build' : {
+      "\     'mac' : './install.sh',
+      "\     'unix' : './install.sh --clang-completer',
+      "\    },
+      "\ }
 NeoBundle 'rhysd/vim-clang-format'
 NeoBundle 'kana/vim-operator-user'
 
