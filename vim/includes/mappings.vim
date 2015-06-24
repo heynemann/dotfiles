@@ -71,4 +71,4 @@ endfunction
 
 " whitespace
 map <Leader>m :FixWhitespace<CR>
-map <Leader><Leader>b :1,100bd<CR>
+map <Leader><Leader>b :bufdo bd<CR>
