@@ -1,0 +1,13 @@
+custom/*
+plugins/*
+themes/*
+
+.DS_Store
+*.pyc
+*~
+*.sw?
+
+plugins/ta/data/*
+
+# Track oh-my-fish plugin
+!plugins/omf/

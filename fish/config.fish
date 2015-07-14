@@ -70,7 +70,9 @@ if test $HOMEBREW
 end
 
 fish_bundles_init
+
 fish_bundle "heynemann/git-support-fish-bundle"
+
 fish_bundle "fish-bundles/virtual-fish-bundle"
 
 set -x LC_ALL "en_US.UTF-8"

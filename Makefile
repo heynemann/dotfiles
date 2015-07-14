@@ -164,7 +164,7 @@ neobundle:
 update-virtual-fish:
 	@rm -rf /tmp/virtualfish-master
 	@cd /tmp && wget https://github.com/adambrenecki/virtualfish/archive/master.zip -O virtualfish.zip && unzip virtualfish.zip
-	@cp /tmp/virtualfish-master/*.fish ./fish/functions/
+	@cp /tmp/virtualfish-master/virtualfish/*.fish ./fish/functions/
 
 update-oh-my-fish:
 	@rm -rf /tmp/oh-my-fish*
