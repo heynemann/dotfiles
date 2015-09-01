@@ -11,6 +11,10 @@ source ~/.vim/includes/pymode.vim
 source ~/.vim/includes/syntastic.vim
 source ~/.vim/includes/clangformat.vim
 
+if !empty($LARGEFONT)
+    source ~/.vim/includes/largefont.vim
+endif
+
 " gotta be last thing because bundles must be loaded
 colorscheme molokai
 
