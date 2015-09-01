@@ -140,7 +140,7 @@ postgresql:
 symlinks:
 	@mkdir -p ~/.virtualenvs
 	@rm -rf ~/.vim
-	@ln -sf `pwd`/vim/.vim ~/.vim
+	@ln -sf `pwd`/vim ~/.vim
 	@ln -sf `pwd`/vim/.vimrc ~/.vimrc
 	@ln -sf `pwd`/.bashrc ~/.bashrc
 	@ln -sf `pwd`/.bash_profile ~/.bash_profile
