@@ -69,11 +69,18 @@ if test $HOMEBREW
     set -x VIRTUALENVWRAPPER_PYTHON /usr/local/bin/python
 end
 
-fish_bundles_init
+if test -d ~/.basher
+  set basher ~/.basher/bin
+end
+set -gx PATH $basher $PATH
 
-fish_bundle "heynemann/git-support-fish-bundle"
+status --is-interactive; and . (basher init -|psub)
 
-fish_bundle "fish-bundles/virtual-fish-bundle"
+# fish_bundles_init
+
+# fish_bundle "heynemann/git-support-fish-bundle"
+
+# fish_bundle "fish-bundles/virtual-fish-bundle"
 
 set -x LC_ALL "en_US.UTF-8"
 set -x LANG "en_US.UTF-8"

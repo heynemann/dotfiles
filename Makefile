@@ -174,3 +174,15 @@ update-oh-my-fish:
 fishlinks: update-virtual-fish update-oh-my-fish
 	@rm -rf ~/.config/fish/
 	@ln -s ~/dev/dotfiles/fish ~/.config/fish
+
+basher:
+	@if [ ! -d ~/.basher ]; then git clone https://github.com/basherpm/basher.git ~/.basher ; fi
+	@cd ~/.basher && git reset --hard && git pull
+
+fish-packages:
+	@basher install heynemann/git-support-fish-bundle
+	@basher install fish-bundles/virtual-fish-bundle
+
+docker:
+	@if [ ! -f /usr/bin/docker ]; then curl -sSL https://get.docker.com/ | sh ~/.basher ; fi
+	@basher install bripkens/dock
