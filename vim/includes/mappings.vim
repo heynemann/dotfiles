@@ -63,9 +63,9 @@ map <silent><F12> :cclose<cr>
 " nose focus
 map <Leader>f :call InsertFocus()<CR>
 function! InsertFocus()
-  let trace = expand("from nose_focus import focus")
+  let trace = expand("from nose_focus import focus  # NOQA")
   execute "normal o".trace
-  let trace = expand("@focus")
+  let trace = expand("@focus  # NOQA")
   execute "normal o".trace
 endfunction
 

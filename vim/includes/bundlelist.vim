@@ -51,4 +51,12 @@ NeoBundle 'rstacruz/sparkup'
 
 NeoBundle 'Gist.vim', '7.1'
 
+" Automatically detect indentation
+NeoBundle 'tpope/vim-sleuth'
+
+" Read vimrc inside folder
+NeoBundle 'embear/vim-localvimrc'
+
+" Yank Ring
+NeoBundle 'vim-scripts/YankRing.vim'
 
