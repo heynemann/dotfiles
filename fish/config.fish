@@ -30,6 +30,13 @@ set -g __fish_git_prompt_color_invalidstate red
 set -g __fish_git_prompt_color_untrackedfiles $fish_color_normal
 set -g __fish_git_prompt_color_cleanstate green bold
 
+if test -d ~/.basher
+  set basher ~/.basher/bin
+  set -gx PATH $basher $PATH
+  status --is-interactive; and . (basher init -|psub)
+  set -gx fish_function_path $fish_function_path ~/.basher/cellar/bin/
+end
+
 # uncomment for virtualenvwrapper-style commands
 set -g VIRTUALFISH_COMPAT_ALIASES
 source $fish_path/functions/virtual.fish
@@ -67,15 +74,6 @@ set -x PIP_LOG_FILE '~/.cache/pip-log.txt'
 set -x PIP_DOWNLOAD_CACHE '~/.cache/pip_cache'
 if test $HOMEBREW
     set -x VIRTUALENVWRAPPER_PYTHON /usr/local/bin/python
-end
-
-set -x LC_ALL "en_US.UTF-8"
-set -x LANG "en_US.UTF-8"
-
-if test -d ~/.basher
-  set basher ~/.basher/bin
-  set -gx PATH $basher $PATH
-  status --is-interactive; and . (basher init -|psub)
 end
 
 set -x LC_ALL "en_US.UTF-8"
