@@ -1,1 +1,0 @@
-style_html(%s);
