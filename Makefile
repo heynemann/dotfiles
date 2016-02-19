@@ -184,3 +184,6 @@ fish-packages:
 docker:
 	@if [ ! -f /usr/bin/docker ]; then curl -sSL https://get.docker.com/ | sh ~/.basher ; fi
 	@basher install bripkens/dock
+
+compile-ycm:
+	@cd vim/bundle/YouCompleteMe/ && ./install.py --gocode-complete --tern-completer

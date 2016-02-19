@@ -16,3 +16,12 @@ let g:ctrlp_custom_ignore = {
     \ }
 
 let g:ctrlp_max_height = 30
+
+" The Silver Searcher
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif

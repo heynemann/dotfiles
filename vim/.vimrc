@@ -2,18 +2,11 @@ set shell=/bin/bash
 source ~/.vim/includes/general.vim
 source ~/.vim/includes/mappings.vim
 source ~/.vim/includes/neobundle.vim
+source ~/.vim/includes/neocomplete.vim
 source ~/.vim/includes/ctrlp.vim
 source ~/.vim/includes/airline.vim
-source ~/.vim/includes/neocomplcache.vim
-source ~/.vim/includes/dispatch.vim
-source ~/.vim/includes/easymotion.vim
-source ~/.vim/includes/pymode.vim
 source ~/.vim/includes/syntastic.vim
-source ~/.vim/includes/clangformat.vim
-
-if !empty($LARGEFONT)
-    source ~/.vim/includes/largefont.vim
-endif
+source ~/.vim/includes/snippets.vim
 
 " gotta be last thing because bundles must be loaded
 colorscheme molokai
@@ -26,5 +19,3 @@ autocmd FileType fish setlocal textwidth=79
 
 " Enable folding of block structures in fish.
 autocmd FileType fish setlocal foldmethod=expr
-
-:hi TabLineFill ctermbg=black
