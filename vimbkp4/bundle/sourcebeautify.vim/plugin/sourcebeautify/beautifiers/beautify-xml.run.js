@@ -1,1 +1,0 @@
-vkbeautify.xml(%s);
