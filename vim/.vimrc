@@ -6,7 +6,6 @@ source ~/.vim/includes/neocomplete.vim
 source ~/.vim/includes/ctrlp.vim
 source ~/.vim/includes/airline.vim
 source ~/.vim/includes/syntastic.vim
-source ~/.vim/includes/snippets.vim
 
 " gotta be last thing because bundles must be loaded
 colorscheme molokai
