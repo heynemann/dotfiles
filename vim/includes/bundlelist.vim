@@ -15,6 +15,7 @@ NeoBundle 'jelera/vim-javascript-syntax'
 
 " Integrations
 NeoBundle 'easymotion/vim-easymotion'
+NeoBundle 'Shougo/vimshell.vim'
 
 " Automatically detect indentation
 NeoBundle 'tpope/vim-sleuth'
