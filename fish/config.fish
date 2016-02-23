@@ -3,7 +3,13 @@ set fish_path $HOME/.config/fish
 # Theme
 set fish_theme robbyrussell
 
-function fish_title;end
+function fish_title
+    if [ $_ = 'fish' ]
+        echo (prompt_pwd)
+    else
+        echo $_
+    end
+end
 
 set fish_color_error ff8a00
 
@@ -58,10 +64,11 @@ if test -d /usr/lib/node_modules/bower/bin
     set -gx PATH /usr/lib/node_modules/bower/bin $PATH
 end
 
-set -gx PATH /usr/local/bin $PATH
+if test -d /usr/lib/node_modules
+    set -gx NODE_PATH /usr/lib/node_modules
+end
 
-# rvm path
-set -gx PATH $PATH $HOME/.rvm/bin
+set -gx PATH /usr/local/bin $PATH
 
 # golang path
 set -gx PATH $PATH /usr/local/Cellar/go/1.3.3/libexec/bin $GOPATH/bin
@@ -79,3 +86,10 @@ end
 set -x LC_ALL "en_US.UTF-8"
 set -x LANG "en_US.UTF-8"
 set -x LARGEFONT "1"
+
+# rvm path
+set -gx PATH $HOME/.rvm/bin $PATH
+rvm use 2.2.1
+
+# LATEX
+set -gx PATH /usr/local/texlive/2015/bin/x86_64-linux $PATH

@@ -203,9 +203,7 @@ export PATH=$PATH:/usr/lib/ruby/gems/1.8/gems
 export PATH=$HOME/local/bin:$PATH
 export PATH=/usr/local/bin/:$PATH
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-source ~/.rvm/scripts/rvm
 
 PROMPT_COMMAND="ps1_update"
 
@@ -225,3 +223,6 @@ export PATH=$HOME/.cabal/bin:$PATH
 
 alias workon='pyenv activate'
 alias mkvirtualenv='pyenv virtualenv'
+
+PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
+source ~/.rvm/scripts/rvm
