@@ -1,14 +1,28 @@
 "font size - compatible with status bar
-set guifont=Inconsolata\ for\ Powerline:h17
-
-"This option controls the size of the vim control.
+"fuopt option controls the size of the vim control.
 "maxvert - When entering fullscreen, 'lines' is set to the maximum number of lines fitting on the screen in fullscreen mode.
 "          When leaving fullscreen, if 'lines' is still equal to the maximized number of lines, it is restored to the value
 "          it had before entering fullscreen.
 "maxhorz - When entering fullscreen, 'columns' is set to the maximum number of columns fitting on the screen in fullscreen
 "          mode. When leaving fullscreen, if 'columns' is still equal to the maximized number of columns, it is restored
 "          to the value it had before entering fullscreen.
-set fuopt=maxvert,maxhorz
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ for\ Powerline\ 17
+  elseif has("gui_photon")
+    set guifont=Inconsolata\ for\ Powerline:s17
+    set fuopt=maxvert,maxhorz
+  elseif has("gui_kde")
+    set guifont=Inconsolata\ for\ Powerline/17/-1/5/50/0/0/0/1/0
+    set fuopt=maxvert,maxhorz
+  elseif has("x11")
+    set guifont=-*-inconsolata-medium-r-normal-*-*-170-*-*-m-*-*
+    set fuopt=maxvert,maxhorz
+  else
+    set guifont=Inconsolata\ for\ Powerline:h17
+    set fuopt=maxvert,maxhorz
+  endif
+endif
 
 "About compatible - This option has the effect of making Vim either more Vi-compatible, or
 "    make Vim behave in a more useful way.
