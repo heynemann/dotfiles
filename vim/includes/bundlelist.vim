@@ -12,6 +12,7 @@ NeoBundle 'Shougo/neocomplete.vim'
 
 " Languages
 NeoBundle 'jelera/vim-javascript-syntax'
+NeoBundle 'mxw/vim-jsx'
 
 " Integrations
 NeoBundle 'easymotion/vim-easymotion'
@@ -22,3 +23,6 @@ NeoBundle 'tpope/vim-sleuth'
 
 " Multi-Edit
 NeoBundle 'terryma/vim-multiple-cursors'
+
+" Golang
+NeoBundle 'fatih/vim-go'
