@@ -54,7 +54,7 @@ source $fish_path/functions/projects.fish
 # setenv EDITOR vim
 set fish_greeting
 
-set -x GOPATH $HOME/dev/go
+set -x GOPATH $HOME/Dropbox/dev/go
 if test -d /usr/local/Cellar/go/1.3.3/libexec/bin
     set -gx PATH $PATH /usr/local/Cellar/go/1.3.3/libexec/bin $GOPATH/bin
 end
@@ -88,8 +88,7 @@ set -x LANG "en_US.UTF-8"
 set -x LARGEFONT "1"
 
 # rvm path
-set -gx PATH $HOME/.rvm/bin $PATH
-rvm use 2.2.1
+rvm default
 
 # LATEX
 set -gx PATH /usr/local/texlive/2015/bin/x86_64-linux $PATH

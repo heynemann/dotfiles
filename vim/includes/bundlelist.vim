@@ -14,6 +14,9 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'jelera/vim-javascript-syntax'
 NeoBundle 'mxw/vim-jsx'
 
+" Go
+NeoBundle 'fatih/vim-go'
+
 " Integrations
 NeoBundle 'easymotion/vim-easymotion'
 NeoBundle 'Shougo/vimshell.vim'
