@@ -27,5 +27,5 @@ NeoBundle 'tpope/vim-sleuth'
 " Multi-Edit
 NeoBundle 'terryma/vim-multiple-cursors'
 
-" Golang
-NeoBundle 'fatih/vim-go'
+" JS
+NeoBundle 'pangloss/vim-javascript'
