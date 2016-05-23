@@ -7,6 +7,7 @@ source ~/.vim/includes/ctrlp.vim
 source ~/.vim/includes/airline.vim
 source ~/.vim/includes/syntastic.vim
 source ~/.vim/includes/govim.vim
+source ~/.vim/includes/js.vim
 
 " gotta be last thing because bundles must be loaded
 colorscheme molokai
