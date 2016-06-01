@@ -54,10 +54,16 @@ source $fish_path/functions/projects.fish
 # setenv EDITOR vim
 set fish_greeting
 
-set -x GOPATH $HOME/Dropbox/dev/go
-if test -d /usr/local/Cellar/go/1.3.3/libexec/bin
-    set -gx PATH $PATH /usr/local/Cellar/go/1.3.3/libexec/bin $GOPATH/bin
+if test -d $HOME/Dropbox/dev/go
+  set -x GOPATH $HOME/Dropbox/dev/go
 end
+if test -d $HOME/dev/go
+  set -x GOPATH $HOME/dev/go
+end
+if test -d /usr/local/Cellar/go/1.3.3/libexec/bin
+    set -gx PATH $PATH /usr/local/Cellar/go/1.3.3/libexec/bin
+end
+set -gx PATH $PATH $GOPATH/bin
 
 # node.js
 if test -d /usr/lib/node_modules/bower/bin
