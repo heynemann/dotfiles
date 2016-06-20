@@ -56,9 +56,10 @@ set fish_greeting
 
 if test -d $HOME/Dropbox/dev/go
   set -x GOPATH $HOME/Dropbox/dev/go
-end
-if test -d $HOME/dev/go
-  set -x GOPATH $HOME/dev/go
+else
+    if test -d $HOME/dev/go
+      set -x GOPATH $HOME/dev/go
+    end
 end
 if test -d /usr/local/Cellar/go/1.3.3/libexec/bin
     set -gx PATH $PATH /usr/local/Cellar/go/1.3.3/libexec/bin
@@ -77,7 +78,7 @@ end
 set -gx PATH /usr/local/bin $PATH
 
 # golang path
-set -gx PATH $PATH /usr/local/Cellar/go/1.3.3/libexec/bin $GOPATH/bin
+set -gx PATH $PATH /usr/local/Cellar/go/*/libexec/bin $GOPATH/bin
 set -gx PROJECT_HOME ~/dev
 
 # pip
@@ -94,7 +95,9 @@ set -x LANG "en_US.UTF-8"
 set -x LARGEFONT "1"
 
 # rvm path
-rvm default
+#rvm default
 
 # LATEX
-set -gx PATH /usr/local/texlive/2015/bin/x86_64-linux $PATH
+if test -d /usr/local/texlive/2015/bin
+    set -gx PATH /usr/local/texlive/2015/bin/x86_64-linux $PATH
+end

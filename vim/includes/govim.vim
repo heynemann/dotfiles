@@ -19,3 +19,7 @@ let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
 "au Filetype go nnoremap <leader>t :tab split <CR>:exe "GoDef"<CR>
 
 "au Filetype go nnoremap <leader>r :GoRun %<CR>
+let g:go_auto_type_info = 0
+let g:go_doc_keywordprg_enabled = 0
+
+:autocmd BufWritePre *.go :pclose
