@@ -22,3 +22,7 @@ NeoBundle 'terryma/vim-multiple-cursors'
 
 " JS
 NeoBundle 'pangloss/vim-javascript'
+
+" Elixir
+NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'slashmili/alchemist.vim'
