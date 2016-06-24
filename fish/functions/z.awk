@@ -1,1 +1,1 @@
-/Users/heynemann/.config/fisherman/z/functions/z.awk
+/home/heynemann/.config/fisherman/z/functions/z.awk

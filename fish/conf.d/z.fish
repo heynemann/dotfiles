@@ -1,1 +1,1 @@
-/Users/heynemann/.config/fisherman/z/conf.d/z.fish
+/home/heynemann/.config/fisherman/z/conf.d/z.fish
