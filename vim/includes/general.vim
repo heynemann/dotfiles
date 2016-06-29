@@ -39,9 +39,9 @@ set shiftwidth=4
 set softtabstop=4
 
 "Set fold to syntax
-set foldmethod=syntax
-set foldlevel=20
-set foldlevelstart=20
+"set foldmethod=syntax
+"set foldlevel=20
+"set foldlevelstart=20
 
 "Display line numbers
 set number
