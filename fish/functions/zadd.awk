@@ -1,1 +1,1 @@
-/home/heynemann/.config/fisherman/z/functions/zadd.awk
+/Users/heynemann/.config/fisherman/z/functions/zadd.awk

@@ -1,1 +1,1 @@
-/home/heynemann/.config/fisherman/z/functions/__z_add.fish
+/Users/heynemann/.config/fisherman/z/functions/__z_add.fish
