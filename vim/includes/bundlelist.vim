@@ -24,5 +24,8 @@ NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'pangloss/vim-javascript'
 
 " Elixir
-"NeoBundle 'elixir-lang/vim-elixir'
-"NeoBundle 'slashmili/alchemist.vim'
+NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'slashmili/alchemist.vim'
+
+NeoBundle 'tpope/vim-sleuth'
+NeoBundle 'fholgado/minibufexpl.vim'
