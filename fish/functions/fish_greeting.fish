@@ -1,1 +1,1 @@
-/Users/heynemann/.config/fisherman/bobthefish/fish_greeting.fish
+/home/heynemann/.config/fisherman/bobthefish/fish_greeting.fish

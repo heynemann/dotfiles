@@ -1,1 +1,1 @@
-/Users/heynemann/.config/fisherman/bobthefish/fish_prompt.fish
+/home/heynemann/.config/fisherman/bobthefish/fish_prompt.fish
