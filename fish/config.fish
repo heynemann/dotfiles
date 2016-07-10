@@ -101,3 +101,7 @@ set -x LARGEFONT "1"
 if test -d /usr/local/texlive/2015/bin
     set -gx PATH /usr/local/texlive/2015/bin/x86_64-linux $PATH
 end
+
+for file in ~/.config/fish/conf.d/*.fish
+    source $file
+end

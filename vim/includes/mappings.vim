@@ -131,3 +131,42 @@ onoremap <silent> [l :call NextIndent(0, 0, 0, 1)<CR>
 onoremap <silent> ]l :call NextIndent(0, 1, 0, 1)<CR>
 onoremap <silent> [L :call NextIndent(1, 0, 1, 1)<CR>
 onoremap <silent> ]L :call NextIndent(1, 1, 1, 1)<CR>
+
+" MINI Buf Expl
+map <Leader>b :MBEToggle<cr>
+map <Leader>h :MBEbp<cr>
+map <Leader>l :MBEbn<cr>
+map <Leader>d :MBEbd<cr>
+let g:miniBufExplBRSplit = 0
+let g:miniBufExplAutoStart = 0
+
+nmap <F5> :leftabove  vnew<CR>
+nmap <F6> :leftabove  new<CR>
+nmap <F7> :rightbelow new<CR>
+nmap <F8> :rightbelow vnew<CR>
+
+nnoremap <left> <C-W><C-H>
+nnoremap <right> <C-W><C-L>
+nnoremap <down> <C-W><C-J>
+nnoremap <up> <C-W><C-K>
+
+set nofoldenable    " disable folding
+
+nnoremap <F10> :call MaximizeToggle()<CR>
+
+function! MaximizeToggle()
+  if exists("s:maximize_session")
+    exec "source " . s:maximize_session
+    call delete(s:maximize_session)
+    unlet s:maximize_session
+    let &hidden=s:maximize_hidden_save
+    unlet s:maximize_hidden_save
+  else
+    let s:maximize_hidden_save = &hidden
+    let s:maximize_session = tempname()
+    set hidden
+    exec "mksession! " . s:maximize_session
+    only
+  endif
+  bufdo execute "setlocal nofoldenable"
+endfunction
