@@ -94,9 +94,6 @@ set -x LC_ALL "en_US.UTF-8"
 set -x LANG "en_US.UTF-8"
 set -x LARGEFONT "1"
 
-# rvm path
-#rvm default
-
 # LATEX
 if test -d /usr/local/texlive/2015/bin
     set -gx PATH /usr/local/texlive/2015/bin/x86_64-linux $PATH
