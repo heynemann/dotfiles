@@ -187,3 +187,7 @@ docker:
 
 compile-ycm:
 	@cd vim/bundle/YouCompleteMe/ && ./install.py --gocode-complete --tern-completer
+
+update-fisher:
+	@fish -c "fisher ls | fisher rm"
+	@fish -c "fisher bobthefish edc/bass getopts nvm rvm z"
