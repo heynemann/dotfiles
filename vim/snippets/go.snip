@@ -1,0 +1,24 @@
+snippet     describe
+options     indent
+  Describe("some functionality", func() {
+    ${0}
+  }
+
+snippet     its
+options     indent
+  It("should do something", func() {
+    ${0}
+  }
+
+snippet     experr
+options     indent
+  Expect(err).To(HaveOccurred())
+  Expect(err.Error()).To(ContainSubstring("${0}"))
+
+snippet     expnerr
+options     indent
+  Expect(err).NotTo(HaveOccurred())
+
+snippet     expstr
+options     indent
+  Expect(${0:exp}).To(ContainSubstring("qwe"))

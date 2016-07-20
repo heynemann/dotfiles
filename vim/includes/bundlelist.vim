@@ -8,7 +8,9 @@ NeoBundle 'scrooloose/nerdcommenter'
 
 " Completion
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/neocomplete'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 "NeoBundle 'Konfekt/FastFold'
 
 " Go
