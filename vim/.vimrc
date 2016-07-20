@@ -8,6 +8,7 @@ source ~/.vim/includes/airline.vim
 source ~/.vim/includes/syntastic.vim
 source ~/.vim/includes/govim.vim
 source ~/.vim/includes/js.vim
+source ~/.vim/includes/ultisnips.vim
 
 " gotta be last thing because bundles must be loaded
 colorscheme molokai
