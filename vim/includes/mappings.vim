@@ -32,8 +32,14 @@ nnoremap ; :
 " linux CTRL+T
 map <F1> :tabnew<CR>
 
+function! NextError()
+  :Errors
+  :lclose
+  :lnext
+endfunction
+
 " show and hide errors
-nmap <silent> q :lnext<CR>
+nmap <silent> q :call NextError()<CR>
 nmap <silent> Q :lprev<CR>
 nmap <silent> <Leader>q :Errors<CR>
 
@@ -170,3 +176,6 @@ function! MaximizeToggle()
   endif
   bufdo execute "setlocal nofoldenable"
 endfunction
+
+nmap P <Plug>yankstack_substitute_older_paste
+nmap <leader>P <Plug>yankstack_substitute_newer_paste

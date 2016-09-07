@@ -1,7 +1,7 @@
 "" Plugin key-mappings.
-imap =     <Plug>(neosnippet_expand_or_jump)
-smap =     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
+imap <S-Tab>     <Plug>(neosnippet_expand_or_jump)
+smap <S-Tab>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>       <Plug>(neosnippet_expand_target)
 
 " SuperTab like snippets behavior.
 "imap <expr><TAB>

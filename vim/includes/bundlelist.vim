@@ -5,6 +5,7 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'Colour-Sampler-Pack'
 NeoBundle 'ScrollColors'
 NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'yankring.vim'
 
 " Completion
 NeoBundle 'scrooloose/syntastic'
