@@ -2,13 +2,35 @@ snippet     describe
 options     indent
   Describe("some functionality", func() {
     ${0}
-  }
+  })
+
+snippet     beach
+options     indent
+  BeforeEach(func() {
+    ${0}
+  })
+
+snippet     before
+options     indent
+  BeforeEach(func() {
+    ${0}
+  })
 
 snippet     its
 options     indent
   It("should do something", func() {
     ${0}
-  }
+  })
+
+snippet     bfe
+options     indent
+  BeforeEach(func() {
+    ${0}
+  })
+
+snippet     expnil
+options     indent
+  Expect(${1}).To(BeNil())
 
 snippet     experr
 options     indent
@@ -22,3 +44,25 @@ options     indent
 snippet     expstr
 options     indent
   Expect(${0:exp}).To(ContainSubstring("qwe"))
+
+snippet     uuid
+options     indent
+  uuid.NewV4().String()
+
+snippet     lwith
+options     indent
+  l := ${0:self}.Logger.With(
+    zap.String("operation", ""),
+  )
+
+snippet     lerr
+options     indent
+  l.Error("${0}", zap.Error(err))
+
+snippet     ldeb
+options     indent
+  l.Debug("${0}")
+
+snippet     linfo
+options     indent
+  l.Info("${0}")

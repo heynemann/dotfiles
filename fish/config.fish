@@ -99,6 +99,12 @@ if test -d /usr/local/texlive/2015/bin
     set -gx PATH /usr/local/texlive/2015/bin/x86_64-linux $PATH
 end
 
+if test -f /usr/local/bin/cloud-ssh
+    alias csh "cloud-ssh"
+end
+
+set -x PATH ~/.rvm/gems/ruby-2.2.5/bin $PATH
+
 for file in ~/.config/fish/conf.d/*.fish
     source $file
 end
