@@ -1,3 +1,5 @@
+.PHONY: vim
+
 setup bootstrap config: osx memcached brew git pythonbrew rvm python opencv htop mysql vbox symlinks
 setup-ubuntu: apt git rvm python-ubuntu nodejs postgresql symlinks pythonbrew
 
@@ -148,10 +150,6 @@ symlinks:
 	@ln -sf `pwd`/flake8 ~/.config/flake8
 	@ln -sf `pwd`/pep8 ~/.config/pep8
 
-vundle:
-	@rm ~/.vim/bundle/vundle
-	@ln -sf ~/.vim/vendor/vundle ~/.vim/bundle/vundle
-
 vim:
 	@mkdir -p ~/.fonts
 	@cp fonts/* ~/.fonts
@@ -185,9 +183,32 @@ docker:
 	@if [ ! -f /usr/bin/docker ]; then curl -sSL https://get.docker.com/ | sh ~/.basher ; fi
 	@basher install bripkens/dock
 
-compile-ycm:
-	@cd vim/bundle/YouCompleteMe/ && ./install.py --gocode-complete --tern-completer
-
 update-fisher:
 	@fish -c "fisher ls | fisher rm"
 	@fish -c "fisher bobthefish edc/bass getopts nvm rvm z"
+
+update-dein:
+	@curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/dein-installer.sh
+	@sh /tmp/dein-installer.sh vim/dein
+
+clear-vim-bundle:
+	@rm -rf vim/bundle
+
+vundle:
+	@mkdir -p vim/vendor
+	@rm -rf vim/vendor/Vundle
+	@git clone https://github.com/VundleVim/Vundle.vim.git vim/vendor/Vundle.vim
+	@mkdir -p vim/bundle
+	@rm -rf vim/bundle/Vundle.vim
+	@ln -sf ~/.vim/vendor/Vundle.vim ~/.vim/bundle/Vundle.vim
+
+install-vundle-plugins:
+	@vim +PluginInstall +qall
+
+update-vundle-plugins:
+	@vim +PluginUpdate +qall
+
+compile-ycm:
+	@cd vim/bundle/YouCompleteMe && git submodule update --init --recursive && ./install.py --gocode-complete --tern-completer
+
+vim: clear-vim-bundle vundle install-vundle-plugins compile-ycm
