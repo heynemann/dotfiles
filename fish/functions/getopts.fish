@@ -1,1 +1,1 @@
-/Users/heynemann/.config/fisherman/getopts/getopts.fish
+/home/heynemann/.config/fisherman/getopts/getopts.fish

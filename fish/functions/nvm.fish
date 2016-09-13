@@ -1,1 +1,1 @@
-/Users/heynemann/.config/fisherman/nvm/nvm.fish
+/home/heynemann/.config/fisherman/nvm/nvm.fish
