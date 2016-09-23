@@ -105,6 +105,8 @@ end
 
 set -x PATH ~/.rvm/gems/ruby-2.2.5/bin $PATH
 
+set -g theme_display_git_latest_tag yes
+
 for file in ~/.config/fish/conf.d/*.fish
     source $file
 end

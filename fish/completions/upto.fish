@@ -1,0 +1,1 @@
+/Users/heynemann/.config/fisherman/upto/completions/upto.fish

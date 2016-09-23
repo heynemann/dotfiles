@@ -1,6 +1,10 @@
 edc/bass
-oh-my-fish/theme-bobthefish
+heynemann/theme-bobthefish
 fisherman/getopts
+fisherman/grc
+fisherman/humanize_duration
 fisherman/nvm
 fisherman/rvm
+jaredculp/todo.fish
+fisherman/upto
 fisherman/z
