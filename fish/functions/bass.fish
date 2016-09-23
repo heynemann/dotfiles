@@ -1,1 +1,1 @@
-/home/heynemann/.config/fisherman/bass/functions/bass.fish
+/Users/heynemann/.config/fisherman/bass/functions/bass.fish
