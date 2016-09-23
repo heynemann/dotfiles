@@ -1,1 +1,1 @@
-/home/heynemann/.config/fisherman/nvm/__nvm_can_run.fish
+/Users/heynemann/.config/fisherman/nvm/__nvm_can_run.fish

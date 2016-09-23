@@ -1,1 +1,1 @@
-/home/heynemann/.config/fisherman/bass/functions/__bass.py
+/Users/heynemann/.config/fisherman/bass/functions/__bass.py

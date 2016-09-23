@@ -1,1 +1,1 @@
-/home/heynemann/.config/fisherman/rvm/functions/rvm.fish
+/Users/heynemann/.config/fisherman/rvm/functions/rvm.fish
