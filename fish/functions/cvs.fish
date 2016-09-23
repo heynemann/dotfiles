@@ -1,0 +1,1 @@
+/Users/heynemann/.config/fisherman/grc/functions/cvs.fish

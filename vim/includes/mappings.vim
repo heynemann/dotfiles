@@ -63,3 +63,5 @@ map <silent><F12> :cclose<cr>
 map <Leader><Leader>b :bufdo bd<CR>
 
 set nofoldenable    " disable folding
+
+map <Leader><Leader>f :%!python -m json.tool<CR>
