@@ -1,1 +1,1 @@
-/Users/heynemann/.config/fisherman/grc/functions/make.fish
+/home/heynemann/.config/fisherman/grc/functions/make.fish

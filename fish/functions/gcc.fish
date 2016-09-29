@@ -1,1 +1,1 @@
-/Users/heynemann/.config/fisherman/grc/functions/gcc.fish
+/home/heynemann/.config/fisherman/grc/functions/gcc.fish

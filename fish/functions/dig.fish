@@ -1,1 +1,1 @@
-/Users/heynemann/.config/fisherman/grc/functions/dig.fish
+/home/heynemann/.config/fisherman/grc/functions/dig.fish

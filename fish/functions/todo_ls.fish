@@ -1,1 +1,1 @@
-/Users/heynemann/.config/fisherman/todo.fish/functions/todo_ls.fish
+/home/heynemann/.config/fisherman/todo.fish/functions/todo_ls.fish
