@@ -8,7 +8,8 @@
 "          to the value it had before entering fullscreen.
 if has("gui_running")
   if has("gui_gtk2")
-    set guifont=Inconsolata\ for\ Powerline\ 17
+    " LINUX
+    set guifont=Inconsolata\ for\ Powerline\ 28
   elseif has("gui_photon")
     set guifont=Inconsolata\ for\ Powerline:s17
     set fuopt=maxvert,maxhorz
