@@ -1,1 +1,1 @@
-/Users/heynemann/.config/fisherman/grc/functions/df.fish
+/home/heynemann/.config/fisherman/grc/functions/df.fish

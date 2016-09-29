@@ -1,1 +1,1 @@
-/Users/heynemann/.config/fisherman/grc/functions/mount.fish
+/home/heynemann/.config/fisherman/grc/functions/mount.fish

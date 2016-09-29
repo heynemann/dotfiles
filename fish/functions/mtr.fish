@@ -1,1 +1,1 @@
-/Users/heynemann/.config/fisherman/grc/functions/mtr.fish
+/home/heynemann/.config/fisherman/grc/functions/mtr.fish

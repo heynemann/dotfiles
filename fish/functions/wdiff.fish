@@ -1,1 +1,1 @@
-/Users/heynemann/.config/fisherman/grc/functions/wdiff.fish
+/home/heynemann/.config/fisherman/grc/functions/wdiff.fish

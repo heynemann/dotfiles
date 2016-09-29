@@ -1,1 +1,1 @@
-/Users/heynemann/.config/fisherman/grc/functions/_grc_wrap.fish
+/home/heynemann/.config/fisherman/grc/functions/_grc_wrap.fish

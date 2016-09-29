@@ -1,1 +1,1 @@
-/Users/heynemann/.config/fisherman/upto/upto.fish
+/home/heynemann/.config/fisherman/upto/upto.fish

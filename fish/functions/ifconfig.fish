@@ -1,1 +1,1 @@
-/Users/heynemann/.config/fisherman/grc/functions/ifconfig.fish
+/home/heynemann/.config/fisherman/grc/functions/ifconfig.fish

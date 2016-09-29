@@ -1,1 +1,1 @@
-/Users/heynemann/.config/fisherman/grc/functions/cat.fish
+/home/heynemann/.config/fisherman/grc/functions/cat.fish
