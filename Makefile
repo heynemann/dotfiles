@@ -149,6 +149,8 @@ symlinks:
 	@ln -sf `pwd`/virtualenv.ini ~/.virtualenvs/virtualenv.ini
 	@ln -sf `pwd`/flake8 ~/.config/flake8
 	@ln -sf `pwd`/pep8 ~/.config/pep8
+	@ln -sf `pwd`/.zshrc ~/.zshrc
+	@ln -sf `pwd`/antigen.zsh ~/.antigen.zsh
 
 vim:
 	@mkdir -p ~/.fonts
@@ -196,7 +198,7 @@ clear-vim-bundle:
 
 vundle:
 	@mkdir -p vim/vendor
-	@rm -rf vim/vendor/Vundle
+	@rm -rf vim/vendor/Vundle.vim
 	@git clone https://github.com/VundleVim/Vundle.vim.git vim/vendor/Vundle.vim
 	@mkdir -p vim/bundle
 	@rm -rf vim/bundle/Vundle.vim
