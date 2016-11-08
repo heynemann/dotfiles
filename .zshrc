@@ -1,10 +1,36 @@
 export TERM="xterm-256color"
-source ~/.antigen.zsh
+source "${HOME}/.zgen/zgen.zsh"
+
+prompt_last_tag(){
+    local last_tag=$(git describe --abbrev=0 --tags 2> /dev/null)
+    local color='%F{black}'
+    if [ $last_tag ]; then
+        echo -n "%{$color%} $(print_icon 'VCS_BOOKMARK_ICON')$last_tag%{%f%} "
+    fi
+}
+
+function preexec() {
+  timer=${timer:-$SECONDS}
+}
+
+function precmd() {
+  if [ $timer ]; then
+    timer_show=$(($SECONDS - $timer))
+    export LAST_CMD_TIME="%F{cyan}${timer_show}s "
+    unset timer
+  fi
+}
+
+prompt_command_time(){
+    echo -n $LAST_CMD_TIME
+}
 
 export POWERLEVEL9K_MODE='awesome-patched'
 export POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
-export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status nvm node_version virtualenv go_version aws time)
+export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs last_tag)
+export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_time nvm node_version virtualenv rvm time)
+export POWERLEVEL9K_VCS_HIDE_TAGS=true
+export POWERLEVEL9K_HIDE_BRANCH_ICON=true
 
 export POWERLEVEL9K_OS_ICON_BACKGROUND="white"
 export POWERLEVEL9K_OS_ICON_FOREGROUND="blue"
@@ -13,63 +39,65 @@ export POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND="white"
 export POWERLEVEL9K_DIR_DEFAULT_FOREGROUND="white"
 
 # Install oh-my-zsh
-antigen bundle robbyrussell/oh-my-zsh lib/
+## if the init scipt doesn't exist
+if ! zgen saved; then
+    echo "Creating a zgen save"
 
-# Load the oh-my-zsh's library.
-antigen use oh-my-zsh
+    # Load the oh-my-zsh's library.
+    zgen oh-my-zsh
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
-antigen bundle git
-antigen bundle git-extras
-antigen bundle command-not-found
-antigen bundle common-aliases
-antigen bundle zsh-users/zsh-syntax-highlighting
+    # Bundles from the default repo (robbyrussell's oh-my-zsh).
+    zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/git-extras
+    zgen oh-my-zsh plugins/sudo
+    zgen oh-my-zsh plugins/command-not-found
+    zgen oh-my-zsh plugins/common-aliases
+    zgen oh-my-zsh plugins/ssh-agent
+    zgen load zsh-users/zsh-syntax-highlighting
+    zgen load zsh-users/zsh-completions src
 
-# For SSH, starting ssh-agent is annoying
-antigen bundle ssh-agent
+    # Node Plugins
+    zgen oh-my-zsh plugins/coffee
+    zgen oh-my-zsh plugins/node
+    zgen oh-my-zsh plugins/npm
+    zgen oh-my-zsh plugins/jsontools
+    zgen load lukechilds/zsh-nvm
 
-# Node Plugins
-antigen bundle coffee
-antigen bundle node
-antigen bundle npm
-antigen bundle jsontools
-antigen bundle lukechilds/zsh-nvm
+    # Python Plugins
+    zgen oh-my-zsh plugins/pip
+    zgen oh-my-zsh plugins/python
+    zgen oh-my-zsh plugins/virtualenv
+    zgen oh-my-zsh plugins/virtualenvwrapper
 
-# Python Plugins
-antigen bundle pip
-antigen bundle python
-antigen bundle virtualenv
-antigen bundle virtualenvwrapper
+    # Ruby Plugins
+    zgen oh-my-zsh plugins/ruby
+    zgen oh-my-zsh plugins/rvm
 
-# Ruby Plugins
-antigen bundle ruby
-antigen bundle rvm
+    # Docker
+    zgen oh-my-zsh plugins/docker
 
-# Docker
-antigen bundle docker
+    # Redis
+    zgen oh-my-zsh plugins/redis-cli
 
-# Redis
-antigen bundle redis-cli
+    # AWS
+    zgen oh-my-zsh plugins/aws
 
-# AWS
-antigen bundle aws
+    # OS specific plugins
+    if [[ $CURRENT_OS == 'OS X' ]]; then
+        zgen oh-my-zsh plugins/brew
+        zgen oh-my-zsh plugins/brew-cask
+        zgen oh-my-zsh plugins/gem
+        zgen oh-my-zsh plugins/osx
+    elif [[ $CURRENT_OS == 'Linux' ]]; then
+        # None so far...
+    fi
 
-# OS specific plugins
-if [[ $CURRENT_OS == 'OS X' ]]; then
-    antigen bundle brew
-    antigen bundle brew-cask
-    antigen bundle gem
-    antigen bundle osx
-elif [[ $CURRENT_OS == 'Linux' ]]; then
-    # None so far...
+    # Load the theme.
+    zgen load bhilburn/powerlevel9k powerlevel9k
+
+    # Tell antigen that you're done.
+    #antigen apply
+    zgen save
 fi
-
-# Load the theme.
-#antigen theme juanghurtado
-#antigen theme bureau
-antigen theme bhilburn/powerlevel9k powerlevel9k
-
-# Tell antigen that you're done.
-antigen apply
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

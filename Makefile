@@ -214,3 +214,6 @@ compile-ycm:
 	@cd vim/bundle/YouCompleteMe && git submodule update --init --recursive && ./install.py --gocode-complete --tern-completer
 
 vim: clear-vim-bundle vundle install-vundle-plugins compile-ycm
+
+zsh:
+	@git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
