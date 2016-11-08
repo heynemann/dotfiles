@@ -187,7 +187,7 @@ docker:
 
 update-fisher:
 	@fish -c "fisher ls | fisher rm"
-	@fish -c "fisher heynemann/theme-bobthefish edc/bass getopts nvm rvm z upto grc humanize_duration jaredculp/todo.fish"
+	@fish -c "fisher heynemann/theme-bobthefish edc/bass getopts nvm rvm z upto humanize_duration jaredculp/todo.fish"
 
 update-dein:
 	@curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > /tmp/dein-installer.sh
