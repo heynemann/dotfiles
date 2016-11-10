@@ -122,4 +122,11 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
+export GOPATH=~/dev/go
+export PATH=$PATH:~/dev/go/bin
+
+fpath=(~/.zsh/completion $fpath)
+
+autoload -Uz compinit && compinit -i
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
