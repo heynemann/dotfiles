@@ -102,6 +102,7 @@ fi
 
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+alias aws-login='$(aws ecr get-login)'
 
 autoload -U add-zsh-hook
 load-nvmrc() {
