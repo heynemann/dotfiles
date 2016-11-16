@@ -1,4 +1,13 @@
 export TERM="xterm-256color"
+
+platform='unknown'
+unamestr=`uname`
+if [[ "$unamestr" == 'Linux' ]]; then
+   platform='linux'
+elif [[ "$unamestr" == 'FreeBSD' ]]; then
+   platform='freebsd'
+fi
+
 source "${HOME}/.zgen/zgen.zsh"
 
 prompt_last_tag(){
@@ -25,10 +34,14 @@ prompt_command_time(){
     echo -n $LAST_CMD_TIME
 }
 
+prompt_space(){
+    echo -n " "
+}
+
 export POWERLEVEL9K_MODE='awesome-patched'
 export POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs last_tag)
-export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_time nvm node_version virtualenv rvm time)
+export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_time node_version space virtualenv rvm time)
 export POWERLEVEL9K_VCS_HIDE_TAGS=true
 export POWERLEVEL9K_HIDE_BRANCH_ICON=true
 
@@ -98,10 +111,6 @@ if ! zgen saved; then
     zgen save
 fi
 
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
-alias aws-login='$(aws ecr get-login)'
-
 autoload -U add-zsh-hook
 load-nvmrc() {
   local node_version="$(nvm version)"
@@ -131,3 +140,12 @@ autoload -Uz compinit && compinit -i
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source "${HOME}/.zgen/zgen.zsh"
+
+if [[ $platform == 'linux' ]]; then
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
+fi
+
+alias aws-login='$(aws ecr get-login)'
+alias docker-stop='echo "Stopping containers..." && docker stop $(docker ps -a -q) && echo "Removing containers..." && docker rm $(docker ps -a -q)'
+alias docker-nuke='echo "Removing all docker images..." && docker rmi $(docker images -q)'
