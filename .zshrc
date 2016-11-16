@@ -6,6 +6,8 @@ if [[ "$unamestr" == 'Linux' ]]; then
    platform='linux'
 elif [[ "$unamestr" == 'FreeBSD' ]]; then
    platform='freebsd'
+elif [[ "$unamestr" == 'Darwin' ]]; then
+   platform='darwin'
 fi
 
 source "${HOME}/.zgen/zgen.zsh"
@@ -149,3 +151,9 @@ fi
 alias aws-login='$(aws ecr get-login)'
 alias docker-stop='echo "Stopping containers..." && docker stop $(docker ps -a -q) && echo "Removing containers..." && docker rm $(docker ps -a -q)'
 alias docker-nuke='echo "Removing all docker images..." && docker rmi $(docker images -q)'
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+source ~/.profile
+if [[ $platform == 'darwin' ]]; then
+  source `brew --prefix`/etc/profile.d/z.sh
+fi
