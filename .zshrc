@@ -132,7 +132,11 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-export GOPATH=~/dev/go
+if [[ -d ~/Dropbox/dev/go ]]; then
+  export GOPATH=~/Dropbox/dev/go
+else
+  export GOPATH=~/dev/go
+fi
 export PATH=$PATH:~/dev/go/bin
 
 fpath=(~/.zsh/completion $fpath)
@@ -157,3 +161,6 @@ source ~/.profile
 if [[ $platform == 'darwin' ]]; then
   source `brew --prefix`/etc/profile.d/z.sh
 fi
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
