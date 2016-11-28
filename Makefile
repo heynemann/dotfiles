@@ -149,8 +149,9 @@ symlinks:
 	@ln -sf `pwd`/virtualenv.ini ~/.virtualenvs/virtualenv.ini
 	@ln -sf `pwd`/flake8 ~/.config/flake8
 	@ln -sf `pwd`/pep8 ~/.config/pep8
-	@ln -sf `pwd`/.zshrc ~/.zshrc
-	@ln -sf `pwd`/antigen.zsh ~/.antigen.zsh
+	@ln -sf `pwd`/zsh ~/.zsh
+	@ln -sf `pwd`/zsh/zshrc ~/.zshrc
+	#@ln -sf `pwd`/antigen.zsh ~/.antigen.zsh
 
 vim:
 	@mkdir -p ~/.fonts
