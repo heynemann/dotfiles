@@ -1,0 +1,6 @@
+source ~/.zsh/includes/general.zsh
+source ~/.zsh/includes/powerlevel9k.zsh
+source ~/.zsh/includes/golang.zsh
+source ~/.zsh/includes/alias.zsh
+source ~/.zsh/includes/rvm.zsh
+source ~/.zsh/includes/plugins.zsh

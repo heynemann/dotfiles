@@ -39,9 +39,7 @@ function! NextError()
 endfunction
 
 " show and hide errors
-nmap <silent> q :call NextError()<CR>
-nmap <silent> Q :lprev<CR>
-nmap <silent> <Leader>q :Errors<CR>
+nmap <silent> q :ll1<CR>
 
 " Keep search pattern at the center of the screen - http://vimbits.com/bits/92
 nnoremap <silent> n nzz
