@@ -27,5 +27,5 @@ else
 fi
 
 # Language completions
-source <(npm completion)
+#source <(npm completion)
 source <(pip completion --zsh)
