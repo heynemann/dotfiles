@@ -128,3 +128,10 @@ time 1480512305
 old [description:"Define MRTS Architecture with Gui" due:"1480730399" entry:"1480356954" modified:"1480361805" project:"MRTS" status:"pending" uuid:"a99c3e19-df97-4944-9996-b9754dcf2e23"]
 new [description:"Define MRTS Architecture with Gui" due:"1480730399" end:"1480512305" entry:"1480356954" modified:"1480512305" project:"MRTS" status:"completed" uuid:"a99c3e19-df97-4944-9996-b9754dcf2e23"]
 ---
+time 1480521132
+new [description:"Checklist ECG deploy" due:"1480557600" entry:"1480521132" modified:"1480521132" status:"pending" uuid:"999eb45b-79e9-4436-ba40-250fd154f645"]
+---
+time 1480521141
+old [description:"Post-Mortem ECG" due:"1480384800" entry:"1480361217" modified:"1480361796" project:"ecg" status:"pending" uuid:"e45c980f-232b-4194-8924-7e77dbf950bf"]
+new [description:"Post-Mortem ECG" due:"1480384800" end:"1480521141" entry:"1480361217" modified:"1480521141" project:"ecg" status:"completed" uuid:"e45c980f-232b-4194-8924-7e77dbf950bf"]
+---

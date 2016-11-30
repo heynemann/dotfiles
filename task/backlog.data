@@ -34,3 +34,5 @@
 {"description":"Turn Khan-Prune on in Prod","due":"20161129T020000Z","end":"20161129T140859Z","entry":"20161128T181527Z","modified":"20161129T140859Z","priority":"H","project":"khan","status":"completed","uuid":"73961610-5004-4586-b3c6-d312516016c4"}
 {"description":"Validate UR direct to client","due":"20161129T020000Z","end":"20161129T181308Z","entry":"20161128T215001Z","modified":"20161129T181308Z","priority":"H","project":"ur","status":"completed","uuid":"e91c45f5-6e57-4d78-8a8d-a3addc149e3a"}
 {"description":"Define MRTS Architecture with Gui","due":"20161203T015959Z","end":"20161130T132505Z","entry":"20161128T181554Z","modified":"20161130T132505Z","project":"MRTS","status":"completed","uuid":"a99c3e19-df97-4944-9996-b9754dcf2e23"}
+{"description":"Checklist ECG deploy","due":"20161201T020000Z","entry":"20161130T155212Z","modified":"20161130T155212Z","status":"pending","uuid":"999eb45b-79e9-4436-ba40-250fd154f645"}
+{"description":"Post-Mortem ECG","due":"20161129T020000Z","end":"20161130T155221Z","entry":"20161128T192657Z","modified":"20161130T155221Z","project":"ecg","status":"completed","uuid":"e45c980f-232b-4194-8924-7e77dbf950bf"}
