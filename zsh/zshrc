@@ -4,6 +4,8 @@ source ~/.zsh/includes/general.zsh
 source ~/.zsh/includes/powerlevel9k.zsh
 #echo 'Configuring Go...'
 source ~/.zsh/includes/golang.zsh
+#echo 'Configuring Python...'
+source ~/.zsh/includes/python.zsh
 #echo 'Configuring Aliases...'
 source ~/.zsh/includes/alias.zsh
 #echo 'Configuring RVM...'

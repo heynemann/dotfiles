@@ -1,0 +1,4 @@
+[description:"Define MRTS Architecture with Gui" due:"1480730399" end:"1480512305" entry:"1480356954" modified:"1480512305" project:"MRTS" status:"completed" uuid:"a99c3e19-df97-4944-9996-b9754dcf2e23"]
+[description:"Validate UR direct to client" due:"1480384800" end:"1480443188" entry:"1480369801" modified:"1480443188" priority:"H" project:"ur" status:"completed" uuid:"e91c45f5-6e57-4d78-8a8d-a3addc149e3a"]
+[description:"Turn Khan-Prune on in Prod" due:"1480384800" end:"1480428539" entry:"1480356927" modified:"1480428539" priority:"H" project:"khan" status:"completed" uuid:"73961610-5004-4586-b3c6-d312516016c4"]
+[description:"Talk to Backend-0 about issue with Black Friday" end:"1480361230" entry:"1480356915" modified:"1480361230" status:"completed" uuid:"d5bb490c-1e05-4284-93ac-b7a3da287a64"]

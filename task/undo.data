@@ -1,0 +1,130 @@
+time 1480356659
+new [description:"Notify @thibault of Marathon's planning" due:"1480298400" entry:"1480356659" modified:"1480356659" status:"pending" uuid:"bf999cb9-dd96-49bc-a4b9-99cf3edf1c65"]
+---
+time 1480356711
+old [description:"Notify @thibault of Marathon's planning" due:"1480298400" entry:"1480356659" modified:"1480356659" status:"pending" uuid:"bf999cb9-dd96-49bc-a4b9-99cf3edf1c65"]
+new [description:"Notify @thibault of Marathon's planning" due:"1480903200" entry:"1480356659" modified:"1480356711" status:"pending" uuid:"bf999cb9-dd96-49bc-a4b9-99cf3edf1c65"]
+---
+time 1480356915
+new [description:"Talk to Backend-0 about issue with Black Friday" entry:"1480356915" modified:"1480356915" status:"pending" uuid:"d5bb490c-1e05-4284-93ac-b7a3da287a64"]
+---
+time 1480356927
+new [description:"Turn Khan-Prune on in Prod" entry:"1480356927" modified:"1480356927" status:"pending" uuid:"73961610-5004-4586-b3c6-d312516016c4"]
+---
+time 1480356954
+new [description:"Define MRTS Architecture with Gui" entry:"1480356954" modified:"1480356954" status:"pending" uuid:"a99c3e19-df97-4944-9996-b9754dcf2e23"]
+---
+time 1480356965
+new [description:"Talk to Banduk and Gui about Sniper PVP" entry:"1480356965" modified:"1480356965" status:"pending" uuid:"b1c35d08-44e0-45c5-a2d2-d9e5079ca75e"]
+---
+time 1480356984
+new [description:"Review ECG next steps" entry:"1480356984" modified:"1480356984" status:"pending" uuid:"fec9d713-cbc2-4ed9-b91e-b184a7f75a20"]
+---
+time 1480361217
+new [description:"Post-Mortem ECG" due:"1480384800" entry:"1480361217" modified:"1480361217" status:"pending" uuid:"e45c980f-232b-4194-8924-7e77dbf950bf"]
+---
+time 1480361230
+old [description:"Talk to Backend-0 about issue with Black Friday" entry:"1480356915" modified:"1480356915" status:"pending" uuid:"d5bb490c-1e05-4284-93ac-b7a3da287a64"]
+new [description:"Talk to Backend-0 about issue with Black Friday" end:"1480361230" entry:"1480356915" modified:"1480361230" status:"completed" uuid:"d5bb490c-1e05-4284-93ac-b7a3da287a64"]
+---
+time 1480361261
+old [description:"Turn Khan-Prune on in Prod" entry:"1480356927" modified:"1480356927" status:"pending" uuid:"73961610-5004-4586-b3c6-d312516016c4"]
+new [description:"Turn Khan-Prune on in Prod" due:"1480384800" entry:"1480356927" modified:"1480361261" status:"pending" uuid:"73961610-5004-4586-b3c6-d312516016c4"]
+---
+time 1480361329
+old [description:"Define MRTS Architecture with Gui" entry:"1480356954" modified:"1480356954" status:"pending" uuid:"a99c3e19-df97-4944-9996-b9754dcf2e23"]
+new [description:"Define MRTS Architecture with Gui" due:"1480730399" entry:"1480356954" modified:"1480361329" status:"pending" uuid:"a99c3e19-df97-4944-9996-b9754dcf2e23"]
+---
+time 1480361346
+old [description:"Talk to Banduk and Gui about Sniper PVP" entry:"1480356965" modified:"1480356965" status:"pending" uuid:"b1c35d08-44e0-45c5-a2d2-d9e5079ca75e"]
+new [description:"Talk to Banduk and Gui about Sniper PVP" due:"1480384800" entry:"1480356965" modified:"1480361346" status:"pending" uuid:"b1c35d08-44e0-45c5-a2d2-d9e5079ca75e"]
+---
+time 1480361354
+old [description:"Review ECG next steps" entry:"1480356984" modified:"1480356984" status:"pending" uuid:"fec9d713-cbc2-4ed9-b91e-b184a7f75a20"]
+new [description:"Review ECG next steps" due:"1480730399" entry:"1480356984" modified:"1480361354" status:"pending" uuid:"fec9d713-cbc2-4ed9-b91e-b184a7f75a20"]
+---
+time 1480361377
+new [description:"Review Tanks next steps" due:"1480730399" entry:"1480361377" modified:"1480361377" status:"pending" uuid:"6682c428-2057-4e35-81fe-c9f0e6f71381"]
+---
+time 1480361656
+new [description:"Define marathon planning with B1" due:"1480730399" entry:"1480361656" modified:"1480361656" status:"pending" uuid:"062aebc6-dbcc-4c55-95a4-f874bc9a47e5"]
+---
+time 1480361756
+new [description:"Define attribution strategy for views" due:"1480989600" entry:"1480361756" modified:"1480361756" project:"MRTS" status:"pending" uuid:"ac79a346-d818-4a6f-b5cd-a21d833005e4"]
+---
+time 1480361779
+old [description:"Turn Khan-Prune on in Prod" due:"1480384800" entry:"1480356927" modified:"1480361261" status:"pending" uuid:"73961610-5004-4586-b3c6-d312516016c4"]
+new [description:"Turn Khan-Prune on in Prod" due:"1480384800" entry:"1480356927" modified:"1480361779" project:"khan" status:"pending" uuid:"73961610-5004-4586-b3c6-d312516016c4"]
+---
+time 1480361787
+old [description:"Talk to Banduk and Gui about Sniper PVP" due:"1480384800" entry:"1480356965" modified:"1480361346" status:"pending" uuid:"b1c35d08-44e0-45c5-a2d2-d9e5079ca75e"]
+new [description:"Talk to Banduk and Gui about Sniper PVP" due:"1480384800" entry:"1480356965" modified:"1480361787" project:"sniper" status:"pending" uuid:"b1c35d08-44e0-45c5-a2d2-d9e5079ca75e"]
+---
+time 1480361796
+old [description:"Post-Mortem ECG" due:"1480384800" entry:"1480361217" modified:"1480361217" status:"pending" uuid:"e45c980f-232b-4194-8924-7e77dbf950bf"]
+new [description:"Post-Mortem ECG" due:"1480384800" entry:"1480361217" modified:"1480361796" project:"ecg" status:"pending" uuid:"e45c980f-232b-4194-8924-7e77dbf950bf"]
+---
+time 1480361805
+old [description:"Define MRTS Architecture with Gui" due:"1480730399" entry:"1480356954" modified:"1480361329" status:"pending" uuid:"a99c3e19-df97-4944-9996-b9754dcf2e23"]
+new [description:"Define MRTS Architecture with Gui" due:"1480730399" entry:"1480356954" modified:"1480361805" project:"MRTS" status:"pending" uuid:"a99c3e19-df97-4944-9996-b9754dcf2e23"]
+---
+time 1480361813
+old [description:"Review ECG next steps" due:"1480730399" entry:"1480356984" modified:"1480361354" status:"pending" uuid:"fec9d713-cbc2-4ed9-b91e-b184a7f75a20"]
+new [description:"Review ECG next steps" due:"1480730399" entry:"1480356984" modified:"1480361813" project:"ecg" status:"pending" uuid:"fec9d713-cbc2-4ed9-b91e-b184a7f75a20"]
+---
+time 1480361821
+old [description:"Review Tanks next steps" due:"1480730399" entry:"1480361377" modified:"1480361377" status:"pending" uuid:"6682c428-2057-4e35-81fe-c9f0e6f71381"]
+new [description:"Review Tanks next steps" due:"1480730399" entry:"1480361377" modified:"1480361821" project:"tanks" status:"pending" uuid:"6682c428-2057-4e35-81fe-c9f0e6f71381"]
+---
+time 1480361830
+old [description:"Define marathon planning with B1" due:"1480730399" entry:"1480361656" modified:"1480361656" status:"pending" uuid:"062aebc6-dbcc-4c55-95a4-f874bc9a47e5"]
+new [description:"Define marathon planning with B1" due:"1480730399" entry:"1480361656" modified:"1480361830" project:"marathon" status:"pending" uuid:"062aebc6-dbcc-4c55-95a4-f874bc9a47e5"]
+---
+time 1480361835
+old [description:"Notify @thibault of Marathon's planning" due:"1480903200" entry:"1480356659" modified:"1480356711" status:"pending" uuid:"bf999cb9-dd96-49bc-a4b9-99cf3edf1c65"]
+new [description:"Notify @thibault of Marathon's planning" due:"1480903200" entry:"1480356659" modified:"1480361835" project:"marathon" status:"pending" uuid:"bf999cb9-dd96-49bc-a4b9-99cf3edf1c65"]
+---
+time 1480369017
+new [description:"Write ECG Post Mortem" due:"1480730399" entry:"1480369017" modified:"1480369017" status:"pending" uuid:"94f67f81-cb59-4167-a005-f9ccd9f6f578"]
+---
+time 1480369027
+old [description:"Write ECG Post Mortem" due:"1480730399" entry:"1480369017" modified:"1480369017" status:"pending" uuid:"94f67f81-cb59-4167-a005-f9ccd9f6f578"]
+new [description:"Write ECG Post Mortem" due:"1480730399" entry:"1480369017" modified:"1480369027" project:"ecg" status:"pending" uuid:"94f67f81-cb59-4167-a005-f9ccd9f6f578"]
+---
+time 1480369367
+old [description:"Write ECG Post Mortem" due:"1480730399" entry:"1480369017" modified:"1480369027" project:"ecg" status:"pending" uuid:"94f67f81-cb59-4167-a005-f9ccd9f6f578"]
+new [description:"Write Black Thursday ECG Post Mortem" due:"1480730399" entry:"1480369017" modified:"1480369367" project:"ecg" status:"pending" uuid:"94f67f81-cb59-4167-a005-f9ccd9f6f578"]
+---
+time 1480369428
+new [description:"Finish beta release of Donations API" due:"1481248800" entry:"1480369428" modified:"1480369428" status:"pending" uuid:"6bca4dc1-f81d-40bb-b14b-12992075aec1"]
+---
+time 1480369438
+old [description:"Finish beta release of Donations API" due:"1481248800" entry:"1480369428" modified:"1480369428" status:"pending" uuid:"6bca4dc1-f81d-40bb-b14b-12992075aec1"]
+new [description:"Finish beta release of Donations API" due:"1481248800" entry:"1480369428" modified:"1480369438" project:"donations" status:"pending" uuid:"6bca4dc1-f81d-40bb-b14b-12992075aec1"]
+---
+time 1480369801
+new [description:"Validate UR direct to client" due:"1480384800" entry:"1480369801" modified:"1480369801" project:"ur" status:"pending" uuid:"e91c45f5-6e57-4d78-8a8d-a3addc149e3a"]
+---
+time 1480369858
+old [description:"Validate UR direct to client" due:"1480384800" entry:"1480369801" modified:"1480369801" project:"ur" status:"pending" uuid:"e91c45f5-6e57-4d78-8a8d-a3addc149e3a"]
+new [description:"Validate UR direct to client" due:"1480384800" entry:"1480369801" modified:"1480369858" priority:"H" project:"ur" status:"pending" uuid:"e91c45f5-6e57-4d78-8a8d-a3addc149e3a"]
+---
+time 1480369869
+old [description:"Turn Khan-Prune on in Prod" due:"1480384800" entry:"1480356927" modified:"1480361779" project:"khan" status:"pending" uuid:"73961610-5004-4586-b3c6-d312516016c4"]
+new [description:"Turn Khan-Prune on in Prod" due:"1480384800" entry:"1480356927" modified:"1480369869" priority:"H" project:"khan" status:"pending" uuid:"73961610-5004-4586-b3c6-d312516016c4"]
+---
+time 1480428510
+new [description:"API for gems" due:"1480384800" entry:"1480428510" modified:"1480428510" project:"ecg" status:"pending" uuid:"b3b58e84-5ad2-4458-8fe6-edfaf17ded66"]
+---
+time 1480428539
+old [description:"Turn Khan-Prune on in Prod" due:"1480384800" entry:"1480356927" modified:"1480369869" priority:"H" project:"khan" status:"pending" uuid:"73961610-5004-4586-b3c6-d312516016c4"]
+new [description:"Turn Khan-Prune on in Prod" due:"1480384800" end:"1480428539" entry:"1480356927" modified:"1480428539" priority:"H" project:"khan" status:"completed" uuid:"73961610-5004-4586-b3c6-d312516016c4"]
+---
+time 1480443188
+old [description:"Validate UR direct to client" due:"1480384800" entry:"1480369801" modified:"1480369858" priority:"H" project:"ur" status:"pending" uuid:"e91c45f5-6e57-4d78-8a8d-a3addc149e3a"]
+new [description:"Validate UR direct to client" due:"1480384800" end:"1480443188" entry:"1480369801" modified:"1480443188" priority:"H" project:"ur" status:"completed" uuid:"e91c45f5-6e57-4d78-8a8d-a3addc149e3a"]
+---
+time 1480512305
+old [description:"Define MRTS Architecture with Gui" due:"1480730399" entry:"1480356954" modified:"1480361805" project:"MRTS" status:"pending" uuid:"a99c3e19-df97-4944-9996-b9754dcf2e23"]
+new [description:"Define MRTS Architecture with Gui" due:"1480730399" end:"1480512305" entry:"1480356954" modified:"1480512305" project:"MRTS" status:"completed" uuid:"a99c3e19-df97-4944-9996-b9754dcf2e23"]
+---

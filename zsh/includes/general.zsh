@@ -84,11 +84,4 @@ zstyle ':completion:*:cd:*' ignore-parents parent pwd
 export WORDCHARS='*?[]~&;!$%^<>'
 
 # Language completions
-#source <(npm completion)
-source <(pip completion --zsh)
-
-# https://github.com/wkentaro/pycd
-type pycd.sh &>/dev/null && source `which pycd.sh`
-
-# Python
-export VIRTUALENV_USE_DISTRIBUTE=1
+source <(npm completion)
