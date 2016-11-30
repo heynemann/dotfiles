@@ -151,6 +151,8 @@ symlinks:
 	@ln -sf `pwd`/pep8 ~/.config/pep8
 	@ln -sf `pwd`/zsh ~/.zsh
 	@ln -sf `pwd`/zsh/zshrc ~/.zshrc
+	@ln -sf `pwd`/task ~/.task
+	@ln -sf `pwd`/.taskrc ~/.taskrc
 	#@ln -sf `pwd`/antigen.zsh ~/.antigen.zsh
 
 vim:
@@ -218,3 +220,7 @@ vim: clear-vim-bundle vundle install-vundle-plugins compile-ycm
 
 zsh:
 	@git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+
+antibody-bundles:
+	@antibody bundle < ./zsh/includes/bundles.txt > ./zsh/includes/bundles.zsh
+	@antibody bundle < ./zsh/includes/last-bundles.txt > ./zsh/includes/last-bundles.zsh
