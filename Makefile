@@ -1,5 +1,7 @@
 .PHONY: vim
 
+OS:=$(shell uname -s)
+
 setup bootstrap config: osx memcached brew git pythonbrew rvm python opencv htop mysql vbox symlinks
 setup-ubuntu: apt git rvm python-ubuntu nodejs postgresql symlinks pythonbrew
 
@@ -150,8 +152,9 @@ symlinks:
 	@ln -sf `pwd`/flake8 ~/.config/flake8
 	@ln -sf `pwd`/pep8 ~/.config/pep8
 	@ln -sf `pwd`/zsh ~/.zsh
+	@ln -sf `pwd`/zsh/zsh_history ~/.zsh_history
 	@ln -sf `pwd`/zsh/zshrc ~/.zshrc
-	@ln -sf `pwd`/task ~/.task
+	@ln -sf `pwd`/task/ ~/.task
 	@ln -sf `pwd`/.taskrc ~/.taskrc
 	#@ln -sf `pwd`/antigen.zsh ~/.antigen.zsh
 
@@ -222,5 +225,10 @@ zsh:
 	@git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 
 antibody-bundles:
+	@echo "Don't forget to install percol (pip install percol)"
 	@antibody bundle < ./zsh/includes/bundles.txt > ./zsh/includes/bundles.zsh
 	@antibody bundle < ./zsh/includes/last-bundles.txt > ./zsh/includes/last-bundles.zsh
+
+install-python-extensions:
+	@bash -lc "if [ '${OS}' == 'Linux' ]; then sudo pip install -r ./pip-requirements.txt; fi"
+	@bash -lc "if [ '${OS}' == 'Darwin' ]; then pip install -r ./pip-requirements.txt; fi"
