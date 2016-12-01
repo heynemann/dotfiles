@@ -6,6 +6,15 @@ prompt_last_tag(){
     fi
 }
 
+prompt_date_time() {
+  local time_format="%D{%d/%m %H:%M:%S}"
+  if [[ -n "$POWERLEVEL9K_TIME_FORMAT" ]]; then
+    time_format="$POWERLEVEL9K_TIME_FORMAT"
+  fi
+
+  "$1_prompt_segment" "$0" "$2" "$DEFAULT_COLOR_INVERTED" "$DEFAULT_COLOR" "$time_format"
+}
+
 prompt_due_tasks(){
   local today_tasks=$(task +TODAY count)
   local tomorrow_tasks=$(task +TOMORROW count)
@@ -45,7 +54,7 @@ prompt_space(){
 export POWERLEVEL9K_MODE='awesome-patched'
 export POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir due_tasks vcs last_tag)
-export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_time nvm space virtualenv rvm time)
+export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_time nvm space virtualenv rvm date_time)
 export POWERLEVEL9K_VCS_HIDE_TAGS=true
 export POWERLEVEL9K_HIDE_BRANCH_ICON=false
 

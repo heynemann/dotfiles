@@ -1,3 +1,6 @@
+[description:"Finish Python exercise 1" due:"1480471200" end:"1480598541" entry:"1480534087" modified:"1480598541" project:"rh" status:"completed" uuid:"cde8c150-3811-4105-99d4-d6fce5ebd11b"]
+[description:"Talk to Banduk and Gui about Sniper PVP" due:"1480384800" end:"1480532014" entry:"1480356965" modified:"1480532014" project:"sniper" status:"completed" uuid:"b1c35d08-44e0-45c5-a2d2-d9e5079ca75e"]
+[description:"API for gems" due:"1480384800" end:"1480531795" entry:"1480428510" modified:"1480531795" project:"ecg" status:"completed" uuid:"b3b58e84-5ad2-4458-8fe6-edfaf17ded66"]
 [description:"Post-Mortem ECG" due:"1480384800" end:"1480521141" entry:"1480361217" modified:"1480521141" project:"ecg" status:"completed" uuid:"e45c980f-232b-4194-8924-7e77dbf950bf"]
 [description:"Define MRTS Architecture with Gui" due:"1480730399" end:"1480512305" entry:"1480356954" modified:"1480512305" project:"MRTS" status:"completed" uuid:"a99c3e19-df97-4944-9996-b9754dcf2e23"]
 [description:"Validate UR direct to client" due:"1480384800" end:"1480443188" entry:"1480369801" modified:"1480443188" priority:"H" project:"ur" status:"completed" uuid:"e91c45f5-6e57-4d78-8a8d-a3addc149e3a"]

@@ -135,3 +135,25 @@ time 1480521141
 old [description:"Post-Mortem ECG" due:"1480384800" entry:"1480361217" modified:"1480361796" project:"ecg" status:"pending" uuid:"e45c980f-232b-4194-8924-7e77dbf950bf"]
 new [description:"Post-Mortem ECG" due:"1480384800" end:"1480521141" entry:"1480361217" modified:"1480521141" project:"ecg" status:"completed" uuid:"e45c980f-232b-4194-8924-7e77dbf950bf"]
 ---
+time 1480531795
+old [description:"API for gems" due:"1480384800" entry:"1480428510" modified:"1480428510" project:"ecg" status:"pending" uuid:"b3b58e84-5ad2-4458-8fe6-edfaf17ded66"]
+new [description:"API for gems" due:"1480384800" end:"1480531795" entry:"1480428510" modified:"1480531795" project:"ecg" status:"completed" uuid:"b3b58e84-5ad2-4458-8fe6-edfaf17ded66"]
+---
+time 1480532014
+old [description:"Talk to Banduk and Gui about Sniper PVP" due:"1480384800" entry:"1480356965" modified:"1480361787" project:"sniper" status:"pending" uuid:"b1c35d08-44e0-45c5-a2d2-d9e5079ca75e"]
+new [description:"Talk to Banduk and Gui about Sniper PVP" due:"1480384800" end:"1480532014" entry:"1480356965" modified:"1480532014" project:"sniper" status:"completed" uuid:"b1c35d08-44e0-45c5-a2d2-d9e5079ca75e"]
+---
+time 1480532296
+old [description:"Checklist ECG deploy" due:"1480557600" entry:"1480521132" modified:"1480521132" status:"pending" uuid:"999eb45b-79e9-4436-ba40-250fd154f645"]
+new [description:"Checklist ECG deploy" due:"1480557600" entry:"1480521132" modified:"1480532296" project:"ecg" status:"pending" uuid:"999eb45b-79e9-4436-ba40-250fd154f645"]
+---
+time 1480534087
+new [description:"Finish Python exercise 1" due:"1480471200" entry:"1480534087" modified:"1480534087" project:"rh" status:"pending" uuid:"cde8c150-3811-4105-99d4-d6fce5ebd11b"]
+---
+time 1480534113
+new [description:"Finish Python exercise 2" due:"1481248800" entry:"1480534113" modified:"1480534113" project:"rh" status:"pending" uuid:"e99c9489-1d8a-4d76-b86a-1f9c7ca22d53"]
+---
+time 1480598541
+old [description:"Finish Python exercise 1" due:"1480471200" entry:"1480534087" modified:"1480534087" project:"rh" status:"pending" uuid:"cde8c150-3811-4105-99d4-d6fce5ebd11b"]
+new [description:"Finish Python exercise 1" due:"1480471200" end:"1480598541" entry:"1480534087" modified:"1480598541" project:"rh" status:"completed" uuid:"cde8c150-3811-4105-99d4-d6fce5ebd11b"]
+---
