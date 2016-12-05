@@ -13,3 +13,6 @@ source ~/.zsh/includes/rvm.zsh
 #echo 'Loading Plugins...'
 source ~/.zsh/includes/plugins.zsh
 #echo 'ZSH configured properly.'
+
+# Language completions (must happen after plug-ins)
+source <(`which npm` completion)
