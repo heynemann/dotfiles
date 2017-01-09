@@ -1,6 +1,7 @@
 if [[ $platform == 'linux' ]]; then
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
+  alias mvim='gvim'
 fi
 
 alias ll="ls -lah"
