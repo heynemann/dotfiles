@@ -1,18 +1,26 @@
 #echo 'Loading general configurations...'
 source ~/.zsh/includes/general.zsh
+
 #echo 'Configuring Power Level 9k...'
 source ~/.zsh/includes/powerlevel9k.zsh
+
 #echo 'Configuring Go...'
 source ~/.zsh/includes/golang.zsh
+
 #echo 'Configuring Python...'
 source ~/.zsh/includes/python.zsh
+
 #echo 'Configuring Aliases...'
 source ~/.zsh/includes/alias.zsh
+
 #echo 'Configuring RVM...'
 source ~/.zsh/includes/rvm.zsh
+
 #echo 'Loading Plugins...'
 source ~/.zsh/includes/plugins.zsh
-#echo 'ZSH configured properly.'
+
+#echo 'Loading PyEnv...'
+source ~/.zsh/includes/pyenv.zsh
 
 # Language completions (must happen after plug-ins)
 source <(`which npm` completion)
