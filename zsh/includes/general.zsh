@@ -82,3 +82,8 @@ zstyle ':completion:*:cd:*' ignore-parents parent pwd
 # By default, zsh considers many characters part of a word (e.g., _ and -).
 # Narrow that down to allow easier skipping through words via M-f and M-b.
 export WORDCHARS='*?[]~&;!$%^<>'
+
+# Language completions
+source <(npm completion)
+
+export PATH="/usr/local/sbin:$PATH"

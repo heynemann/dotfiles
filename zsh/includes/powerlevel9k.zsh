@@ -1,5 +1,5 @@
 prompt_last_tag(){
-    local last_tag=$(git describe --abbrev=0 --tags 2> /dev/null)
+    local last_tag=$(git for-each-ref --format='%(*committerdate:raw)%(committerdate:raw) %(refname) %(*objectname) %(objectname)' refs/tags 2>/dev/null | sort -n | awk '{ print $3 }' | tail -n1 | sed s@refs/tags/@@g)
     local color='%F{black}'
     if [ $last_tag ]; then
         echo -n "%{$color%} $(print_icon 'VCS_BOOKMARK_ICON')$last_tag%{%f%} "

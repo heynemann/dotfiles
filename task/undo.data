@@ -157,3 +157,36 @@ time 1480598541
 old [description:"Finish Python exercise 1" due:"1480471200" entry:"1480534087" modified:"1480534087" project:"rh" status:"pending" uuid:"cde8c150-3811-4105-99d4-d6fce5ebd11b"]
 new [description:"Finish Python exercise 1" due:"1480471200" end:"1480598541" entry:"1480534087" modified:"1480598541" project:"rh" status:"completed" uuid:"cde8c150-3811-4105-99d4-d6fce5ebd11b"]
 ---
+time 1480606952
+new [description:"Get Level 3 Contract Signed" due:"1480644000" entry:"1480606952" modified:"1480606952" project:"backend" status:"pending" uuid:"aa7f8814-ec84-4f27-83e1-b14b3db517f4"]
+---
+time 1480623438
+new [description:"UR Indexes" due:"1480557600" entry:"1480623438" modified:"1480623438" project:"ur" status:"pending" uuid:"73a925de-2d2d-4cbe-82fa-3a18f4ed665d"]
+---
+time 1480682509
+old [description:"UR Indexes" due:"1480557600" entry:"1480623438" modified:"1480623438" project:"ur" status:"pending" uuid:"73a925de-2d2d-4cbe-82fa-3a18f4ed665d"]
+new [description:"UR Indexes" due:"1480557600" end:"1480682509" entry:"1480623438" modified:"1480682509" project:"ur" status:"completed" uuid:"73a925de-2d2d-4cbe-82fa-3a18f4ed665d"]
+---
+time 1480693323
+old [description:"Define marathon planning with B1" due:"1480730399" entry:"1480361656" modified:"1480361830" project:"marathon" status:"pending" uuid:"062aebc6-dbcc-4c55-95a4-f874bc9a47e5"]
+new [description:"Define marathon planning with B1" due:"1480730399" end:"1480693323" entry:"1480361656" modified:"1480693323" project:"marathon" status:"completed" uuid:"062aebc6-dbcc-4c55-95a4-f874bc9a47e5"]
+---
+time 1480693436
+old [description:"Finish beta release of Donations API" due:"1481248800" entry:"1480369428" modified:"1480369438" project:"donations" status:"pending" uuid:"6bca4dc1-f81d-40bb-b14b-12992075aec1"]
+new [description:"Finish beta release of Donations API" due:"1481248800" end:"1480693436" entry:"1480369428" modified:"1480693436" project:"donations" status:"completed" uuid:"6bca4dc1-f81d-40bb-b14b-12992075aec1"]
+---
+time 1481045580
+new [description:"Avaliações" due:"1481076000" entry:"1481045580" modified:"1481045580" status:"pending" uuid:"550c02ff-0a5f-4daf-b3d9-7c0d0a1ab152"]
+---
+time 1481129026
+old [description:"Define attribution strategy for views" due:"1480989600" entry:"1480361756" modified:"1480361756" project:"MRTS" status:"pending" uuid:"ac79a346-d818-4a6f-b5cd-a21d833005e4"]
+new [description:"Define attribution strategy for views" due:"1480989600" end:"1481129026" entry:"1480361756" modified:"1481129026" project:"MRTS" status:"completed" uuid:"ac79a346-d818-4a6f-b5cd-a21d833005e4"]
+---
+time 1481129032
+old [description:"Notify @thibault of Marathon's planning" due:"1480903200" entry:"1480356659" modified:"1480361835" project:"marathon" status:"pending" uuid:"bf999cb9-dd96-49bc-a4b9-99cf3edf1c65"]
+new [description:"Notify @thibault of Marathon's planning" due:"1480903200" end:"1481129032" entry:"1480356659" modified:"1481129032" project:"marathon" status:"completed" uuid:"bf999cb9-dd96-49bc-a4b9-99cf3edf1c65"]
+---
+time 1481214490
+old [description:"Get Level 3 Contract Signed" due:"1480644000" entry:"1480606952" modified:"1480606952" project:"backend" status:"pending" uuid:"aa7f8814-ec84-4f27-83e1-b14b3db517f4"]
+new [description:"Get Level 3 Contract Signed" due:"1480644000" end:"1481214490" entry:"1480606952" modified:"1481214490" project:"backend" status:"completed" uuid:"aa7f8814-ec84-4f27-83e1-b14b3db517f4"]
+---

@@ -24,3 +24,6 @@ source ~/.zsh/includes/pyenv.zsh
 
 # Language completions (must happen after plug-ins)
 source <(`which npm` completion)
+
+#echo 'Loading Git Configurations...'
+source ~/.zsh/includes/git.zsh

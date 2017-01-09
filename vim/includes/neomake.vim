@@ -3,7 +3,7 @@ if split(getcwd(), "/")[-1] == 'brigade'
   let g:neomake_javascript_eslint_maker = {
         \ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
           \ '%W%f: line %l\, col %c\, Warning - %m',
-        \ 'exe': "./node_modules/.bin/eslint",
+        \ 'exe': "./node_modules/.bin/eslint_d",
         \ 'args': ['-f', 'compact', '--rule', '{"no-console":[1]}'],
         \ }
 
@@ -33,7 +33,7 @@ endif
 let g:neomake_list_height = 2     " this doesn't work but hopefully will someday
 let g:neomake_open_list = 2
 let g:neomake_ruby_enabled_makers = ['mri', 'rubocop']
-let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_enabled_makers = ['eslint_d']
 let g:neomake_jsx_enabled_makers = ['eslint']
 let g:neomake_go_enabled_makers = ['go', 'golint', 'govet']
 
