@@ -190,3 +190,23 @@ time 1481214490
 old [description:"Get Level 3 Contract Signed" due:"1480644000" entry:"1480606952" modified:"1480606952" project:"backend" status:"pending" uuid:"aa7f8814-ec84-4f27-83e1-b14b3db517f4"]
 new [description:"Get Level 3 Contract Signed" due:"1480644000" end:"1481214490" entry:"1480606952" modified:"1481214490" project:"backend" status:"completed" uuid:"aa7f8814-ec84-4f27-83e1-b14b3db517f4"]
 ---
+time 1483962159
+old [description:"Write Black Thursday ECG Post Mortem" due:"1480730399" entry:"1480369017" modified:"1480369367" project:"ecg" status:"pending" uuid:"94f67f81-cb59-4167-a005-f9ccd9f6f578"]
+new [description:"Write Black Thursday ECG Post Mortem" due:"1480730399" end:"1483962159" entry:"1480369017" modified:"1483962159" project:"ecg" status:"completed" uuid:"94f67f81-cb59-4167-a005-f9ccd9f6f578"]
+---
+time 1483962163
+old [description:"Review Tanks next steps" due:"1480730399" entry:"1480361377" modified:"1480361821" project:"tanks" status:"pending" uuid:"6682c428-2057-4e35-81fe-c9f0e6f71381"]
+new [description:"Review Tanks next steps" due:"1480730399" end:"1483962163" entry:"1480361377" modified:"1483962163" project:"tanks" status:"completed" uuid:"6682c428-2057-4e35-81fe-c9f0e6f71381"]
+---
+time 1483962168
+old [description:"Review ECG next steps" due:"1480730399" entry:"1480356984" modified:"1480361813" project:"ecg" status:"pending" uuid:"fec9d713-cbc2-4ed9-b91e-b184a7f75a20"]
+new [description:"Review ECG next steps" due:"1480730399" end:"1483962168" entry:"1480356984" modified:"1483962168" project:"ecg" status:"completed" uuid:"fec9d713-cbc2-4ed9-b91e-b184a7f75a20"]
+---
+time 1483962177
+old [description:"Checklist ECG deploy" due:"1480557600" entry:"1480521132" modified:"1480532296" project:"ecg" status:"pending" uuid:"999eb45b-79e9-4436-ba40-250fd154f645"]
+new [description:"Checklist ECG deploy" due:"1480557600" end:"1483962177" entry:"1480521132" modified:"1483962177" project:"ecg" status:"completed" uuid:"999eb45b-79e9-4436-ba40-250fd154f645"]
+---
+time 1483962193
+old [description:"Avaliações" due:"1481076000" entry:"1481045580" modified:"1481045580" status:"pending" uuid:"550c02ff-0a5f-4daf-b3d9-7c0d0a1ab152"]
+new [description:"Avaliações" due:"1481076000" end:"1483962193" entry:"1481045580" modified:"1483962193" status:"completed" uuid:"550c02ff-0a5f-4daf-b3d9-7c0d0a1ab152"]
+---
