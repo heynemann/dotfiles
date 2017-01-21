@@ -83,7 +83,4 @@ zstyle ':completion:*:cd:*' ignore-parents parent pwd
 # Narrow that down to allow easier skipping through words via M-f and M-b.
 export WORDCHARS='*?[]~&;!$%^<>'
 
-# Language completions
-source <(npm completion)
-
 export PATH="/usr/local/sbin:$PATH"

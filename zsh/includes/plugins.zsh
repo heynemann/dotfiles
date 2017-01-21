@@ -1,7 +1,8 @@
-#antibody bundle robbyrussell/oh-my-zsh
-#source <(antibody init)
+ANTIBODY_CACHE_PATH="/home/heynemann/.cache"
+[[ "`uname -s`" == "Darwin" ]] && ANTIBODY_CACHE_PATH="/Users/heynemann/Library/Caches"
+
+#echo 'Loading bundles...'
 source ~/.zsh/includes/bundles.zsh
-#antibody bundle < ~/.zsh/includes/bundles.txt
+
 #echo 'Loading last bundles...'
 source ~/.zsh/includes/last-bundles.zsh
-#antibody bundle < ~/.zsh/includes/last-bundles.txt
