@@ -181,3 +181,7 @@ autocmd Filetype json setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype yaml setlocal ts=2 sw=2 sts=0 expandtab
 
 :autocmd BufWritePre *.py :pclose
+:autocmd BufWritePre *.js :pclose
+
+:let g:session_autosave = 'yes'
+set sessionoptions-=help

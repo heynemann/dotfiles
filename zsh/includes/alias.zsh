@@ -46,3 +46,11 @@ function ppkill() {
     fi
     ppgrep $QUERY | xargs kill $*
 }
+
+function rtime() {
+    START=`python -c "import time; print(time.time())"`
+    /bin/zsh -c "$1 $2 $3 $4 $5 $6 $7 $8 $9 $10"
+    STATUS=$?
+    python -c "import time; print('Operation took %.5fms.' % ((time.time() - float($START)) * 1000.0))"
+    return STATUS
+}
