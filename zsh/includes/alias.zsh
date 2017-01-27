@@ -2,6 +2,7 @@ if [[ $platform == 'linux' ]]; then
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
   alias mvim='gvim'
+  alias apt-upgrade='sudo aptitude update -y && sudo aptitude safe-upgrade -y'
 fi
 
 alias ll="ls -lah"
