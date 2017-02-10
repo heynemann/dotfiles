@@ -56,3 +56,7 @@
 {"description":"Review ECG next steps","due":"20161203T015959Z","end":"20170109T114248Z","entry":"20161128T181624Z","modified":"20170109T114248Z","project":"ecg","status":"completed","uuid":"fec9d713-cbc2-4ed9-b91e-b184a7f75a20"}
 {"description":"Checklist ECG deploy","due":"20161201T020000Z","end":"20170109T114257Z","entry":"20161130T155212Z","modified":"20170109T114257Z","project":"ecg","status":"completed","uuid":"999eb45b-79e9-4436-ba40-250fd154f645"}
 {"description":"Avaliações","due":"20161207T020000Z","end":"20170109T114313Z","entry":"20161206T173300Z","modified":"20170109T114313Z","status":"completed","uuid":"550c02ff-0a5f-4daf-b3d9-7c0d0a1ab152"}
+{"description":"Fill Linked-in for Henrique Vaz","entry":"20170126T153639Z","modified":"20170126T153639Z","status":"pending","uuid":"d97c856d-79e3-454d-b2a3-ee1692f47e54"}
+{"description":"Finish Python exercise 2","due":"20161209T020000Z","end":"20170126T153646Z","entry":"20161130T192833Z","modified":"20170126T153646Z","project":"rh","status":"completed","uuid":"e99c9489-1d8a-4d76-b86a-1f9c7ca22d53"}
+{"description":"Get provider id by player id","entry":"20170210T164248Z","modified":"20170210T164248Z","project":"ur","status":"pending","uuid":"a046e686-147b-43ad-92bc-68f9c3c9b5d4"}
+{"description":"Solve jenkins problems","entry":"20170210T164308Z","modified":"20170210T164308Z","project":"jenkins-front","status":"pending","uuid":"5ade6a42-6c0e-42b5-a8d7-c788246482ef"}

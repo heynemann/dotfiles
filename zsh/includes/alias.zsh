@@ -10,7 +10,10 @@ alias myip="ifconfig | grep --color=none -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' 
 
 alias aws-login='$(aws ecr get-login)'
 alias docker-stop='echo "Stopping containers..." && docker stop $(docker ps -a -q) && echo "Removing containers..." && docker rm $(docker ps -a -q)'
+alias docker-cleanup='docker run -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker:/var/lib/docker --rm martin/docker-cleanup-volumes'
 alias docker-nuke='echo "Removing all docker images..." && docker rmi $(docker images -q)'
+alias fis-stag='fission --server fission-stag.tfgco.com'
+alias fis-prod='fission --server fission.tfgco.com'
 
 alias reload='exec zsh'
 

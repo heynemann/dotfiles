@@ -185,3 +185,14 @@ autocmd Filetype yaml setlocal ts=2 sw=2 sts=0 expandtab
 
 :let g:session_autosave = 'yes'
 set sessionoptions-=help
+
+let g:formatdef_prettier_js = '"prettier --stdin --print-width 99 --no-bracket-spacing --single-quote --write | ./node_modules/.bin/eslint-fix --stdin"'
+let g:formatters_javascript = ['prettier_js']
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
+
+augroup WrapLineInFeatureFile
+    autocmd!
+    autocmd FileType cucumber setlocal nowrap
+augroup END

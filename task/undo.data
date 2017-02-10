@@ -210,3 +210,16 @@ time 1483962193
 old [description:"Avaliações" due:"1481076000" entry:"1481045580" modified:"1481045580" status:"pending" uuid:"550c02ff-0a5f-4daf-b3d9-7c0d0a1ab152"]
 new [description:"Avaliações" due:"1481076000" end:"1483962193" entry:"1481045580" modified:"1483962193" status:"completed" uuid:"550c02ff-0a5f-4daf-b3d9-7c0d0a1ab152"]
 ---
+time 1485444999
+new [description:"Fill Linked-in for Henrique Vaz" entry:"1485444999" modified:"1485444999" status:"pending" uuid:"d97c856d-79e3-454d-b2a3-ee1692f47e54"]
+---
+time 1485445006
+old [description:"Finish Python exercise 2" due:"1481248800" entry:"1480534113" modified:"1480534113" project:"rh" status:"pending" uuid:"e99c9489-1d8a-4d76-b86a-1f9c7ca22d53"]
+new [description:"Finish Python exercise 2" due:"1481248800" end:"1485445006" entry:"1480534113" modified:"1485445006" project:"rh" status:"completed" uuid:"e99c9489-1d8a-4d76-b86a-1f9c7ca22d53"]
+---
+time 1486744968
+new [description:"Get provider id by player id" entry:"1486744968" modified:"1486744968" project:"ur" status:"pending" uuid:"a046e686-147b-43ad-92bc-68f9c3c9b5d4"]
+---
+time 1486744988
+new [description:"Solve jenkins problems" entry:"1486744988" modified:"1486744988" project:"jenkins-front" status:"pending" uuid:"5ade6a42-6c0e-42b5-a8d7-c788246482ef"]
+---

@@ -32,14 +32,9 @@ nnoremap ; :
 " linux CTRL+T
 map <F1> :tabnew<CR>
 
-function! NextError()
-  :Errors
-  :lclose
-  :lnext
-endfunction
-
 " show and hide errors
-nmap <silent> q :ll1<CR>
+nmap <silent> q :lnext<CR>
+nmap <silent> Q :lnext<CR>
 
 " Keep search pattern at the center of the screen - http://vimbits.com/bits/92
 nnoremap <silent> n nzz
@@ -65,3 +60,7 @@ set nofoldenable    " disable folding
 map <Leader><Leader>f :%!python -m json.tool<CR>
 
 map <Leader><Leader>q :RestartVim<CR>
+
+map <Leader><Leader>/ :%!prettier --print-width 100 --no-bracket-spacing --single-quote --write % && ./node_modules/.bin/eslint --fix %<CR>
+
+noremap <F3> :Autoformat<CR>
