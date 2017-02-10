@@ -17,6 +17,7 @@ source ~/.vim/includes/ctrlp.vim
 source ~/.vim/includes/neomake.vim
 source ~/.vim/includes/govim.vim
 source ~/.vim/includes/ycm.vim
+source ~/.vim/includes/cucumber.vim
 
 " gotta be last thing because bundles must be loaded
 colorscheme molokai
