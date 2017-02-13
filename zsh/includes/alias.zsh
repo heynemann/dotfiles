@@ -3,10 +3,15 @@ if [[ $platform == 'linux' ]]; then
   alias pbpaste='xclip -selection clipboard -o'
   alias mvim='gvim'
   alias apt-upgrade='sudo aptitude update -y && sudo aptitude safe-upgrade -y'
+  alias ls="ls --color"
+  alias ll="ls --color -lah"
 fi
 
-alias ls="ls --color"
-alias ll="ls --color -lah"
+if [[ $platform == 'darwin' ]]; then
+  alias ls="ls -G"
+  alias ll="ls -lah"
+fi
+
 alias myip="ifconfig | grep --color=none -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep --color=none -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | head -n 1"
 
 alias aws-login='$(aws ecr get-login)'

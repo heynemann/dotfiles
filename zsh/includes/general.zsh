@@ -22,6 +22,12 @@ fi
 
 if [[ $platform == 'darwin' ]]; then
   source `brew --prefix`/etc/profile.d/z.sh
+  export CLICOLOR=1
+  export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+fi
+
+if [[ $platform == 'Linux' ]]; then
+  eval `dircolors $HOME/.zsh/dircolors.ansi-dark`
 fi
 
 # completion
@@ -84,5 +90,3 @@ zstyle ':completion:*:cd:*' ignore-parents parent pwd
 export WORDCHARS='*?[]~&;!$%^<>'
 
 export PATH="/usr/local/sbin:$PATH"
-
-eval `dircolors $HOME/.zsh/dircolors.ansi-dark`

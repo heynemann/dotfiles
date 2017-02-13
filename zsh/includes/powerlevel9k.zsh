@@ -54,7 +54,7 @@ prompt_space(){
 export POWERLEVEL9K_MODE='awesome-patched'
 export POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir due_tasks vcs last_tag)
-export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_time nvm space virtualenv rvm date_time)
+export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_time space virtualenv rvm date_time)
 export POWERLEVEL9K_VCS_HIDE_TAGS=true
 export POWERLEVEL9K_HIDE_BRANCH_ICON=false
 
