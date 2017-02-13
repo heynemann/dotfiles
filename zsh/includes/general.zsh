@@ -84,3 +84,5 @@ zstyle ':completion:*:cd:*' ignore-parents parent pwd
 export WORDCHARS='*?[]~&;!$%^<>'
 
 export PATH="/usr/local/sbin:$PATH"
+
+eval `dircolors $HOME/.zsh/dircolors.ansi-dark`

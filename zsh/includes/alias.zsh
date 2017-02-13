@@ -5,7 +5,8 @@ if [[ $platform == 'linux' ]]; then
   alias apt-upgrade='sudo aptitude update -y && sudo aptitude safe-upgrade -y'
 fi
 
-alias ll="ls -lah"
+alias ls="ls --color"
+alias ll="ls --color -lah"
 alias myip="ifconfig | grep --color=none -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep --color=none -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | head -n 1"
 
 alias aws-login='$(aws ecr get-login)'
