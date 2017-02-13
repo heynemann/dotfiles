@@ -1,11 +1,11 @@
-.PHONY: vim
+.PHONY: vim zsh
 
 OS:=$(shell uname -s)
 
 setup bootstrap config: osx memcached brew git pythonbrew rvm python opencv htop mysql vbox symlinks
-setup-ubuntu: apt git rvm python-ubuntu nodejs postgresql symlinks pythonbrew
 
 apt:
+	@sudo add-apt-repository -y ppa:ubuntu-lxc/lxd-stable
 	@sudo aptitude update
 	@sudo aptitude safe-upgrade -y
 	@cat ubuntu-packages.apt | xargs sudo aptitude install -y
@@ -69,8 +69,9 @@ python-ubuntu:
 
 pyenv:
 	@cd ~ && if [ ! -d ~/.pyenv ]; then git clone git://github.com/yyuu/pyenv.git .pyenv; fi
-	@pyenv install 2.7.6
-	@pyenv install 3.3.3
+	@pyenv install 2.7.13
+	@pyenv install 3.5.2
+	@pyenv install 3.6.0
 	@pyenv install pypy-2.2
 
 python:
@@ -89,13 +90,6 @@ python:
 	@cp ./flake8 ~/.config
 
 	@echo ">>>>>>>>> PYTHON FINISHED <<<<<<<<<<"
-	@echo
-
-nodejs:
-	@echo ">>>>>>>>>>>>> NODE JS <<<<<<<<<<<<<<<"
-	@curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
-	@sudo apt-get install -y nodejs
-	@echo ">>>>>>>>> NODE JS FINISHED <<<<<<<<<<"
 	@echo
 
 pythonbrew:
@@ -222,7 +216,12 @@ compile-ycm:
 vim: clear-vim-bundle vundle install-vundle-plugins compile-ycm
 
 zsh:
+	@chsh -s /bin/zsh
+	@rm -rf "${HOME}/.zgen"
 	@git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+
+antibody:
+	@curl -sL https://git.io/antibody | bash -s
 
 antibody-bundles:
 	@echo "Don't forget to install percol (pip install percol)"
@@ -232,3 +231,10 @@ antibody-bundles:
 install-python-extensions:
 	@bash -lc "if [ '${OS}' == 'Linux' ]; then sudo pip install -r ./pip-requirements.txt; fi"
 	@bash -lc "if [ '${OS}' == 'Darwin' ]; then pip install -r ./pip-requirements.txt; fi"
+
+nodejs:
+	@curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
+	@sudo apt-get install -y nodejs
+	@curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+
+setup-ubuntu: apt nodejs git symlinks zsh antibody install-python-extensions antibody-bundles clear-vim-bundle vundle install-vundle-plugins compile-ycm pyenv

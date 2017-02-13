@@ -27,3 +27,6 @@ source <(`which npm` completion)
 
 #echo 'Loading Git Configurations...'
 source ~/.zsh/includes/git.zsh
+
+export NVM_DIR="/home/heynemann/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
