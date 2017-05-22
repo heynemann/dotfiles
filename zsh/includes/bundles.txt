@@ -1,5 +1,4 @@
 zsh-users/zsh-completions
-lukechilds/zsh-nvm
 MichaelAquilina/zsh-autoswitch-virtualenv
 bhilburn/powerlevel9k
 zsh-users/zsh-autosuggestions

@@ -22,11 +22,17 @@ source ~/.zsh/includes/plugins.zsh
 #echo 'Loading PyEnv...'
 source ~/.zsh/includes/pyenv.zsh
 
+#echo 'Loading Node...'
+source ~/.zsh/includes/node.zsh
+
 # Language completions (must happen after plug-ins)
 source <(`which npm` completion)
 
 #echo 'Loading Git Configurations...'
 source ~/.zsh/includes/git.zsh
 
-export NVM_DIR="/home/heynemann/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# Android
+source ~/.zsh/includes/android.zsh
+
+# COCOS
+source ~/.zsh/includes/cocos.zsh

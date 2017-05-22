@@ -10,4 +10,4 @@ export VIRTUALENV_USE_DISTRIBUTE=1
 export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
-export PATH=~/.pyenv/shims/:$PATH
+export PATH=~/.pyenv/shims:$PATH

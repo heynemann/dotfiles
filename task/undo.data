@@ -223,3 +223,83 @@ new [description:"Get provider id by player id" entry:"1486744968" modified:"148
 time 1486744988
 new [description:"Solve jenkins problems" entry:"1486744988" modified:"1486744988" project:"jenkins-front" status:"pending" uuid:"5ade6a42-6c0e-42b5-a8d7-c788246482ef"]
 ---
+time 1487277648
+old [description:"Fill Linked-in for Henrique Vaz" entry:"1485444999" modified:"1485444999" status:"pending" uuid:"d97c856d-79e3-454d-b2a3-ee1692f47e54"]
+new [description:"Fill Linked-in for Henrique Vaz" end:"1487277648" entry:"1485444999" modified:"1487277648" status:"completed" uuid:"d97c856d-79e3-454d-b2a3-ee1692f47e54"]
+---
+time 1490121661
+old [description:"Solve jenkins problems" entry:"1486744988" modified:"1486744988" project:"jenkins-front" status:"pending" uuid:"5ade6a42-6c0e-42b5-a8d7-c788246482ef"]
+new [description:"Solve jenkins problems" end:"1490121661" entry:"1486744988" modified:"1490121661" project:"jenkins-front" status:"completed" uuid:"5ade6a42-6c0e-42b5-a8d7-c788246482ef"]
+---
+time 1490121753
+old [description:"Get provider id by player id" entry:"1486744968" modified:"1486744968" project:"ur" status:"pending" uuid:"a046e686-147b-43ad-92bc-68f9c3c9b5d4"]
+new [description:"Get provider id by player id" end:"1490121753" entry:"1486744968" modified:"1490121753" project:"ur" status:"completed" uuid:"a046e686-147b-43ad-92bc-68f9c3c9b5d4"]
+---
+time 1490121791
+new [description:"Release v1.4.2" due:"1490324400" entry:"1490121791" modified:"1490121791" project:"block" status:"pending" uuid:"1893dad2-d1fc-4520-93e6-b7cf8f475e20"]
+---
+time 1490121831
+new [description:"Follow up on study gems spent in custom buildings" due:"1490324400" entry:"1490121831" modified:"1490121831" project:"block" status:"pending" uuid:"7b5c19a2-82c3-432e-98c7-ec9dafe9b093"]
+---
+time 1490121844
+new [description:"Follow up on study gems spent in special tickets" due:"1490324400" entry:"1490121844" modified:"1490121844" project:"block" status:"pending" uuid:"39cd09d5-8b27-407c-a36b-d274ca698b2c"]
+---
+time 1490121864
+new [description:"Follow up on study of viability of Amazon Appstore" due:"1490324400" entry:"1490121864" modified:"1490121864" project:"block" status:"pending" uuid:"0e6e5fdb-7c17-40da-b623-635f71f43c15"]
+---
+time 1490121985
+new [description:"Review results of Feature in Google Play" due:"1490324400" entry:"1490121985" modified:"1490121985" project:"block" status:"pending" uuid:"de034cbf-36a2-4cab-90b0-30a2374cb305"]
+---
+time 1490122051
+new [description:"Plan the next sprint (content pack or Amazon)" due:"1490238000" entry:"1490122051" modified:"1490122051" project:"block" status:"pending" uuid:"b42aecf5-8ed5-414d-937c-c06f4668a5d2"]
+---
+time 1490122363
+new [description:"Goals of the Quarter" due:"1490151600" entry:"1490122363" modified:"1490122363" project:"backend" status:"pending" uuid:"bddce124-f99f-40ca-9c6e-e122148594d3"]
+---
+time 1490122443
+old [description:"Follow up on study of viability of Amazon Appstore" due:"1490324400" entry:"1490121864" modified:"1490121864" project:"block" status:"pending" uuid:"0e6e5fdb-7c17-40da-b623-635f71f43c15"]
+new [description:"Follow up on study of viability of Amazon Appstore" due:"1490238000" entry:"1490121864" modified:"1490122443" project:"block" status:"pending" uuid:"0e6e5fdb-7c17-40da-b623-635f71f43c15"]
+---
+time 1490122457
+old [description:"Plan the next sprint (content pack or Amazon)" due:"1490238000" entry:"1490122051" modified:"1490122051" project:"block" status:"pending" uuid:"b42aecf5-8ed5-414d-937c-c06f4668a5d2"]
+new [description:"Plan the next sprint (content pack or Amazon)" due:"1490324400" entry:"1490122051" modified:"1490122457" project:"block" status:"pending" uuid:"b42aecf5-8ed5-414d-937c-c06f4668a5d2"]
+---
+time 1490122522
+new [description:"Follow up on artist for block" due:"1490324400" entry:"1490122522" modified:"1490122522" project:"block" status:"pending" uuid:"98d849d6-60e7-44f0-9e17-22220f652bc3"]
+---
+time 1490122537
+new [description:"Follow up on product person" due:"1490727337" entry:"1490122537" modified:"1490122537" project:"block" status:"pending" uuid:"3902c101-f5b9-4cff-bce4-ff13d4724563"]
+---
+time 1490122588
+new [description:"Review metrics for the project (retention, revenue, arpdau, arpu) in major countries" due:"1490324400" entry:"1490122588" modified:"1490122588" project:"block" status:"pending" uuid:"d0887470-9347-4dc3-bf97-c393cd49519e"]
+---
+time 1490126535
+new [description:"Follow-up on future features" due:"1490731335" entry:"1490126535" modified:"1490126535" project:"block" status:"pending" uuid:"c088f457-b0e3-4bb4-a1da-06de4b9b2831"]
+---
+time 1490129485
+new [description:"Ver com Jose o que vai para o time dele e quando faremos o hand-over" due:"1490151600" entry:"1490129485" modified:"1490129485" project:"backend" status:"pending" uuid:"568596df-12df-4805-9b2a-7503425fc795"]
+---
+time 1490652351
+old [description:"Goals of the Quarter" due:"1490151600" entry:"1490122363" modified:"1490122363" project:"backend" status:"pending" uuid:"bddce124-f99f-40ca-9c6e-e122148594d3"]
+new [description:"Goals of the Quarter" due:"1490151600" end:"1490652351" entry:"1490122363" modified:"1490652351" project:"backend" status:"completed" uuid:"bddce124-f99f-40ca-9c6e-e122148594d3"]
+---
+time 1490652364
+old [description:"Ver com Jose o que vai para o time dele e quando faremos o hand-over" due:"1490151600" entry:"1490129485" modified:"1490129485" project:"backend" status:"pending" uuid:"568596df-12df-4805-9b2a-7503425fc795"]
+new [description:"Ver com Jose o que vai para o time dele e quando faremos o hand-over" due:"1490151600" end:"1490652364" entry:"1490129485" modified:"1490652364" project:"backend" status:"completed" uuid:"568596df-12df-4805-9b2a-7503425fc795"]
+---
+time 1490652373
+old [description:"Release v1.4.2" due:"1490324400" entry:"1490121791" modified:"1490121791" project:"block" status:"pending" uuid:"1893dad2-d1fc-4520-93e6-b7cf8f475e20"]
+new [description:"Release v1.4.2" due:"1490324400" end:"1490652373" entry:"1490121791" modified:"1490652373" project:"block" status:"completed" uuid:"1893dad2-d1fc-4520-93e6-b7cf8f475e20"]
+---
+time 1490652382
+old [description:"Follow up on study gems spent in custom buildings" due:"1490324400" entry:"1490121831" modified:"1490121831" project:"block" status:"pending" uuid:"7b5c19a2-82c3-432e-98c7-ec9dafe9b093"]
+new [description:"Follow up on study gems spent in custom buildings" due:"1490324400" end:"1490652382" entry:"1490121831" modified:"1490652382" project:"block" status:"completed" uuid:"7b5c19a2-82c3-432e-98c7-ec9dafe9b093"]
+---
+time 1490652385
+old [description:"Follow up on study gems spent in special tickets" due:"1490324400" entry:"1490121844" modified:"1490121844" project:"block" status:"pending" uuid:"39cd09d5-8b27-407c-a36b-d274ca698b2c"]
+new [description:"Follow up on study gems spent in special tickets" due:"1490324400" end:"1490652385" entry:"1490121844" modified:"1490652385" project:"block" status:"completed" uuid:"39cd09d5-8b27-407c-a36b-d274ca698b2c"]
+---
+time 1490652395
+old [description:"Plan the next sprint (content pack or Amazon)" due:"1490324400" entry:"1490122051" modified:"1490122457" project:"block" status:"pending" uuid:"b42aecf5-8ed5-414d-937c-c06f4668a5d2"]
+new [description:"Plan the next sprint (content pack or Amazon)" due:"1490324400" end:"1490652395" entry:"1490122051" modified:"1490652395" project:"block" status:"completed" uuid:"b42aecf5-8ed5-414d-937c-c06f4668a5d2"]
+---

@@ -20,6 +20,7 @@ alias docker-cleanup='docker run -v /var/run/docker.sock:/var/run/docker.sock -v
 alias docker-nuke='echo "Removing all docker images..." && docker rmi $(docker images -q)'
 alias fis-stag='fission --server fission-stag.tfgco.com'
 alias fis-prod='fission --server fission.tfgco.com'
+alias random-commit='curl -s http://whatthecommit.com/ | grep --color=no "[<]p" | egrep -v permalink | sed "s@[<]p[>]\(.*\)@\1@"'
 
 alias reload='exec zsh'
 

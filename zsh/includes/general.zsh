@@ -90,3 +90,5 @@ zstyle ':completion:*:cd:*' ignore-parents parent pwd
 export WORDCHARS='*?[]~&;!$%^<>'
 
 export PATH="/usr/local/sbin:$PATH"
+
+eval $(thefuck --alias f)
