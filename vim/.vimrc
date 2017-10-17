@@ -18,6 +18,8 @@ source ~/.vim/includes/govim.vim
 source ~/.vim/includes/ycm.vim
 source ~/.vim/includes/cucumber.vim
 source ~/.vim/includes/ultisnips.vim
+source ~/.vim/includes/search.vim
+source ~/.vim/includes/easy-motion.vim
 
 " gotta be last thing because bundles must be loaded
 colorscheme molokai

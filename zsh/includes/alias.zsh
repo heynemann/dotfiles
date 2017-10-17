@@ -21,6 +21,7 @@ alias docker-nuke='echo "Removing all docker images..." && docker rmi $(docker i
 alias fis-stag='fission --server fission-stag.tfgco.com'
 alias fis-prod='fission --server fission.tfgco.com'
 alias random-commit='curl -s http://whatthecommit.com/ | grep --color=no "[<]p" | egrep -v permalink | sed "s@[<]p[>]\(.*\)@\1@"'
+alias hit='wrk -c 30 -d 30 -t 10 --latency'
 
 alias reload='exec zsh'
 
@@ -65,3 +66,9 @@ function rtime() {
     python -c "import time; print('Operation took %.5fms.' % ((time.time() - float($START)) * 1000.0))"
     return STATUS
 }
+
+if ! exists pygmentize; then
+    pip install pygments
+fi
+
+alias c='pygmentize -g -O style=colorful,linenos=1'

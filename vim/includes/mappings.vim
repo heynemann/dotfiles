@@ -53,14 +53,14 @@ map <silent><F12> :cclose<cr>
 :nnoremap <silent> <Leader>m :StripWhitespace
 
 " delete all buffers
-map <Leader><Leader>b :bufdo bd<CR>
+map <Leader>b :bufdo bd<CR>
 
 set nofoldenable    " disable folding
 
-map <Leader><Leader>f :%!python -m json.tool<CR>
+map <Leader>f :%!python -m json.tool<CR>
 
-map <Leader><Leader>q :RestartVim<CR>
+map <Leader>q :RestartVim<CR>
 
-map <Leader><Leader>/ :%!prettier --print-width 100 --no-bracket-spacing --single-quote --write % && ./node_modules/.bin/eslint --fix %<CR>
+map <Leader>/ :%!prettier --print-width 100 --no-bracket-spacing --single-quote --write % && ./node_modules/.bin/eslint --fix %<CR>
 
 noremap <F3> :Autoformat<CR>
