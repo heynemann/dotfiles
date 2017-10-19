@@ -98,3 +98,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 eval $(thefuck --alias f)
 
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_141.jdk/Contents/Home"
+
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word
