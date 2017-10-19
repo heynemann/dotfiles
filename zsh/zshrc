@@ -25,6 +25,9 @@ source ~/.zsh/includes/pyenv.zsh
 #echo 'Loading Node...'
 source ~/.zsh/includes/node.zsh
 
+#echo 'Loading FZF...'
+source ~/.zsh/includes/fzf.zsh
+
 # Language completions (must happen after plug-ins)
 source <(`which npm` completion)
 

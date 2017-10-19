@@ -237,4 +237,8 @@ nodejs:
 	@sudo apt-get install -y nodejs
 	@curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 
+fzf:
+	@bash -lc "if [ '${OS}' == 'Linux' ]; then git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install; fi"
+	@bash -lc "if [ '${OS}' == 'Darwin' ]; then brew install fzf; fi"
+
 setup-ubuntu: apt nodejs git symlinks zsh antibody install-python-extensions antibody-bundles clear-vim-bundle vundle install-vundle-plugins compile-ycm pyenv

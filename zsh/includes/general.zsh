@@ -2,6 +2,10 @@ export TERM="xterm-256color"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+_has() {
+  return $( whence $1 >/dev/null )
+}
+
 # grep
 if [ "$(uname)" = "Darwin" ]; then
   export GREP_OPTIONS='--color=always'
