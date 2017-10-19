@@ -1,0 +1,24 @@
+"
+"   ██╗   ██╗ ██╗ ███╗   ███╗ ██████╗   ██████╗
+"   ██║   ██║ ██║ ████╗ ████║ ██╔══██╗ ██╔════╝
+"   ██║   ██║ ██║ ██╔████╔██║ ██████╔╝ ██║
+"   ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║ ██╔══██╗ ██║
+" ██╗╚████╔╝  ██║ ██║ ╚═╝ ██║ ██║  ██║ ╚██████╗
+" ╚═╝ ╚═══╝   ╚═╝ ╚═╝     ╚═╝ ╚═╝  ╚═╝  ╚═════╝
+"
+set shell=/bin/bash
+source ~/.vim/includes/general.vim
+source ~/.vim/includes/vundle.vim
+source ~/.vim/includes/fzf.vim
+source ~/.vim/includes/mappings.vim
+source ~/.vim/includes/ack.vim
+source ~/.vim/includes/ale.vim
+source ~/.vim/includes/lightline.vim
+source ~/.vim/includes/gitgutter.vim
+source ~/.vim/includes/govim.vim
+source ~/.vim/includes/ycm.vim
+source ~/.vim/includes/search.vim
+source ~/.vim/includes/easy-motion.vim
+
+" gotta be last thing because bundles must be loaded
+colorscheme molokai

@@ -137,7 +137,7 @@ symlinks:
 	@mkdir -p ~/.virtualenvs
 	@rm -rf ~/.vim
 	@ln -sf `pwd`/vim ~/.vim
-	@ln -sf `pwd`/vim/.vimrc ~/.vimrc
+	@ln -sf `pwd`/vim/vimrc ~/.vimrc
 	@ln -sf `pwd`/.bashrc ~/.bashrc
 	@ln -sf `pwd`/.bash_profile ~/.bash_profile
 	@ln -sf `pwd`/.ps1 ~/.ps1
@@ -213,7 +213,10 @@ update-vundle-plugins:
 compile-ycm:
 	@cd vim/bundle/YouCompleteMe && git submodule update --init --recursive && ./install.py --gocode-complete --tern-completer
 
-vim: clear-vim-bundle vundle install-vundle-plugins compile-ycm
+compile-ycm-all:
+	@cd vim/bundle/YouCompleteMe && git submodule update --init --recursive && ./install.py --all
+
+vim: clear-vim-bundle vundle install-vundle-plugins compile-ycm-all
 
 zsh:
 	@chsh -s /bin/zsh
