@@ -17,8 +17,8 @@ source ~/.vim/includes/lightline.vim
 source ~/.vim/includes/gitgutter.vim
 source ~/.vim/includes/govim.vim
 source ~/.vim/includes/ycm.vim
-source ~/.vim/includes/search.vim
 source ~/.vim/includes/easy-motion.vim
+source ~/.vim/includes/search.vim
 
 " gotta be last thing because bundles must be loaded
 colorscheme molokai

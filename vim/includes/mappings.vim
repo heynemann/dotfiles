@@ -57,7 +57,7 @@ map <Leader>b :bufdo bd<CR>
 
 set nofoldenable    " disable folding
 
-map <Leader>f :%!python -m json.tool<CR>
+"map <Leader>f :%!python -m json.tool<CR>
 
 map <Leader>q :RestartVim<CR>
 
