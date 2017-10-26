@@ -8,6 +8,7 @@ _has() {
 
 # grep
 if [ "$(uname)" = "Darwin" ]; then
+  export PATH="/usr/local/bin:$PATH"
   export GREP_OPTIONS='--color=always'
   export GREP_COLOR='1;35;40'
 fi
@@ -22,10 +23,10 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
    platform='darwin'
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh &
 
 if [[ $platform == 'darwin' ]]; then
-  source `brew --prefix`/etc/profile.d/z.sh
+  source `brew --prefix`/etc/profile.d/z.sh &
   export CLICOLOR=1
   export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 fi
@@ -35,7 +36,7 @@ if [[ $platform == 'Linux' ]]; then
 fi
 
 # completion
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit &
 setopt auto_param_slash
 setopt mark_dirs
 setopt list_types

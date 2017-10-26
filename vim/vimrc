@@ -19,6 +19,9 @@ source ~/.vim/includes/govim.vim
 source ~/.vim/includes/ycm.vim
 source ~/.vim/includes/easy-motion.vim
 source ~/.vim/includes/search.vim
+source ~/.vim/includes/tabular.vim
+
+:au FocusGained * :redraw!
 
 " gotta be last thing because bundles must be loaded
 colorscheme molokai

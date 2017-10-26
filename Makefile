@@ -150,6 +150,7 @@ symlinks:
 	@ln -sf `pwd`/zsh/zshrc ~/.zshrc
 	@ln -sf `pwd`/task/ ~/.task
 	@ln -sf `pwd`/.taskrc ~/.taskrc
+	@ln -sf `pwd`/timeit.py ~/timeit.py
 	#@ln -sf `pwd`/antigen.zsh ~/.antigen.zsh
 
 vim:

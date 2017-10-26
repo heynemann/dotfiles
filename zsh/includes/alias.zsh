@@ -14,11 +14,27 @@ fi
 
 alias myip="ifconfig | grep --color=none -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep --color=none -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1' | head -n 1"
 
+function docker-tail() {
+  if [[ $* == "" ]]; then
+    echo "The name of the container is required!"
+    return 1
+  fi
+
+  CONTAINERID=$(docker ps -aqf "name=$*")
+  if [[ $CONTAINERID == "" ]]; then
+    echo "Container with name $* was not found."
+    return 1
+  else
+    docker logs -f $CONTAINERID
+  fi
+}
+
 alias aws-login='$(aws ecr get-login)'
 alias docker-stop='echo "Stopping containers..." && docker stop $(docker ps -a -q) && echo "Removing containers..." && docker rm $(docker ps -a -q)'
 alias docker-cleanup='docker run -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker:/var/lib/docker --rm martin/docker-cleanup-volumes'
 alias docker-clean='docker volume rm $(docker volume ls -qf dangling=true)'
 alias docker-nuke='echo "Removing all docker images..." && docker rmi $(docker images -q)'
+#alias docker-tail='dockertail($*)'
 alias fis-stag='fission --server fission-stag.tfgco.com'
 alias fis-prod='fission --server fission.tfgco.com'
 alias random-commit='curl -s http://whatthecommit.com/ | grep --color=no "[<]p" | egrep -v permalink | sed "s@[<]p[>]\(.*\)@\1@"'

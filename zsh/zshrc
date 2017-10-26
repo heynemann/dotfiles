@@ -1,48 +1,89 @@
+#Resetting the timer
+rm -f ~/.timeit
+
+python ~/timeit.py zsh start general
 #echo 'Loading general configurations...'
 source ~/.zsh/includes/general.zsh
+python ~/timeit.py zsh finish general
 
+python ~/timeit.py zsh start powerlevel9k
 #echo 'Configuring Power Level 9k...'
 source ~/.zsh/includes/powerlevel9k.zsh
+python ~/timeit.py zsh finish powerlevel9k
 
+python ~/timeit.py zsh start golang
 #echo 'Configuring Go...'
 source ~/.zsh/includes/golang.zsh
+python ~/timeit.py zsh finish golang
 
+python ~/timeit.py zsh start python
 #echo 'Configuring Python...'
 source ~/.zsh/includes/python.zsh
+python ~/timeit.py zsh finish python
 
+python ~/timeit.py zsh start aliases
 #echo 'Configuring Aliases...'
 source ~/.zsh/includes/alias.zsh
+python ~/timeit.py zsh finish aliases
 
+python ~/timeit.py zsh start rvm
 #echo 'Configuring RVM...'
 source ~/.zsh/includes/rvm.zsh
+python ~/timeit.py zsh finish rvm
 
+python ~/timeit.py zsh start plugins
 #echo 'Loading Plugins...'
 source ~/.zsh/includes/plugins.zsh
+python ~/timeit.py zsh finish plugins
 
+python ~/timeit.py zsh start pyenv
 #echo 'Loading PyEnv...'
 source ~/.zsh/includes/pyenv.zsh
+python ~/timeit.py zsh finish pyenv
 
+python ~/timeit.py zsh start node
 #echo 'Loading Node...'
 source ~/.zsh/includes/node.zsh
+python ~/timeit.py zsh finish node
 
+python ~/timeit.py zsh start fzf
 #echo 'Loading FZF...'
 source ~/.zsh/includes/fzf.zsh
+python ~/timeit.py zsh finish fzf
 
+python ~/timeit.py zsh start npmcompletion
 # Language completions (must happen after plug-ins)
-source <(`which npm` completion)
+source <(`which npm` completion) &
+python ~/timeit.py zsh finish npmcompletion
 
+python ~/timeit.py zsh start git
 #echo 'Loading Git Configurations...'
 source ~/.zsh/includes/git.zsh
+python ~/timeit.py zsh finish git
 
+python ~/timeit.py zsh start android
 # Android
 source ~/.zsh/includes/android.zsh
+python ~/timeit.py zsh finish android
 
+python ~/timeit.py zsh start cocos
 # COCOS
 source ~/.zsh/includes/cocos.zsh
+python ~/timeit.py zsh finish cocos
 
-cat ~/.zsh/includes/triforce.ascii
+#cat ~/.zsh/includes/triforce.ascii
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-source ~/.zprofile
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+reset
+echo ""
+echo "================="
+echo "ZSH Loading Stats"
+echo "================="
+python ~/timeit.py zsh show
+echo ""
+rm -f ~/.timeit
