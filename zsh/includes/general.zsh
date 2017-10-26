@@ -96,9 +96,18 @@ export WORDCHARS='*?[]~&;!$%^<>'
 
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
-eval $(thefuck --alias f)
-
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_141.jdk/Contents/Home"
 
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
+
+f () {
+    TF_PREVIOUS=$(fc -ln -1 | tail -n 1);
+    TF_CMD=$(
+        TF_ALIAS=f
+        TF_SHELL_ALIASES=$(alias)
+        PYTHONIOENCODING=utf-8
+        thefuck $TF_PREVIOUS THEFUCK_ARGUMENT_PLACEHOLDER $*
+    ) && eval $TF_CMD;
+    test -n "$TF_CMD" && print -s $TF_CMD
+}
