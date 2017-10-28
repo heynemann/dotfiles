@@ -18,3 +18,5 @@ zsh_history
 zsh/cache
 vim/sessions
 .DS_Store
+zsh/includes/bundles.zsh
+zsh/includes/last-bundles.zsh
