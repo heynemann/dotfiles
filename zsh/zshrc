@@ -71,6 +71,12 @@ python ~/timeit.py zsh start cocos
 source ~/.zsh/includes/cocos.zsh
 python ~/timeit.py zsh finish cocos
 
+python ~/timeit.py zsh start z
+# COCOS
+source ~/.zsh/includes/z.zsh
+python ~/timeit.py zsh finish z
+
+
 #cat ~/.zsh/includes/triforce.ascii
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.

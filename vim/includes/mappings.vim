@@ -12,14 +12,26 @@ vnoremap <tab> %
 " no more arrows for you
 nnoremap <up> <nop>
 nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
+nnoremap <left> :tabp<CR>
+nnoremap <right> :tabn<CR>
 inoremap <up> <nop>
 inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+inoremap <left> :tabp<CR>
+inoremap <right> :tabn<CR>
 nnoremap j gj
 nnoremap k gk
+
+" tabs
+nnoremap { :tabp<CR>
+nnoremap } :tabn<CR>
+
+nnoremap [ :tabp<CR>
+nnoremap ] :tabn<CR>
+
+nnoremap <F7> :tabp<CR>
+nnoremap <F6> :tabn<CR>
+inoremap <F7> :tabp<CR>
+inoremap <F6> :tabn<CR>
 
 " please no help ever
 inoremap <F1> <ESC>
@@ -31,10 +43,11 @@ nnoremap ; :
 
 " linux CTRL+T
 map <F1> :tabnew<CR>
+map tt :tabnew<CR>
 
 " show and hide errors
-nmap <silent> q :lnext<CR>
-nmap <silent> Q :lnext<CR>
+"nmap <silent> q :lnext<CR>
+"nmap <silent> Q :lnext<CR>
 
 " Keep search pattern at the center of the screen - http://vimbits.com/bits/92
 nnoremap <silent> n nzz
