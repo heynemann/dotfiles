@@ -23,10 +23,7 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
    platform='darwin'
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh &
-
 if [[ $platform == 'darwin' ]]; then
-  source `brew --prefix`/etc/profile.d/z.sh &
   export CLICOLOR=1
   export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 fi
@@ -36,7 +33,15 @@ if [[ $platform == 'Linux' ]]; then
 fi
 
 # completion
-autoload -Uz compinit && compinit &
+# https://carlosbecker.com/posts/speeding-up-zsh/
+autoload -Uz compinit
+if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+  compinit
+else
+  compinit -C
+fi
+#autoload -Uz compinit && compinit
+
 setopt auto_param_slash
 setopt mark_dirs
 setopt list_types

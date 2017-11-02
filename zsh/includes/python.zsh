@@ -1,13 +1,12 @@
-source <(pip completion --zsh) &
-source `which virtualenvwrapper.sh` &
+source `which virtualenvwrapper_lazy.sh`
 
 #https://github.com/wkentaro/pycd
-type pycd.sh &>/dev/null && source `which pycd.sh` &
+pycd() {
+    unset -f pycd
+    source `which pycd.sh`
+    pycd $@
+}
 
 # Python
 export VIRTUALENV_USE_DISTRIBUTE=1
-
-export PYENV_ROOT=/usr/local/var/pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)" &; fi
-
-export PATH=~/.pyenv/shims:$PATH
+export VIRTUAL_ENV_DISABLE_PROMPT=1

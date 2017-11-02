@@ -2,3 +2,4 @@ zsh-users/zsh-completions
 MichaelAquilina/zsh-autoswitch-virtualenv
 bhilburn/powerlevel9k
 zsh-users/zsh-autosuggestions
+lukechilds/zsh-better-npm-completion

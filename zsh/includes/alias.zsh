@@ -89,3 +89,14 @@ if ! exists pygmentize; then
 fi
 
 alias c='pygmentize -g -O style=colorful,linenos=1'
+
+function gitsquash() {
+    if [[ $1 == "" ]]; then
+        echo "The hash to compare to is required (use 'gitsquash master' to rebase against a parent that's common for master and this branch)."
+        return 1
+    fi
+
+    HASH=$(git merge-base `git rev-parse --abbrev-ref HEAD` $1)
+    git rebase -i $HASH
+    return 0
+}

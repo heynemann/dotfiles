@@ -6,6 +6,11 @@ python ~/timeit.py zsh start general
 source ~/.zsh/includes/general.zsh
 python ~/timeit.py zsh finish general
 
+python ~/timeit.py zsh start brew
+#echo 'Loading brew configurations...'
+source ~/.zsh/includes/brew.zsh
+python ~/timeit.py zsh finish brew
+
 python ~/timeit.py zsh start powerlevel9k
 #echo 'Configuring Power Level 9k...'
 source ~/.zsh/includes/powerlevel9k.zsh
@@ -51,11 +56,6 @@ python ~/timeit.py zsh start fzf
 source ~/.zsh/includes/fzf.zsh
 python ~/timeit.py zsh finish fzf
 
-python ~/timeit.py zsh start npmcompletion
-# Language completions (must happen after plug-ins)
-source <(`which npm` completion) &
-python ~/timeit.py zsh finish npmcompletion
-
 python ~/timeit.py zsh start git
 #echo 'Loading Git Configurations...'
 source ~/.zsh/includes/git.zsh
@@ -85,8 +85,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
-reset
-echo ""
 echo "================="
 echo "ZSH Loading Stats"
 echo "================="
