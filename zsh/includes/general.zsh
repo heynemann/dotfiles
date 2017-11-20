@@ -35,10 +35,14 @@ fi
 # completion
 # https://carlosbecker.com/posts/speeding-up-zsh/
 autoload -Uz compinit
-if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
-  compinit
+if [[ $platform == 'darwin' ]]; then
+  if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+    compinit
+  else
+    compinit -C
+  fi
 else
-  compinit -C
+  compinit
 fi
 #autoload -Uz compinit && compinit
 

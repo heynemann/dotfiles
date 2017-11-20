@@ -6,7 +6,7 @@ fi
 
 # fzf via local installation
 if [ -e ~/.fzf ]; then
-  _append_to_path ~/.fzf/bin
+  export PATH=~/.fzf/bin:$PATH
   source ~/.fzf/shell/key-bindings.zsh
   source ~/.fzf/shell/completion.zsh
 fi
