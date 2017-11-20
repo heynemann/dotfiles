@@ -179,6 +179,7 @@ autocmd FileType javascript set formatprg=prettier\ --single-quote\ --trailing-c
 autocmd Filetype python setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype json setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype yaml setlocal ts=2 sw=2 sts=0 expandtab
+autocmd Filetype make setlocal ts=4 sw=4 sts=0 noexpandtab autoindent
 
 :autocmd BufWritePre *.py :pclose
 :autocmd BufWritePre *.js :pclose

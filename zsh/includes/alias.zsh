@@ -100,3 +100,12 @@ function gitsquash() {
     git rebase -i $HASH
     return 0
 }
+
+function venv3() {
+    if [[ $1 == "" ]]; then
+        echo "The virtualenv name is required."
+        return 1
+    fi
+
+    ~/.pyenv/versions/3.6.3/bin/python3 -m venv ~/.virtualenvs/$1
+}
