@@ -51,7 +51,7 @@ set number
 set expandtab
 
 "Use system-wide clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 "Allow usage of comma as well as ;
 let mapleader = ","
