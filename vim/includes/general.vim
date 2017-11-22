@@ -193,6 +193,5 @@ let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
 
-filetype plugin indent on
 syntax on
 set background=dark
