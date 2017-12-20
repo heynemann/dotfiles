@@ -6,8 +6,8 @@ mysql
 redis
 hiredis
 mongodb
-gfortran
-umfpack
+gcc
+suite-sparse
 swig
 libpng
 libjpeg
@@ -26,3 +26,10 @@ wget
 tree
 boost
 v8
+task
+python3
+z
+go
+rust
+cmake
+mono
