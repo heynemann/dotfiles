@@ -33,3 +33,12 @@ go
 rust
 cmake
 mono
+imagemagick
+webp
+opencv
+coreutils
+gifsicle
+libvpx
+exiftool
+cairo
+ffmpeg

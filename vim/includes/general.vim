@@ -51,7 +51,11 @@ set number
 set expandtab
 
 "Use system-wide clipboard
-set clipboard=unnamedplus
+if has('macunix')
+  set clipboard=unnamed
+else
+  set clipboard=unnamedplus
+endif
 
 "Allow usage of comma as well as ;
 let mapleader = ","
