@@ -35,10 +35,8 @@ let g:ale_fixers = {
 \   ],
 \   'javascript': [
 \       'prettier',
-\       'standard',
 \       'prettier_standard',
-\       'eslint',
-\       'prettier_eslint',
+\       'standard',
 \       'remove_trailing_lines',
 \       'trim_whitespace'
 \   ]
