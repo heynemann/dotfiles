@@ -14,15 +14,16 @@ nmap <silent> q <Plug>(ale_next_wrap)
 
 let g:ale_linters = {
   \   'csh': ['shell'],
-  \   'go': ['gofmt', 'golint', 'go vet'],
+  \   'go': ['gofmt', 'gometalinter'],
   \   'help': [],
   \   'perl': ['perlcritic'],
   \   'python': ['flake8', 'mypy', 'pylint'],
   \   'javascript': ['standard'],
+  \   'javascript.jsx': ['standard'],
   \   'rust': ['cargo'],
   \   'spec': [],
   \   'text': [],
-  \   'zsh': ['shell'],
+  \   'zsh': ['shell']
 \}
 
 let g:ale_fixers = {
@@ -34,6 +35,13 @@ let g:ale_fixers = {
 \       'add_blank_lines_for_python_control_statements'
 \   ],
 \   'javascript': [
+\       'prettier',
+\       'prettier_standard',
+\       'standard',
+\       'remove_trailing_lines',
+\       'trim_whitespace'
+\   ],
+\   'javascript.jsx': [
 \       'prettier',
 \       'prettier_standard',
 \       'standard',
