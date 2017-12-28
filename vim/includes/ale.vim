@@ -18,6 +18,7 @@ let g:ale_linters = {
   \   'help': [],
   \   'perl': ['perlcritic'],
   \   'python': ['flake8', 'mypy', 'pylint'],
+  \   'javascript': ['standard'],
   \   'rust': ['cargo'],
   \   'spec': [],
   \   'text': [],
@@ -31,5 +32,12 @@ let g:ale_fixers = {
 \       'remove_trailing_lines',
 \       'trim_whitespace',
 \       'add_blank_lines_for_python_control_statements'
+\   ],
+\   'javascript': [
+\       'prettier',
+\       'prettier_standard',
+\       'standard',
+\       'remove_trailing_lines',
+\       'trim_whitespace'
 \   ]
 \}
