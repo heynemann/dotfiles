@@ -199,3 +199,5 @@ let g:autoformat_remove_trailing_spaces = 0
 
 syntax on
 set background=dark
+
+let vim_markdown_preview_github=1
