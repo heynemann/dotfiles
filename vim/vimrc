@@ -20,6 +20,7 @@ source ~/.vim/includes/ycm.vim
 source ~/.vim/includes/easy-motion.vim
 source ~/.vim/includes/search.vim
 source ~/.vim/includes/tabular.vim
+source ~/.vim/includes/sessions.vim
 
 :au FocusGained * :redraw!
 
