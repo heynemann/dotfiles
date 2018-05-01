@@ -85,6 +85,13 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
+if [[ "$platform" == "windows" ]]; then
+    python ~/timeit.py zsh start windows
+    # COCOS
+    source ~/.zsh/includes/windows.zsh
+    python ~/timeit.py zsh finish windows
+fi
+
 echo "================="
 echo "ZSH Loading Stats"
 echo "================="

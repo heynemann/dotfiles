@@ -1,3 +1,11 @@
+if !exists("g:os")
+  if has("win64") || has("win32") || has("win16") || !empty(system('uname -a | grep Microsoft'))
+    let g:os = "Windows"
+  else
+    let g:os = substitute(system('uname'), '\n', '', '')
+  endif
+endif
+
 "font size - compatible with status bar
 "fuopt option controls the size of the vim control.
 "maxvert - When entering fullscreen, 'lines' is set to the maximum number of lines fitting on the screen in fullscreen mode.

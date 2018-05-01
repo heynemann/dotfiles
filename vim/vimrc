@@ -24,5 +24,13 @@ source ~/.vim/includes/sessions.vim
 
 :au FocusGained * :redraw!
 
+if g:os == "Windows"
+    source ~/.vim/includes/windows.vim
+end
+
 " gotta be last thing because bundles must be loaded
-colorscheme molokai
+if g:os == "Windows"
+    colorscheme desertEx
+else
+    colorscheme molokai
+end

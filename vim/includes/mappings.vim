@@ -63,7 +63,7 @@ map <silent><F12> :cclose<cr>
 " whitespace
 "
 ":nnoremap <silent> <Leader>m :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
-:nnoremap <silent> <Leader>m :StripWhitespace
+":nnoremap <silent> <Leader>m :StripWhitespace
 
 " delete all buffers
 map <Leader>b :bufdo bd<CR>
@@ -77,3 +77,9 @@ map <Leader>q :RestartVim<CR>
 map <Leader>/ :%!prettier --print-width 100 --no-bracket-spacing --single-quote --write % && ./node_modules/.bin/eslint --fix %<CR>
 
 noremap <F3> :Autoformat<CR>
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
+map <silent><F10> :NEXTCOLOR<cr>
+map <silent><F5> :PREVCOLOR<cr>

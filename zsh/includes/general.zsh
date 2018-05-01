@@ -23,6 +23,10 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
    platform='darwin'
 fi
 
+if [[ "`uname -a | grep Microsoft`" != "" ]]; then
+   platform='windows'
+fi
+
 if [[ $platform == 'darwin' ]]; then
   export CLICOLOR=1
   export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
@@ -31,6 +35,8 @@ fi
 if [[ $platform == 'Linux' ]]; then
   eval `dircolors $HOME/.zsh/dircolors.ansi-dark`
 fi
+
+fpath=(~/.zsh/completion $fpath)
 
 # completion
 # https://carlosbecker.com/posts/speeding-up-zsh/
@@ -42,9 +48,8 @@ if [[ $platform == 'darwin' ]]; then
     compinit -C
   fi
 else
-  compinit
+  compinit -i
 fi
-#autoload -Uz compinit && compinit
 
 setopt auto_param_slash
 setopt mark_dirs

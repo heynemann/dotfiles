@@ -1,4 +1,5 @@
 Plugin 'Colour-Sampler-Pack'
+Plugin 'vim-scripts/ScrollColors'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-sleuth'
 Plugin 'junegunn/fzf.vim'
