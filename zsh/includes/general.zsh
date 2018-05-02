@@ -38,8 +38,8 @@ fi
 
 fpath=(~/.zsh/completion $fpath)
 
-# completion
-# https://carlosbecker.com/posts/speeding-up-zsh/
+## completion
+## https://carlosbecker.com/posts/speeding-up-zsh/
 autoload -Uz compinit
 if [[ $platform == 'darwin' ]]; then
   if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
@@ -47,7 +47,17 @@ if [[ $platform == 'darwin' ]]; then
   else
     compinit -C
   fi
-else
+fi
+
+if [[ $platform == "windows" ]]; then
+  if [ $(date +'%j') != $(date -r ~/.zcompdump +'%j') ]; then
+    compinit
+  else
+    compinit -C
+  fi
+fi
+
+if [[ $platform == "linux" ]]; then
   compinit -i
 fi
 
@@ -72,7 +82,7 @@ zstyle ':completion:*:manuals' separate-sections true
 zstyle ':completion:*:*:-subscript-:*' tag-order indexes parameters
 zstyle ':completion:*:*files' ignored-patterns '*?.o' '*?~' '*\#'
 
-# add color
+## add color
 autoload colors
 colors
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
@@ -99,21 +109,18 @@ setopt pushd_ignore_dups
 setopt nolistbeep
 setopt nobeep
 
-# auto cd
+## auto cd
 setopt auto_cd
 zstyle ':completion:*:cd:*' tag-order local-directories path-directories
 zstyle ':completion:*:cd:*' ignore-parents parent pwd
 
-# By default, zsh considers many characters part of a word (e.g., _ and -).
-# Narrow that down to allow easier skipping through words via M-f and M-b.
+## By default, zsh considers many characters part of a word (e.g., _ and -).
+## Narrow that down to allow easier skipping through words via M-f and M-b.
 export WORDCHARS='*?[]~&;!$%^<>'
 
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_141.jdk/Contents/Home"
-
-bindkey "^[[1;3C" forward-word
-bindkey "^[[1;3D" backward-word
 
 f () {
     TF_PREVIOUS=$(fc -ln -1 | tail -n 1);

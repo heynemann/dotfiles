@@ -2,12 +2,12 @@
 rm -f ~/.timeit
 
 python ~/timeit.py zsh start general
-#echo 'Loading general configurations...'
+##echo 'Loading general configurations...'
 source ~/.zsh/includes/general.zsh
 python ~/timeit.py zsh finish general
 
 python ~/timeit.py zsh start brew
-#echo 'Loading brew configurations...'
+##echo 'Loading brew configurations...'
 source ~/.zsh/includes/brew.zsh
 python ~/timeit.py zsh finish brew
 
@@ -61,33 +61,29 @@ python ~/timeit.py zsh start git
 source ~/.zsh/includes/git.zsh
 python ~/timeit.py zsh finish git
 
-python ~/timeit.py zsh start android
+#python ~/timeit.py zsh start android
 # Android
-source ~/.zsh/includes/android.zsh
-python ~/timeit.py zsh finish android
+#source ~/.zsh/includes/android.zsh
+#python ~/timeit.py zsh finish android
 
-python ~/timeit.py zsh start cocos
+#python ~/timeit.py zsh start cocos
 # COCOS
-source ~/.zsh/includes/cocos.zsh
-python ~/timeit.py zsh finish cocos
+#source ~/.zsh/includes/cocos.zsh
+#python ~/timeit.py zsh finish cocos
 
-python ~/timeit.py zsh start z
+#python ~/timeit.py zsh start z
 # COCOS
-source ~/.zsh/includes/z.zsh
-python ~/timeit.py zsh finish z
+#source ~/.zsh/includes/z.zsh
+#python ~/timeit.py zsh finish z
 
 
 #cat ~/.zsh/includes/triforce.ascii
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
 if [[ "$platform" == "windows" ]]; then
     python ~/timeit.py zsh start windows
-    # COCOS
     source ~/.zsh/includes/windows.zsh
     python ~/timeit.py zsh finish windows
 fi
@@ -98,3 +94,4 @@ echo "================="
 python ~/timeit.py zsh show
 echo ""
 rm -f ~/.timeit
+cd ~

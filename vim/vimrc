@@ -30,7 +30,7 @@ end
 
 " gotta be last thing because bundles must be loaded
 if g:os == "Windows"
-    colorscheme desertEx
+    colorscheme desert
 else
     colorscheme molokai
 end
