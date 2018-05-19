@@ -245,4 +245,10 @@ fzf:
 	@bash -lc "if [ '${OS}' == 'Linux' ]; then git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install; fi"
 	@bash -lc "if [ '${OS}' == 'Darwin' ]; then brew install fzf; fi"
 
+html-tidy:
+	@bash -lc "if [ '${OS}' == 'Darwin' ]; then brew install tidy-html5 && exit 0; fi"
+	@sudo apt-get install -y git-core automake libtool
+	@rm -rf /tmp/tidy-html5
+	@cd /tmp && git clone https://github.com/w3c/tidy-html5 && cd tidy-html5 && cd build/cmake && cmake ../.. -DCMAKE_BUILD_TYPE=Release && sudo make install && sudo ldconfig
+
 setup-ubuntu: apt nodejs git symlinks zsh antibody install-python-extensions antibody-bundles clear-vim-bundle vundle install-vundle-plugins compile-ycm pyenv

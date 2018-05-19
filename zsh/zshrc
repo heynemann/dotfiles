@@ -1,60 +1,50 @@
-##echo 'Loading general configurations...'
+# Show all operations and how long it's taking for them to complete
+#setopt prompt_subst; zmodload zsh/datetime; PS4='+[$EPOCHREALTIME]%N:%i> '; set -x
+
+start=$(date +%s%N | cut -b1-13)
+
 source ~/.zsh/includes/general.zsh
 
-##echo 'Loading brew configurations...'
-source ~/.zsh/includes/brew.zsh
+if [[ $platform == 'darwin' ]]; then
+    source ~/.zsh/includes/brew.zsh
+fi
 
-#echo 'Configuring Power Level 9k...'
 source ~/.zsh/includes/powerlevel9k.zsh
 
-#echo 'Configuring Go...'
 source ~/.zsh/includes/golang.zsh
 
-#echo 'Configuring Python...'
 source ~/.zsh/includes/python.zsh
 
-#echo 'Configuring Aliases...'
 source ~/.zsh/includes/alias.zsh
 
-#echo 'Configuring RVM...'
 source ~/.zsh/includes/rvm.zsh
 
-#echo 'Loading Plugins...'
-source ~/.zsh/includes/plugins.zsh
-
-#echo 'Loading PyEnv...'
-source ~/.zsh/includes/pyenv.zsh
-
-#echo 'Loading Node...'
 source ~/.zsh/includes/node.zsh
 
-#echo 'Loading FZF...'
+plugins_start=$(date +%s%N | cut -b1-13)
+source ~/.zsh/includes/plugins.zsh
+plugins_end=$(date +%s%N | cut -b1-13)
+
+source ~/.zsh/includes/pyenv.zsh
+
 source ~/.zsh/includes/fzf.zsh
 
-#echo 'Loading Git Configurations...'
 source ~/.zsh/includes/git.zsh
 
-#python ~/timeit.py zsh start android
-# Android
-#source ~/.zsh/includes/android.zsh
-#python ~/timeit.py zsh finish android
+##source ~/.zsh/includes/android.zsh
 
-#python ~/timeit.py zsh start cocos
-# COCOS
-#source ~/.zsh/includes/cocos.zsh
-#python ~/timeit.py zsh finish cocos
+##source ~/.zsh/includes/cocos.zsh
 
-#python ~/timeit.py zsh start z
-# COCOS
-#source ~/.zsh/includes/z.zsh
-#python ~/timeit.py zsh finish z
+##cat ~/.zsh/includes/triforce.ascii
 
-
-#cat ~/.zsh/includes/triforce.ascii
-
-# Rust
+## Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
 if [[ "$platform" == "windows" ]]; then
     source ~/.zsh/includes/windows.zsh
 fi
+
+cd ~
+
+echo "ZSH plugins load time:  $(expr $plugins_end - $plugins_start)ms"
+echo "ZSH total startup time: $(expr $(date +%s%N | cut -b1-13) - $start)ms"

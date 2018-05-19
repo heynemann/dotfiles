@@ -43,18 +43,18 @@ fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit
 if [[ $platform == 'darwin' ]]; then
   if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
-    compinit
+    compinit -i
   else
-    compinit -C
+    compinit -i -C
   fi
 fi
 
 if [[ $platform == "windows" ]]; then
-  if [ $(date +'%j') != $(date -r ~/.zcompdump +'%j') ]; then
-    compinit
-  else
-    compinit -C
-  fi
+  #if [ $(date +'%j') != $(date -r ~/.zcompdump +'%j') ]; then
+  compinit -u
+  #else
+    #compinit -u
+  #fi
 fi
 
 if [[ $platform == "linux" ]]; then
