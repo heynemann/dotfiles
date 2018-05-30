@@ -42,9 +42,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 if [[ "$platform" == "windows" ]]; then
     source ~/.zsh/includes/windows.zsh
+    cd ~
 fi
-
-cd ~
 
 echo "ZSH plugins load time:  $(expr $plugins_end - $plugins_start)ms"
 echo "ZSH total startup time: $(expr $(date +%s%N | cut -b1-13) - $start)ms"
+export CDPATH=.:$HOME:$GOROOT/src:$GOPATH/src:$GOPATH/src/golang.org:$GOPATH/github.com:$GOPATH/gitlab.globoi.com:$HOME/dev:

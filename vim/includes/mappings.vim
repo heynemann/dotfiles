@@ -70,7 +70,7 @@ map <Leader>b :bufdo bd<CR>
 
 set nofoldenable    " disable folding
 
-"map <Leader>f :%!python -m json.tool<CR>
+map <Leader>p :%!python -m json.tool<CR>
 
 map <Leader>q :RestartVim<CR>
 
@@ -83,3 +83,6 @@ set showmode
 
 map <silent><F10> :NEXTCOLOR<cr>
 map <silent><F5> :PREVCOLOR<cr>
+
+nmap <silent> <C-n> <Plug>(VM-Find-Under)
+xmap <silent> <C-n> <Plug>(VM-Find-Subword-Under)
