@@ -42,6 +42,7 @@ alias hit='wrk -c 30 -d 30 -t 10 --latency'
 
 alias reload='exec zsh'
 alias mac-install-pycurl='PYCURL_SSL_LIBRARY=openssl LDFLAGS="-L/usr/local/opt/openssl/lib" CPPFLAGS="-I/usr/local/opt/openssl/include" pip install --no-cache-dir --compile --ignore-installed --install-option="--with-openssl" pycurl'
+alias install-python-lint='pip install flake8 yapf isort'
 
 function exists { which $1 &> /dev/null }
 
@@ -63,4 +64,8 @@ function venv3() {
     fi
 
     ~/.pyenv/versions/3.6.3/bin/python3 -m venv ~/.virtualenvs/$1
+}
+
+function download-gitignore() {
+  python ~/dev/dotfiles/download_gitignore.py $*
 }
