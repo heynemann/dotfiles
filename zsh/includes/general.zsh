@@ -37,6 +37,7 @@ if [[ $platform == 'Linux' ]]; then
 fi
 
 fpath=(~/.zsh/completion $fpath)
+fpath+=~/.zsh/zfunc
 
 ## completion
 ## https://carlosbecker.com/posts/speeding-up-zsh/

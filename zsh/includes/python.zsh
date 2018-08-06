@@ -7,3 +7,5 @@ export PATH=~/.local/bin:$PATH
 
 # venv
 source `which virtualenvwrapper_lazy.sh`
+
+export PYTHON_CONFIGURE_OPTS="--enable-framework"

@@ -86,3 +86,6 @@ map <silent><F5> :PREVCOLOR<cr>
 
 nmap <silent> <C-n> <Plug>(VM-Find-Under)
 xmap <silent> <C-n> <Plug>(VM-Find-Subword-Under)
+
+nmap f <Plug>(easymotion-bd-f)
+nmap F <Plug>(easymotion-overwin-f) 

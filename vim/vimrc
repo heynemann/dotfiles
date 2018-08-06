@@ -21,6 +21,7 @@ source ~/.vim/includes/easy-motion.vim
 source ~/.vim/includes/search.vim
 source ~/.vim/includes/tabular.vim
 source ~/.vim/includes/sessions.vim
+source ~/.vim/includes/python.vim
 
 :au FocusGained * :redraw!
 
