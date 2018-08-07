@@ -43,6 +43,7 @@ alias hit='wrk -c 30 -d 30 -t 10 --latency'
 alias reload='exec zsh'
 alias mac-install-pycurl='PYCURL_SSL_LIBRARY=openssl LDFLAGS="-L/usr/local/opt/openssl/lib" CPPFLAGS="-I/usr/local/opt/openssl/include" pip install --no-cache-dir --compile --ignore-installed --install-option="--with-openssl" pycurl'
 alias install-python-lint='pip install flake8 yapf isort'
+alias p='poetry'
 
 function exists { which $1 &> /dev/null }
 
