@@ -15,21 +15,21 @@ prompt_date_time() {
   "$1_prompt_segment" "$0" "$2" "$DEFAULT_COLOR_INVERTED" "$DEFAULT_COLOR" "$time_format"
 }
 
-prompt_due_tasks(){
-  local today_tasks=$(task +TODAY count)
-  local tomorrow_tasks=$(task +TOMORROW count)
-  local today_color='%F{red}'
-  local tomorrow_color='%F{red}'
-  local text_color='%F{white}'
-  local task_char='⚙'
-  if [ $today_tasks != 0 ]; then
-      echo -n "%{$today_color%}⛈ %{$text_color%}$today_tasks%{%f%} "
-  fi
+#prompt_due_tasks(){
+  #local today_tasks=$(task +TODAY count)
+  #local tomorrow_tasks=$(task +TOMORROW count)
+  #local today_color='%F{red}'
+  #local tomorrow_color='%F{red}'
+  #local text_color='%F{white}'
+  #local task_char='⚙'
+  #if [ $today_tasks != 0 ]; then
+      #echo -n "%{$today_color%}⛈ %{$text_color%}$today_tasks%{%f%} "
+  #fi
 
-   if [ $tomorrow_tasks != 0 ]; then
-      echo -n "%{$tomorrow_color%}⛅ %{$text_color%}$tomorrow_tasks%{%f%} "
-  fi
-}
+   #if [ $tomorrow_tasks != 0 ]; then
+      #echo -n "%{$tomorrow_color%}⛅ %{$text_color%}$tomorrow_tasks%{%f%} "
+  #fi
+#}
 
 function preexec() {
   timer=${timer:-$SECONDS}
@@ -53,7 +53,7 @@ prompt_space(){
 
 export POWERLEVEL9K_MODE='awesome-patched'
 export POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir due_tasks vcs last_tag)
+export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs last_tag)
 export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_time space virtualenv rvm date_time)
 export POWERLEVEL9K_VCS_HIDE_TAGS=true
 export POWERLEVEL9K_HIDE_BRANCH_ICON=false
