@@ -252,3 +252,6 @@ html-tidy:
 	@cd /tmp && git clone https://github.com/w3c/tidy-html5 && cd tidy-html5 && cd build/cmake && cmake ../.. -DCMAKE_BUILD_TYPE=Release && sudo make install && sudo ldconfig
 
 setup-ubuntu: apt nodejs git symlinks zsh antibody install-python-extensions antibody-bundles clear-vim-bundle vundle install-vundle-plugins compile-ycm pyenv
+
+update-tabnine:
+	@./vim/bundle/deoplete-tabnine/install.sh
