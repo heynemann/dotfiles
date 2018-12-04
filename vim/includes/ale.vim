@@ -21,6 +21,7 @@ let g:ale_linters = {
   \   'go': ['gofmt', 'gometalinter'],
   \   'html': ['tidy'],
   \   'htmldjango': ['tidy'],
+  \   'hack': ['hack', 'hhast'],
   \   'help': [],
   \   'perl': ['perlcritic'],
   \   'python': ['flake8', 'mypy', 'pylint'],
@@ -40,6 +41,9 @@ let g:ale_fixers = {
 \       'remove_trailing_lines',
 \       'trim_whitespace',
 \       'add_blank_lines_for_python_control_statements'
+\   ],
+\   'hack': [
+\       'hackfmt',
 \   ],
 \   'javascript': [
 \       'prettier',

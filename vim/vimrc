@@ -38,6 +38,11 @@ else
 end
 
 if has('nvim')
-    let g:python2_host_prog = '/usr/local/bin/python'
-    let g:python3_host_prog = '/usr/local/bin/python3'
+    if g:os == "Linux"
+        let g:python2_host_prog = '/usr/bin/python'
+        let g:python3_host_prog = '/usr/bin/python3'
+    else
+        let g:python2_host_prog = '/usr/local/bin/python'
+        let g:python3_host_prog = '/usr/local/bin/python3'
+    end
 end
