@@ -11,5 +11,3 @@ source `which virtualenvwrapper_lazy.sh`
 if [[ $platform == "darwin" ]]; then
   export PYTHON_CONFIGURE_OPTS="--enable-framework"
 fi
-
-
