@@ -45,6 +45,6 @@ if [[ "$platform" == "windows" ]]; then
     cd ~
 fi
 
-echo "ZSH plugins load time:  $(expr $plugins_end - $plugins_start)ms"
-echo "ZSH total startup time: $(expr $(date +%s%N | cut -b1-13) - $start)ms"
+#echo "ZSH plugins load time:  $(expr $plugins_end - $plugins_start)ms"
+#echo "ZSH total startup time: $(expr $(date +%s%N | cut -b1-13) - $start)ms"
 export CDPATH=.:$HOME:$GOROOT/src:$GOPATH/src:$GOPATH/src/golang.org:$GOPATH/src/github.com:$GOPATH/src/github.com/heynemann:$GOPATH/src/gitlab.globoi.com:$HOME/dev:

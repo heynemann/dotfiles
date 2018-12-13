@@ -133,3 +133,5 @@ f () {
     ) && eval $TF_CMD;
     test -n "$TF_CMD" && print -s $TF_CMD
 }
+
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES

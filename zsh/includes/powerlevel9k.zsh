@@ -51,7 +51,8 @@ prompt_space(){
     echo -n " "
 }
 
-export POWERLEVEL9K_MODE='awesome-patched'
+export POWERLEVEL9K_MODE='nerdfont-complete'
+#export POWERLEVEL9K_MODE='awesome-patched'
 export POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 export POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs last_tag)
 export POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_time space virtualenv rvm date_time)

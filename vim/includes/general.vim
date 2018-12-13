@@ -17,18 +17,18 @@ endif
 if has("gui_running")
   if has("gui_gtk2")
     " LINUX
-    set guifont=Inconsolata\ Awesome\ 28
+    set guifont=FuraCode\ Nerd\ Font\ Mono\ 28
   elseif has("gui_photon")
-    set guifont=Inconsolata\ Awesome:s17
+    set guifont=FuraCode\ Nerd\ Font\ Mono:s17
     set fuopt=maxvert,maxhorz
   elseif has("gui_kde")
-    set guifont=Inconsolata\ Awesome/17/-1/5/50/0/0/0/1/0
+    set guifont=FuraCode\ Nerd\ Font\ Mono/17/-1/5/50/0/0/0/1/0
     set fuopt=maxvert,maxhorz
   elseif has("x11")
-    set guifont=-*-inconsolata-medium-r-normal-*-*-170-*-*-m-*-*
+    set guifont=-*-furacode-medium-r-normal-*-*-170-*-*-m-*-*
     set fuopt=maxvert,maxhorz
   else
-    set guifont=Inconsolata\ Awesome:h17
+    set guifont=FuraCode\ Nerd\ Font\ Mono:h17
     set fuopt=maxvert,maxhorz
   endif
 endif
