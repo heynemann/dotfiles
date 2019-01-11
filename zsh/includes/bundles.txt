@@ -1,3 +1,4 @@
 bhilburn/powerlevel9k
 zsh-users/zsh-autosuggestions
 lukechilds/zsh-nvm
+blueyed/zsh-completions forked from zsh-users/zsh-completions
