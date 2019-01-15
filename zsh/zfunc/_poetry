@@ -1,6 +1,6 @@
 #compdef poetry
 
-_poetry_fba08e63e8e33757_complete()
+_poetry_6000d852b2cd6f26_complete()
 {
     local state com cur
 
@@ -19,7 +19,7 @@ _poetry_fba08e63e8e33757_complete()
         opts=("--ansi:Force ANSI output" "--help:Display this help message" "--no-ansi:Disable ANSI output" "--no-interaction:Do not ask any interactive question" "--quiet:Do not output any message" "--verbose:Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug" "--version:Display this application version")
     elif [[ $cur == $com ]]; then
         state="command"
-        coms=("about:Short information about Poetry." "add:Add a new dependency to pyproject.toml." "build:Builds a package, as a tarball and a wheel by default." "cache\:clear:Clears poetry\'s cache." "check:Checks the validity of the pyproject.toml file." "config:Sets/Gets config options." "debug\:info:Shows debug information." "debug\:resolve:Debugs dependency resolution." "develop:Installs the current project in development mode." "help:Displays help for a command" "init:Creates a basic pyproject.toml file in the current directory." "install:Installs the project dependencies." "list:Lists commands" "lock:Locks the project dependencies." "new:Creates a new Python project at <path\>" "publish:Publishes a package to a remote repository." "remove:Removes a package from the project dependencies." "run:Runs a command in the appropriate environment." "script:Executes a script defined in pyproject.toml. \(Deprecated\)" "search:Searches for packages on remote repositories." "self\:update:Updates poetry to the latest version." "shell:Spawns a shell within the virtual environment." "show:Shows information about packages." "update:Update dependencies as according to the pyproject.toml file." "version:Bumps the version of the project.")
+        coms=("about:Short information about Poetry." "add:Add a new dependency to pyproject.toml." "build:Builds a package, as a tarball and a wheel by default." "cache\:clear:Clears poetry\'s cache." "check:Checks the validity of the pyproject.toml file." "config:Sets/Gets config options." "debug\:info:Shows debug information." "debug\:resolve:Debugs dependency resolution." "develop:Installs the current project in development mode. \(Deprecated\)" "help:Displays help for a command" "init:Creates a basic pyproject.toml file in the current directory." "install:Installs the project dependencies." "list:Lists commands" "lock:Locks the project dependencies." "new:Creates a new Python project at <path\>" "publish:Publishes a package to a remote repository." "remove:Removes a package from the project dependencies." "run:Runs a command in the appropriate environment." "script:Executes a script defined in pyproject.toml. \(Deprecated\)" "search:Searches for packages on remote repositories." "self\:update:Updates poetry to the latest version." "shell:Spawns a shell within the virtual environment." "show:Shows information about packages." "update:Update dependencies as according to the pyproject.toml file." "version:Bumps the version of the project.")
     fi
 
     case $state in
@@ -58,7 +58,7 @@ _poetry_fba08e63e8e33757_complete()
             ;;
 
             (debug:resolve)
-            opts+=("--extras:Extras to activate for the dependency." "--python:Python version\(s\) to use for resolution.")
+            opts+=("--extras:Extras to activate for the dependency." "--install:Show what would be installed for the current system." "--python:Python version\(s\) to use for resolution." "--tree:Displays the dependency tree.")
             ;;
 
             (develop)
@@ -118,11 +118,11 @@ _poetry_fba08e63e8e33757_complete()
             ;;
 
             (show)
-            opts+=("--all:Show all packages \(even those not compatible with current system\)." "--latest:Show the latest version." "--outdated:Show the latest version but only for packages that are outdated." "--tree:List the dependencies as a tree.")
+            opts+=("--all:Show all packages \(even those not compatible with current system\)." "--latest:Show the latest version." "--no-dev:Do not list the dev dependencies." "--outdated:Show the latest version but only for packages that are outdated." "--tree:List the dependencies as a tree.")
             ;;
 
             (update)
-            opts+=("--dry-run:Outputs the operations but will not execute anything \(implicitly enables --verbose\)." "--no-dev:Do not install dev dependencies.")
+            opts+=("--dry-run:Outputs the operations but will not execute anything \(implicitly enables --verbose\)." "--lock:Do not perform install \(only update the lockfile\)." "--no-dev:Do not install dev dependencies.")
             ;;
 
             (version)
@@ -139,5 +139,5 @@ _poetry_fba08e63e8e33757_complete()
     esac
 }
 
-_poetry_fba08e63e8e33757_complete "$@"
-compdef _poetry_fba08e63e8e33757_complete /usr/local/bin/poetry
+_poetry_6000d852b2cd6f26_complete "$@"
+compdef _poetry_6000d852b2cd6f26_complete /home/heynemann/.poetry/bin/poetry

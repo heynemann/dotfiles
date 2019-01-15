@@ -25,8 +25,10 @@ let g:ale_linters = {
   \   'help': [],
   \   'perl': ['perlcritic'],
   \   'python': ['flake8', 'mypy', 'pylint'],
-  \   'javascript': ['standard'],
-  \   'javascript.jsx': ['standard'],
+  \   'javascript': ['eslint'],
+  \   'typescript': ['tslint'],
+  \   'typescript.tsx': ['tslint'],
+  \   'javascript.jsx': ['eslint'],
   \   'rust': ['cargo'],
   \   'spec': [],
   \   'text': [],
@@ -53,6 +55,20 @@ let g:ale_fixers = {
 \       'trim_whitespace'
 \   ],
 \   'javascript.jsx': [
+\       'prettier',
+\       'prettier_standard',
+\       'standard',
+\       'remove_trailing_lines',
+\       'trim_whitespace'
+\   ],
+\   'typescript': [
+\       'prettier',
+\       'prettier_standard',
+\       'standard',
+\       'remove_trailing_lines',
+\       'trim_whitespace'
+\   ],
+\   'typescript.tsx': [
 \       'prettier',
 \       'prettier_standard',
 \       'standard',

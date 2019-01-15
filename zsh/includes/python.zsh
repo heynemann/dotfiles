@@ -5,6 +5,9 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 # PIPSI
 export PATH=~/.local/bin:$PATH
 
+# Poetry
+export PATH=~/.poetry/bin:$PATH
+
 # venv
 source `which virtualenvwrapper_lazy.sh`
 
