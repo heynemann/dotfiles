@@ -23,6 +23,7 @@ source ~/.vim/includes/tabular.vim
 source ~/.vim/includes/sessions.vim
 source ~/.vim/includes/python.vim
 source ~/.vim/includes/deoplete.vim
+source ~/.vim/includes/flow.vim
 
 :au FocusGained * :redraw!
 
