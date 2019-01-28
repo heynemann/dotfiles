@@ -46,6 +46,8 @@ alias install-python-lint='pip install flake8 yapf isort'
 alias p='poetry'
 alias mk='minikube --vm-driver=hyperkit'
 alias update-pyenv="cd $HOME/.pyenv/plugins/python-build/../.. && git pull && cd -"
+alias cdu="cd-gitroot"
+alias travis="git-trav"
 
 function exists { which $1 &> /dev/null }
 

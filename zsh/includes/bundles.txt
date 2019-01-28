@@ -1,5 +1,4 @@
 chrissicool/zsh-256color
-bhilburn/powerlevel9k
+denysdovhan/spaceship-prompt
 zsh-users/zsh-autosuggestions
 lukechilds/zsh-nvm
-blueyed/zsh-completions forked from zsh-users/zsh-completions

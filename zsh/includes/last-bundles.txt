@@ -1,2 +1,13 @@
 zsh-users/zsh-history-substring-search
-zsh-users/zsh-syntax-highlighting
+zdharma/fast-syntax-highlighting
+blueyed/zsh-completions forked from zsh-users/zsh-completions
+lukechilds/zsh-better-npm-completion
+akoenig/npm-run.plugin.zsh
+srijanshetty/zsh-pip-completion
+buonomo/yarn-completion
+marzocchi/zsh-notify
+molovo/tipz
+mollifier/cd-gitroot
+MichaelAquilina/zsh-autoswitch-virtualenv
+Cloudstek/zsh-plugin-appup
+denolfe/zsh-travis
