@@ -231,11 +231,8 @@ antibody-bundles update-antibody-bundles update-zsh-bundles:
 	@echo "Don't forget to install percol (pip install percol)"
 	@antibody bundle < ./zsh/includes/bundles.txt > ./zsh/includes/bundles.zsh
 	@sed -i.bak "s@${HOME}@~@g" ./zsh/includes/bundles.zsh
-	#@echo "Running: cat ./zsh/includes/bundles.zsh | sed s@${HOME}@~@ > ./zsh/includes/bundles.zsh"
-	#@eval "cat ./zsh/includes/bundles.zsh | sed 's@${HOME}@~@' > ./zsh/includes/bundles.zsh"
 	@antibody bundle < ./zsh/includes/last-bundles.txt > ./zsh/includes/last-bundles.zsh
 	@sed -i.bak "s@${HOME}@~@g" ./zsh/includes/last-bundles.zsh
-	#@cat ./zsh/includes/last-bundles.zsh | sed s@${HOME}@~@ > ./zsh/includes/last-bundles.zsh
 	@rm -f ./zsh/includes/*.bak
 
 install-python-extensions:
