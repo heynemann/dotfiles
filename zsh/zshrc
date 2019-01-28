@@ -31,6 +31,8 @@ source ~/.zsh/includes/fzf.zsh
 
 source ~/.zsh/includes/git.zsh
 
+source ~/.zsh/includes/spaceship.zsh
+
 ##source ~/.zsh/includes/android.zsh
 
 ##source ~/.zsh/includes/cocos.zsh
