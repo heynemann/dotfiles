@@ -49,6 +49,7 @@ alias update-pyenv="cd $HOME/.pyenv/plugins/python-build/../.. && git pull && cd
 alias cdu="cd-gitroot"
 alias travis="git-trav"
 alias setup-node="npm install -g yarn yo eslint npm"
+alias findf="find . -name "
 
 function exists { which $1 &> /dev/null }
 

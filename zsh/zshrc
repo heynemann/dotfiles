@@ -7,6 +7,8 @@ source ~/.zsh/includes/general.zsh
 
 if [[ $platform == 'darwin' ]]; then
     source ~/.zsh/includes/brew.zsh
+else
+    source ~/.zsh/includes/linux-brew.zsh
 fi
 
 source ~/.zsh/includes/powerlevel9k.zsh
