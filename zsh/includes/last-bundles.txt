@@ -8,6 +8,5 @@ buonomo/yarn-completion
 marzocchi/zsh-notify
 molovo/tipz
 mollifier/cd-gitroot
-MichaelAquilina/zsh-autoswitch-virtualenv
 Cloudstek/zsh-plugin-appup
 denolfe/zsh-travis
