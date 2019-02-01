@@ -22,6 +22,8 @@ source ~/.vim/includes/search.vim
 source ~/.vim/includes/tabular.vim
 source ~/.vim/includes/sessions.vim
 source ~/.vim/includes/python.vim
+source ~/.vim/includes/typescript.vim
+source ~/.vim/includes/vim-test.vim
 source ~/.vim/includes/deoplete.vim
 source ~/.vim/includes/flow.vim
 

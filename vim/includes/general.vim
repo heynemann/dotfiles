@@ -186,8 +186,11 @@ set sidescrolloff=15    " Number of cols from horizontal edge to start scrolling
 set sidescroll=1        " Number of cols to scroll at a time
 
 filetype plugin indent on
+autocmd Filetype cpp setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=0 expandtab
 autocmd FileType javascript set formatprg=prettier\ --single-quote\ --trailing-comma\ --stdin
+autocmd Filetype typescript setlocal ts=2 sw=2 sts=0 expandtab
+autocmd FileType typescript set formatprg=prettier\ --single-quote\ --trailing-comma\ --stdin
 autocmd Filetype python setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype json setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype yaml setlocal ts=2 sw=2 sts=0 expandtab
@@ -216,3 +219,4 @@ syntax on
 set background=dark
 
 let vim_markdown_preview_github=1
+let NERDSpaceDelims=1

@@ -22,3 +22,9 @@ inoremap <silent><expr> <TAB>
 		endfunction"}}}
 
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
+
+" Change clang binary path
+call deoplete#custom#var('clangx', 'clang_binary', '/usr/bin/clang')
+
+" Change clang options
+call deoplete#custom#var('clangx', 'default_cpp_options', '-std=c++14 -I./node_modules/node-addon-api/ -I~/$HOME/node-gyp/11.8.0/include/node/')

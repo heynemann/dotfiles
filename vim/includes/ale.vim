@@ -14,6 +14,8 @@ nmap <silent> q <Plug>(ale_next_wrap)
 
 let g:ale_cpp_clang_executable = 'clang++-6.0'
 let g:ale_c_clangformat_executable = 'clang-format-6.0'
+let g:ale_cpp_gcc_options = "-std=c++14 -I./node_modules/node-addon-api/ -I$HOME/.node-gyp/11.8.0/include/node/"
+let g:ale_cpp_clang_options = "-std=c++14 -I./node_modules/node-addon-api/ -I~/$HOME/node-gyp/11.8.0/include/node/"
 
 let g:ale_linters = {
   \   'csh': ['shell'],
@@ -26,8 +28,8 @@ let g:ale_linters = {
   \   'perl': ['perlcritic'],
   \   'python': ['flake8', 'mypy', 'pylint'],
   \   'javascript': ['flow', 'eslint'],
-  \   'typescript': ['tslint'],
-  \   'typescript.tsx': ['tslint'],
+  \   'typescript': ['tslint', 'typecheck', 'tsserver'],
+  \   'typescript.tsx': ['tslint', 'typecheck', 'tsserver'],
   \   'javascript.jsx': ['eslint'],
   \   'rust': ['cargo'],
   \   'spec': [],
@@ -55,22 +57,17 @@ let g:ale_fixers = {
 \   ],
 \   'javascript.jsx': [
 \       'prettier',
-\       'prettier_standard',
-\       'standard',
+\       'eslint',
 \       'remove_trailing_lines',
 \       'trim_whitespace'
 \   ],
 \   'typescript': [
-\       'prettier',
-\       'prettier_standard',
-\       'standard',
+\		'prettier',
 \       'remove_trailing_lines',
 \       'trim_whitespace'
 \   ],
 \   'typescript.tsx': [
-\       'prettier',
-\       'prettier_standard',
-\       'standard',
+\		'prettier',
 \       'remove_trailing_lines',
 \       'trim_whitespace'
 \   ],
@@ -80,3 +77,5 @@ let g:ale_fixers = {
 \       'trim_whitespace'
 \   ]
 \}
+
+let g:ale_typescript_tslint_use_global = 0
