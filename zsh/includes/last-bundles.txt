@@ -1,12 +1,2 @@
-zsh-users/zsh-history-substring-search
 zdharma/fast-syntax-highlighting
-blueyed/zsh-completions forked from zsh-users/zsh-completions
-lukechilds/zsh-better-npm-completion
-akoenig/npm-run.plugin.zsh
-srijanshetty/zsh-pip-completion
-buonomo/yarn-completion
-marzocchi/zsh-notify
-molovo/tipz
 mollifier/cd-gitroot
-Cloudstek/zsh-plugin-appup
-denolfe/zsh-travis
