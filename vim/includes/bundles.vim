@@ -45,3 +45,7 @@ Plugin 'olalonde/jest-quickfix-reporter'
 " C++
 Plugin 'Shougo/neoinclude.vim'
 Plugin 'Shougo/deoplete-clangx'
+
+" C#
+Plugin 'OmniSharp/omnisharp-vim'
+Plugin 'idbrii/vim-unityengine'

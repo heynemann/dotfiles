@@ -26,6 +26,7 @@ source ~/.vim/includes/typescript.vim
 source ~/.vim/includes/vim-test.vim
 source ~/.vim/includes/deoplete.vim
 source ~/.vim/includes/flow.vim
+source ~/.vim/includes/csharp.vim
 
 :au FocusGained * :redraw!
 

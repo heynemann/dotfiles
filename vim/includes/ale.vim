@@ -19,6 +19,7 @@ let g:ale_cpp_clang_options = "-std=c++14 -I./node_modules/node-addon-api/ -I~/$
 
 let g:ale_linters = {
   \   'csh': ['shell'],
+  \   'cs': ['omnisharp'],
   \   'cpp': ['gcc', 'cpplint', 'cppcheck', 'flawfinder'],
   \   'go': ['gofmt', 'gometalinter'],
   \   'html': ['tidy'],
