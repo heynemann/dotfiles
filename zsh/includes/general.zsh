@@ -32,7 +32,7 @@ if [[ $platform == 'darwin' ]]; then
   export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 fi
 
-if [[ $platform == 'Linux' ]]; then
+if [[ $platform == 'linux' ]]; then
   eval `dircolors $HOME/.zsh/dircolors.ansi-dark`
 fi
 
@@ -120,8 +120,6 @@ zstyle ':completion:*:cd:*' ignore-parents parent pwd
 export WORDCHARS='*?[]~&;!$%^<>'
 
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_141.jdk/Contents/Home"
 
 f () {
     TF_PREVIOUS=$(fc -ln -1 | tail -n 1);

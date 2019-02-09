@@ -48,4 +48,3 @@ Plugin 'Shougo/deoplete-clangx'
 
 " C#
 Plugin 'OmniSharp/omnisharp-vim'
-Plugin 'idbrii/vim-unityengine'

@@ -19,7 +19,7 @@ let g:ale_cpp_clang_options = "-std=c++14 -I./node_modules/node-addon-api/ -I~/$
 
 let g:ale_linters = {
   \   'csh': ['shell'],
-  \   'cs': ['omnisharp'],
+  \   'cs': ['omnisharp', 'mcsc'],
   \   'cpp': ['gcc', 'cpplint', 'cppcheck', 'flawfinder'],
   \   'go': ['gofmt', 'gometalinter'],
   \   'html': ['tidy'],
@@ -76,7 +76,14 @@ let g:ale_fixers = {
 \       'clang-format',
 \       'remove_trailing_lines',
 \       'trim_whitespace'
+\   ],
+\   'cs': [
+\       'uncrustify',
+\       'remove_trailing_lines',
+\       'trim_whitespace'
 \   ]
 \}
 
 let g:ale_typescript_tslint_use_global = 0
+" let g:ale_c_uncrustify_options = '-c ~/.uncrustify.cfg'
+let g:ale_c_uncrustify_options = ''

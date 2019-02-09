@@ -40,6 +40,9 @@ if g:os == "Windows"
 else
     colorscheme molokai
 end
+" if filereadable("$HOME/.extras.vim") == 1
+source ~/.extras.vim
+" endif
 
 if has('nvim')
     if g:os == "Linux"

@@ -199,6 +199,8 @@ autocmd Filetype htmldjango setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype make setlocal ts=4 sw=4 sts=0 noexpandtab autoindent
 
 :autocmd BufWritePre *.py :pclose
+:autocmd BufWritePre *.cs :pclose
+:autocmd BufWritePre *.cs :cclose
 :autocmd BufWritePre *.js :pclose
 
 "augroup autoindent
