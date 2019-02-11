@@ -135,12 +135,15 @@ postgresql:
 
 symlinks:
 	@mkdir -p ~/.virtualenvs
+	@mkdir -p ~/.config/nvim
+	@rm -rf ~/.config/nvim/init.vim
+	@ln -sf `pwd`/init.vim ~/.config/nvim/init.vim
 	@rm -rf ~/.vim
 	@ln -sf `pwd`/vim ~/.vim
 	@ln -sf `pwd`/vim/vimrc ~/.vimrc
-	@ln -sf `pwd`/.bashrc ~/.bashrc
-	@ln -sf `pwd`/.bash_profile ~/.bash_profile
-	@ln -sf `pwd`/.ps1 ~/.ps1
+	#@ln -sf `pwd`/.bashrc ~/.bashrc
+	#@ln -sf `pwd`/.bash_profile ~/.bash_profile
+	#@ln -sf `pwd`/.ps1 ~/.ps1
 	@ln -sf `pwd`/git-completion.bash ~/git-completion.bash
 	@ln -sf `pwd`/virtualenv.ini ~/.virtualenvs/virtualenv.ini
 	@ln -sf `pwd`/flake8 ~/.config/flake8
@@ -148,9 +151,9 @@ symlinks:
 	@ln -sf `pwd`/zsh ~/.zsh
 	@ln -sf `pwd`/zsh/zsh_history ~/.zsh_history
 	@ln -sf `pwd`/zsh/zshrc ~/.zshrc
-	@ln -sf `pwd`/task/ ~/.task
-	@ln -sf `pwd`/.taskrc ~/.taskrc
-	@ln -sf `pwd`/timeit.py ~/timeit.py
+	#@ln -sf `pwd`/task/ ~/.task
+	#@ln -sf `pwd`/.taskrc ~/.taskrc
+	#@ln -sf `pwd`/timeit.py ~/timeit.py
 	#@ln -sf `pwd`/antigen.zsh ~/.antigen.zsh
 
 vim:
