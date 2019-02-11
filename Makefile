@@ -134,6 +134,7 @@ postgresql:
 	@sudo /etc/init.d/postgresql restart
 
 symlinks:
+	@touch ~/.extras.{vim,zsh}
 	@mkdir -p ~/.virtualenvs
 	@mkdir -p ~/.config/nvim
 	@rm -rf ~/.config/nvim/init.vim

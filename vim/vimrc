@@ -43,18 +43,3 @@ end
 " if filereadable("$HOME/.extras.vim") == 1
 source ~/.extras.vim
 " endif
-
-if has('nvim')
-    if g:os == "Linux"
-        let g:python2_host_prog = '/usr/bin/python'
-        let g:python3_host_prog = '/usr/bin/python3'
-    else
-        if g:os == "Windows"
-            let g:python2_host_prog = '/home/linuxbrew/.linuxbrew/bin/python'
-            let g:python3_host_prog = '/home/linuxbrew/.linuxbrew/bin/python3'
-        else
-            let g:python2_host_prog = '/usr/local/bin/python'
-            let g:python3_host_prog = '/usr/local/bin/python3'
-        end
-    end
-end
