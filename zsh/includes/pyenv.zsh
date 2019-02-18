@@ -3,11 +3,6 @@ export PATH="$PYENV_ROOT/bin:$PYENV_ROOT/shims:$PATH"
 
 eval "$(pyenv init -)"
 
-#start-pyenv() {
-    ##unset -f pyenv
-    #export PATH="~/.pyenv/bin:$PATH"
-    #eval "$(pyenv init -)"
-    #eval "$(pyenv virtualenv-init -)"
-    ##pyenv $@
-#}
-#
+if [[ $platform == 'darwin' ]]; then
+    alias pyenv='CFLAGS="-I$(brew --prefix openssl)/include -I$(xcrun --show-sdk-path)/usr/include" LDFLAGS="-L$(brew --prefix openssl)/lib" pyenv'
+fi

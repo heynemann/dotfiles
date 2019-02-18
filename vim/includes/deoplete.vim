@@ -1,5 +1,9 @@
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#jedi#show_docstring = 1
+let g:jedi#completions_enabled = 0
+let g:jedi#auto_vim_configuration = 0
+let g:jedi#smart_auto_mappings = 0
+let g:jedi#show_call_signatures = 0
 
 " use tab to forward cycle
 "inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"

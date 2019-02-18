@@ -35,6 +35,7 @@ let g:ale_linters = {
   \   'rust': ['cargo'],
   \   'spec': [],
   \   'text': [],
+  \   'sh': [],
   \   'zsh': ['shell']
 \}
 
@@ -77,6 +78,7 @@ let g:ale_fixers = {
 \       'remove_trailing_lines',
 \       'trim_whitespace'
 \   ],
+\   'sh': [],
 \   'cs': [
 \       'uncrustify',
 \       'remove_trailing_lines',
