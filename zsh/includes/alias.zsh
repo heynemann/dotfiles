@@ -20,7 +20,7 @@ function docker-tail() {
     return 1
   fi
 
-  CONTAINERID=$(docker ps -aqf "name=$*")
+  CONTAINERID=$(docker ps -aqf "name=$*" | head -n1)
   if [[ $CONTAINERID == "" ]]; then
     echo "Container with name $* was not found."
     return 1

@@ -8,10 +8,11 @@ _has() {
 
 # grep
 if [ "$(uname)" = "Darwin" ]; then
-  export PATH="/usr/local/bin:$PATH"
+  export PATH="/usr/local/bin:$HOME/bin:$PATH"
   export GREP_OPTIONS='--color=always'
   export GREP_COLOR='1;35;40'
 fi
+
 
 platform='unknown'
 unamestr=`uname`

@@ -28,7 +28,7 @@ let g:ale_linters = {
   \   'help': [],
   \   'perl': ['perlcritic'],
   \   'python': ['flake8', 'mypy', 'pylint'],
-  \   'javascript': ['flow', 'eslint'],
+  \   'javascript': ['eslint'],
   \   'typescript': ['tslint', 'typecheck', 'tsserver'],
   \   'typescript.tsx': ['tslint', 'typecheck', 'tsserver'],
   \   'javascript.jsx': ['eslint'],
@@ -53,23 +53,21 @@ let g:ale_fixers = {
 \   ],
 \   'javascript': [
 \       'prettier',
-\		'eslint',
 \       'remove_trailing_lines',
 \       'trim_whitespace'
 \   ],
 \   'javascript.jsx': [
 \       'prettier',
-\       'eslint',
 \       'remove_trailing_lines',
 \       'trim_whitespace'
 \   ],
 \   'typescript': [
-\		'prettier',
+\	'prettier',
 \       'remove_trailing_lines',
 \       'trim_whitespace'
 \   ],
 \   'typescript.tsx': [
-\		'prettier',
+\	'prettier',
 \       'remove_trailing_lines',
 \       'trim_whitespace'
 \   ],

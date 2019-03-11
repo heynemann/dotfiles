@@ -17,6 +17,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'fgsch/vim-varnish'
 Plugin 'alfredodeza/pytest.vim'
+Plugin 'vim-python/python-syntax'
 
 "Deoplete
 Plugin 'Shougo/deoplete.nvim'

@@ -16,3 +16,5 @@ if has('nvim')
         end
     end
 end
+
+let g:python_highlight_all = 1
