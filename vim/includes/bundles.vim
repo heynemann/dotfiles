@@ -20,13 +20,15 @@ Plugin 'alfredodeza/pytest.vim'
 Plugin 'vim-python/python-syntax'
 
 "Deoplete
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'zchee/deoplete-go'
+" Plugin 'Shougo/deoplete.nvim'
+" Plugin 'zchee/deoplete-go'
 Plugin 'plytophogy/vim-virtualenv'
+Plugin 'roxma/vim-hug-neovim-rpc'
+Plugin 'roxma/nvim-yarp'
 " Plugin 'davidhalter/jedi-vim'
-Plugin 'deoplete-plugins/deoplete-jedi'
-Plugin 'carlitux/deoplete-ternjs'
-Plugin 'zefei/deoplete-hack'
+" Plugin 'deoplete-plugins/deoplete-jedi'
+" Plugin 'carlitux/deoplete-ternjs'
+" Plugin 'zefei/deoplete-hack'
 Plugin 'mhartington/nvim-typescript'
 
 Plugin 'uarun/vim-protobuf'
@@ -34,7 +36,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'lucasecdb/vim-tsx'
 Plugin 'hhvm/vim-hack'
-Plugin 'carlitux/deoplete-flow'
+" Plugin 'carlitux/deoplete-flow'
 Plugin 'flowtype/vim-flow'
 
 " vim-test
@@ -46,7 +48,7 @@ Plugin 'olalonde/jest-quickfix-reporter'
 
 " C++
 Plugin 'Shougo/neoinclude.vim'
-Plugin 'Shougo/deoplete-clangx'
+" Plugin 'Shougo/deoplete-clangx'
 
 " C#
 Plugin 'OmniSharp/omnisharp-vim'

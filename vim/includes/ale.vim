@@ -25,9 +25,9 @@ let g:ale_linters = {
   \   'html': ['tidy'],
   \   'htmldjango': ['tidy'],
   \   'hack': ['hack', 'hhast'],
+  \   'python': ['flake8'],
   \   'help': [],
   \   'perl': ['perlcritic'],
-  \   'python': ['flake8', 'mypy', 'pylint'],
   \   'javascript': ['eslint'],
   \   'typescript': ['tslint', 'typecheck', 'tsserver'],
   \   'typescript.tsx': ['tslint', 'typecheck', 'tsserver'],
@@ -41,12 +41,10 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
 \   'python': [
-\       'isort',
-\       'yapf',
 \       'black',
+\       'isort',
 \       'remove_trailing_lines',
-\       'trim_whitespace',
-\       'add_blank_lines_for_python_control_statements'
+\       'trim_whitespace'
 \   ],
 \   'hack': [
 \       'hackfmt',
@@ -87,3 +85,4 @@ let g:ale_fixers = {
 let g:ale_typescript_tslint_use_global = 0
 " let g:ale_c_uncrustify_options = '-c ~/.uncrustify.cfg'
 let g:ale_c_uncrustify_options = ''
+let g:ale_history_log_output=1

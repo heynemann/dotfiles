@@ -1,3 +1,3 @@
 #source `brew --prefix`/etc/profile.d/z.sh
-export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+export PATH="/home/heynemann/.linuxbrew/bin:$PATH"
+eval $(/home/heynemann/.linuxbrew/bin/brew shellenv)
