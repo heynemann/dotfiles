@@ -9,20 +9,17 @@
 set shell=/bin/bash
 
 " must be done before bundle
-if v:version >= 800
-  let g:ale_completion_enabled = 1
-  nnoremap <silent> K :ALEHover<CR>
-  nnoremap <silent> gd :ALEGoToDefinition<CR>
-  nnoremap <M-LeftMouse> <LeftMouse>:ALEGoToDefinition<CR>
+let g:ale_completion_enabled = 1
+nnoremap <silent> K :ALEHover<CR>
+nnoremap <silent> gd :ALEGoToDefinition<CR>
+nnoremap <M-LeftMouse> <LeftMouse>:ALEGoToDefinition<CR>
 
-  " show type on hover
-  if v:version >= 801
-    set ballooneval
-    set balloonevalterm
-    let g:ale_set_balloons = 1
-  endif
+" show type on hover
+if v:version >= 801
+  set ballooneval
+  set balloonevalterm
+  let g:ale_set_balloons = 1
 endif
-
 
 source ~/.vim/includes/general.vim
 source ~/.vim/includes/vundle.vim

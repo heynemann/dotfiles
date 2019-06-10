@@ -86,3 +86,6 @@ let g:ale_typescript_tslint_use_global = 0
 " let g:ale_c_uncrustify_options = '-c ~/.uncrustify.cfg'
 let g:ale_c_uncrustify_options = ''
 let g:ale_history_log_output=1
+set omnifunc=ale#completion#OmniFunc
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDiscoverDiscovery = ["&omnifunc:<c-x><c-o>"]
