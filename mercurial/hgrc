@@ -1,0 +1,7 @@
+[hint]
+ack = branch-command-deprecate
+
+[ui]
+username = Bernardo Heynemann <heynemann@fb.com>
+editor = vim
+ignore = ~/.hgignore
