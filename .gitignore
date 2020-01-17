@@ -20,3 +20,5 @@ vim/sessions
 .DS_Store
 zsh/includes/bundles.zsh
 zsh/includes/last-bundles.zsh
+/bin
+/vim/vendor

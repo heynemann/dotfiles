@@ -4,6 +4,11 @@ if [ -e /usr/local/opt/fzf/shell/completion.zsh ]; then
   source /usr/local/opt/fzf/shell/completion.zsh
 fi
 
+if [ -e ~/.fzf.zsh ]; then
+  source ~/.fzf.zsh
+fi
+
+
 # fzf via local installation
 if [ -e ~/.fzf ]; then
   export PATH=~/.fzf/bin:$PATH
