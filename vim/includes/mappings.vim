@@ -70,22 +70,9 @@ map <Leader>b :bufdo bd<CR>
 
 set nofoldenable    " disable folding
 
-map <Leader>p :%!python -m json.tool<CR>
-
-map <Leader>q :RestartVim<CR>
-
-map <Leader>/ :%!prettier --print-width 100 --no-bracket-spacing --single-quote --write % && ./node_modules/.bin/eslint --fix %<CR>
-
-noremap <F3> :Autoformat<CR>
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 set showmode
 
 map <silent><F10> :NEXTCOLOR<cr>
 map <silent><F5> :PREVCOLOR<cr>
-
-nmap <silent> <C-n> <Plug>(VM-Find-Under)
-xmap <silent> <C-n> <Plug>(VM-Find-Subword-Under)
-
-nmap f <Plug>(easymotion-bd-f)
-nmap F <Plug>(easymotion-overwin-f) 

@@ -43,6 +43,7 @@ let g:ale_fixers = {
 \   'python': [
 \       'black',
 \       'isort',
+\       'mypy',
 \       'remove_trailing_lines',
 \       'trim_whitespace'
 \   ],

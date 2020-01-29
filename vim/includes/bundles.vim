@@ -1,55 +1,23 @@
-Plugin 'Colour-Sampler-Pack'
-Plugin 'vim-scripts/ScrollColors'
-Plugin 'mg979/vim-visual-multi'
-Plugin 'tpope/vim-sleuth'
-Plugin 'junegunn/fzf.vim'
-Plugin 'w0rp/ale'
-Plugin 'itchyny/lightline.vim'
-"Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rhubarb'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'fatih/vim-go'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'haya14busa/incsearch.vim'
-Plugin 'haya14busa/incsearch-fuzzy.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'JamshedVesuna/vim-markdown-preview'
-Plugin 'fgsch/vim-varnish'
-Plugin 'alfredodeza/pytest.vim'
-Plugin 'vim-python/python-syntax'
-Plugin 'ervandew/supertab'
+" Colors
+Plug 'vim-scripts/Colour-Sampler-Pack'
+Plug 'tomasr/molokai'
+Plug 'vim-scripts/ScrollColors'
 
-"Deoplete
-" Plugin 'Shougo/deoplete.nvim'
-" Plugin 'zchee/deoplete-go'
-Plugin 'plytophogy/vim-virtualenv'
-Plugin 'roxma/vim-hug-neovim-rpc'
-Plugin 'roxma/nvim-yarp'
-" Plugin 'davidhalter/jedi-vim'
-" Plugin 'deoplete-plugins/deoplete-jedi'
-" Plugin 'carlitux/deoplete-ternjs'
-" Plugin 'zefei/deoplete-hack'
-Plugin 'mhartington/nvim-typescript'
+" General Functionality
+Plug 'mg979/vim-visual-multi'
+Plug 'tpope/vim-sleuth'
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'easymotion/vim-easymotion'
 
-Plugin 'uarun/vim-protobuf'
-Plugin 'pangloss/vim-javascript'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'lucasecdb/vim-tsx'
-Plugin 'hhvm/vim-hack'
-" Plugin 'carlitux/deoplete-flow'
-Plugin 'flowtype/vim-flow'
+" Syntax
+Plug 'w0rp/ale'
+Plug 'fatih/vim-go'
 
-" vim-test
-Plugin 'janko-m/vim-test'
-Plugin 'tpope/vim-dispatch'
-Plugin 'radenling/vim-dispatch-neovim'
-Plugin 'craigdallimore/vim-jest-cli'
-Plugin 'olalonde/jest-quickfix-reporter'
+" Coding
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdcommenter'
 
-" C++
-Plugin 'Shougo/neoinclude.vim'
-" Plugin 'Shougo/deoplete-clangx'
-
-" C#
-Plugin 'OmniSharp/omnisharp-vim'
+" Junegunn Choi
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/vim-slash'
