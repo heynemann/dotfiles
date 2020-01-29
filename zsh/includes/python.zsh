@@ -8,9 +8,6 @@ export PATH=~/.local/bin:$PATH
 # Poetry
 export PATH=~/.poetry/bin:$PATH
 
-# venv
-source `which virtualenvwrapper_lazy.sh`
-
 if [[ $platform == "darwin" ]]; then
   export PYTHON_CONFIGURE_OPTS="--enable-framework"
 fi
