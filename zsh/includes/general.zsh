@@ -136,3 +136,5 @@ f () {
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 TIPZ_TEXT='💡 '
+export VISUAL=vim
+export EDITOR="$VISUAL"

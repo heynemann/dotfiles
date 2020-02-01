@@ -41,6 +41,7 @@ git:
 	@git config --global color.diff auto
 	@git config --global color.status auto
 	@git config --global color.branch auto
+	@git config --global core.editor "vim"
 
 linuxbrew:
 	@echo
@@ -103,7 +104,9 @@ pyenv:
 	@echo
 	@sudo apt install -y zlib1g-dev
 	@${LINUXBREW}/brew install pyenv
+	@${LINUXBREW}/brew install pyenv-virtualenv
 	@sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
 	@pyenv --version
 	@pyenv install -s 3.8.1
 	@pyenv global 3.8.1
+	
