@@ -25,7 +25,7 @@ let g:ale_linters = {
   \   'html': ['tidy'],
   \   'htmldjango': ['tidy'],
   \   'hack': ['hack', 'hhast'],
-  \   'python': ['flake8'],
+  \   'python': ['flake8', 'mypy'],
   \   'help': [],
   \   'perl': ['perlcritic'],
   \   'javascript': ['eslint'],
@@ -43,7 +43,6 @@ let g:ale_fixers = {
 \   'python': [
 \       'black',
 \       'isort',
-\       'mypy',
 \       'remove_trailing_lines',
 \       'trim_whitespace'
 \   ],
@@ -90,3 +89,4 @@ let g:ale_history_log_output=1
 set omnifunc=ale#completion#OmniFunc
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDiscoverDiscovery = ["&omnifunc:<c-x><c-o>"]
+let g:ale_python_black_options="-l 80"

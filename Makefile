@@ -110,3 +110,16 @@ pyenv:
 	@pyenv install -s 3.8.1
 	@pyenv global 3.8.1
 	
+docker:
+	@echo
+	@echo "-----------------------------------"
+	@echo "- Docker Set Up                   -"
+	@echo "-----------------------------------"
+	@echo
+	@sudo apt install -y docker.io docker-compose
+	@sudo systemctl start docker
+	@echo "Creating docker user group..."
+	@-sudo groupadd docker
+	@echo "Adding ${USER} to docker user group..."
+	@-sudo usermod -aG docker ${USER}
+	@newgrp docker
