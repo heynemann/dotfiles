@@ -1,1 +1,0 @@
-../../bundle/Pydiction/plugin/python_pydiction.vim

@@ -1,1 +1,0 @@
-../thirdparty/xmledit/ftplugin/xml.vim

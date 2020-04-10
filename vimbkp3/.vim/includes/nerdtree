@@ -1,1 +1,0 @@
-map <silent> <leader>s :NERDTree<CR><C-w>p:NERDTreeFind<CR>

@@ -1,3 +1,0 @@
-download_script.php?src_id=14758: call delete('/Users/globo/.vim/plugin/delimitMate.vim')|call delete('/Users/globo/.vim/autoload/delimitMate.vim')|call delete('/Users/globo/.vim/doc/delimitMate.txt')
-rainbow_parenthsis-4.0.vba: call delete('/Users/bernardo/.vim/autoload/rainbow_parenthsis.vim')|call delete('/Users/bernardo/.vim/doc/rainbow_parenthsis.txt')|call delete('/Users/bernardo/.vim/plugin/rainbow_parenthsis.vim')|call delete('/Users/bernardo/.vim/rainbow_parenthsis_options.vim')
-rainbow.vba: call delete('/Users/bernardo/.vim/autoload/rainbow_parenthsis.vim')|call delete('/Users/bernardo/.vim/doc/rainbow_parenthsis.txt')|call delete('/Users/bernardo/.vim/plugin/rainbow_parenthsis.vim')|call delete('/Users/bernardo/.vim/rainbow_parenthsis_options.vim')
