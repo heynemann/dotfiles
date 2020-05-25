@@ -89,4 +89,4 @@ let g:ale_history_log_output=1
 set omnifunc=ale#completion#OmniFunc
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDiscoverDiscovery = ["&omnifunc:<c-x><c-o>"]
-let g:ale_python_black_options="-l 80"
+let g:ale_python_black_options=""

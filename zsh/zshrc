@@ -27,8 +27,6 @@ plugins_start=$(date +%s%N | cut -b1-13)
 source ~/.zsh/includes/plugins.zsh
 plugins_end=$(date +%s%N | cut -b1-13)
 
-source ~/.zsh/includes/pyenv.zsh
-
 source ~/.zsh/includes/fzf.zsh
 
 source ~/.zsh/includes/git.zsh
@@ -36,6 +34,8 @@ source ~/.zsh/includes/git.zsh
 source ~/.zsh/includes/spaceship.zsh
 
 source ~/.zsh/includes/android.zsh
+
+source ~/.zsh/includes/pyenv.zsh
 
 #source ~/.zsh/includes/cocos.zsh
 
@@ -45,6 +45,10 @@ export PATH="$HOME/.cargo/bin:$PATH"
 if [[ "$platform" == "windows" ]]; then
     source ~/.zsh/includes/windows.zsh
     cd ~
+fi
+
+if [[ -f ~/.zprofile ]]; then
+    source ~/.zprofile
 fi
 
 if [[ -f ~/.extras.zsh ]]; then

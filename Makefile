@@ -28,7 +28,7 @@ apt:
 	@sudo apt-get update
 	@sudo apt-get upgrade -y
 	@echo "Installing build tools, git and curl..."
-	@sudo apt-get install -y build-essential curl file git
+	@sudo apt-get install -y build-essential curl file git libffi-dev
 
 git:
 	@echo
