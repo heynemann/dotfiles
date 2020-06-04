@@ -89,6 +89,9 @@ zsh-setup:
 	@touch ~/.extras.zsh
 	@grep -qxF "${LINUXBREW}/zsh" /etc/shells || sudo echo "${LINUXBREW}/zsh" >> /etc/shells
 	@chsh -s ${LINUXBREW}/zsh
+	@${MAKE} antybody
+
+antibody:
 	@curl -sL https://git.io/antibody | bash -s
 	@./bin/antibody bundle < ./zsh/includes/bundles.txt > ./zsh/includes/bundles.zsh
 	@sed -i.bak "s@${HOME}@~@g" ./zsh/includes/bundles.zsh

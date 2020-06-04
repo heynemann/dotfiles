@@ -40,6 +40,12 @@ fi
 fpath=(~/.zsh/completion $fpath)
 fpath+=~/.zsh/zfunc
 
+# Lines configured by zsh-newuser-install
+zstyle :compinstall filename '~/.zshrc'
+setopt autocd beep extendedglob nomatch notify
+bindkey -e
+# End of lines configured by zsh-newuser-install
+
 ## completion
 ## https://carlosbecker.com/posts/speeding-up-zsh/
 autoload -Uz compinit
