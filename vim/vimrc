@@ -14,6 +14,8 @@ nnoremap <silent> K :ALEHover<CR>
 nnoremap <silent> gd :ALEGoToDefinition<CR>
 nnoremap <M-LeftMouse> <LeftMouse>:ALEGoToDefinition<CR>
 
+" autocmd BufEnter * :syntax sync fromstart
+
 " show type on hover
 if v:version >= 801
   set ballooneval
@@ -30,21 +32,22 @@ source ~/.vim/includes/lightline.vim
 source ~/.vim/includes/easy-motion.vim
 
 " Language Support
+" source ~/.vim/includes/coc.vim
 " source ~/.vim/includes/python.vim
 " source ~/.vim/includes/typescript.vim
 " source ~/.vim/includes/flow.vim
 " source ~/.vim/includes/csharp.vim
-" source ~/.vim/includes/govim.vim
+source ~/.vim/includes/govim.vim
 
 " Junegunn
-source ~/.vim/includes/goyo.vim
-source ~/.vim/includes/slash.vim
+" source ~/.vim/includes/goyo.vim
+" source ~/.vim/includes/slash.vim
 
 :au FocusGained * :redraw!
 
-" if g:os == "Windows"
-"     source ~/.vim/includes/windows.vim
-" end
+if g:os == "Windows"
+    source ~/.vim/includes/windows.vim
+end
 
 " gotta be last thing because bundles must be loaded
 if g:os == "Windows"

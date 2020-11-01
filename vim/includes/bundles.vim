@@ -19,5 +19,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 
 " Junegunn Choi
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/vim-slash'
+" Plug 'junegunn/goyo.vim'
+" Plug 'junegunn/vim-slash'
+
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}

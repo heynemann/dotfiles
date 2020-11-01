@@ -15,3 +15,25 @@ let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
 let g:go_auto_sameids = 1
+
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
+" function! OpenCompletion()
+    " if !pumvisible() && ((v:char >= 'a' && v:char <= 'z') || (v:char >= 'A' && v:char <= 'Z'))
+        " call feedkeys("\<C-x>\<C-o>", "n")
+    " endif
+" endfunction
+
+" autocmd InsertCharPre * call OpenCompletion()
+
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <expr> <tab> InsertTabWrapper()
+inoremap <s-tab> <c-n>

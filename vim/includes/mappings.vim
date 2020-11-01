@@ -6,8 +6,8 @@ vnoremap / /\v
 nnoremap <leader><space> :noh<cr>
 
 " cycle through parenthesis
-nnoremap <tab> %
-vnoremap <tab> %
+" nnoremap <tab> %
+" vnoremap <tab> %
 
 " no more arrows for you
 nnoremap <up> <nop>

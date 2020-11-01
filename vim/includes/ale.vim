@@ -21,7 +21,7 @@ let g:ale_linters = {
   \   'csh': ['shell'],
   \   'cs': ['omnisharp', 'mcsc'],
   \   'cpp': ['gcc', 'cpplint', 'cppcheck', 'flawfinder'],
-  \   'go': ['gofmt', 'gometalinter'],
+  \   'go': ['gofmt', 'gometalinter', 'gopls', 'gotype', 'govet', 'revive'],
   \   'html': ['tidy'],
   \   'htmldjango': ['tidy'],
   \   'hack': ['hack', 'hhast'],
@@ -75,6 +75,7 @@ let g:ale_fixers = {
 \       'trim_whitespace'
 \   ],
 \   'sh': [],
+\   'go': ['gofmt', 'goimports'],
 \   'cs': [
 \       'uncrustify',
 \       'remove_trailing_lines',
@@ -87,6 +88,10 @@ let g:ale_typescript_tslint_use_global = 0
 let g:ale_c_uncrustify_options = ''
 let g:ale_history_log_output=1
 set omnifunc=ale#completion#OmniFunc
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabContextDiscoverDiscovery = ["&omnifunc:<c-x><c-o>"]
+set completeopt=menu,menuone,preview,noselect,noinsert
+" let g:SuperTabDefaultCompletionType = "context"
+" let g:SuperTabContextDiscoverDiscovery = ["&omnifunc:<c-x><c-o>"]
 let g:ale_python_black_options=""
+let g:ale_completion_autoimport = 1
+
+nnoremap <silent> gr :ALEFindReferences<CR>
