@@ -6,7 +6,10 @@
 # /_____|_____/|_|  |_|_|  \_\\_____|
 
 # Includes
-. '.zsh/paths.zsh'
+source ~/.zsh/paths.zsh
+source ~/.zsh/general.zsh
 
 # Plugins
-. '.zsh/pure.zsh'
+source ~/.zsh/pure.zsh
+source ~/.zsh/bundles.zsh
+source ~/.zsh/dotnet.zsh
