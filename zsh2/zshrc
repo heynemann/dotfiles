@@ -8,8 +8,12 @@
 # Includes
 source ~/.zsh/paths.zsh
 source ~/.zsh/general.zsh
+source ~/.zsh/alias.zsh
+source ~/.zsh/network.zsh
 
 # Plugins
 source ~/.zsh/pure.zsh
 source ~/.zsh/bundles.zsh
 source ~/.zsh/dotnet.zsh
+source ~/.zsh/python.zsh
+source ~/.zsh/nvm.zsh

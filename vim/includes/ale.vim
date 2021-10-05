@@ -19,13 +19,13 @@ let g:ale_cpp_clang_options = "-std=c++14 -I./node_modules/node-addon-api/ -I~/$
 
 let g:ale_linters = {
   \   'csh': ['shell'],
-  \   'cs': ['omnisharp', 'mcsc'],
+  \   'cs': ['OmniSharp'],
   \   'cpp': ['gcc', 'cpplint', 'cppcheck', 'flawfinder'],
   \   'go': ['gofmt', 'gometalinter', 'gopls', 'gotype', 'govet', 'revive'],
   \   'html': ['tidy'],
   \   'htmldjango': ['tidy'],
   \   'hack': ['hack', 'hhast'],
-  \   'python': ['flake8', 'mypy'],
+  \   'python': ['flake8', 'mypy', 'pyright'],
   \   'help': [],
   \   'perl': ['perlcritic'],
   \   'javascript': ['eslint'],
@@ -77,7 +77,7 @@ let g:ale_fixers = {
 \   'sh': [],
 \   'go': ['gofmt', 'goimports'],
 \   'cs': [
-\       'uncrustify',
+\       'dotnet-format',
 \       'remove_trailing_lines',
 \       'trim_whitespace'
 \   ]
@@ -95,3 +95,5 @@ let g:ale_python_black_options=""
 let g:ale_completion_autoimport = 1
 
 nnoremap <silent> gr :ALEFindReferences<CR>
+nnoremap <silent> gd :ALEGoToDefinition<CR>
+nnoremap <silent> gt :ALEGoToTypeDefinition<CR>

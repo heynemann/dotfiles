@@ -2,6 +2,7 @@
 set rtp+=/usr/local/opt/fzf
 set rtp+=~/.fzf
 set rtp+=/home/linuxbrew/.linuxbrew/opt/fzf
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 let g:fzf_buffers_jump = 1
 

@@ -13,3 +13,6 @@ setopt    incappendhistory  #Immediately append to the history file, not just wh
 setopt hist_ignore_dups
 setopt hist_ignore_space
 setopt histignorealldups
+
+export GIT_EDITOR=vim
+export PATH="/home/linuxbrew/.linuxbrew/opt/openjdk@8/bin:$PATH"
