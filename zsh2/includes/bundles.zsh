@@ -5,7 +5,7 @@
 # typical vim+pathogen setup. Antigen is to zsh, what Vundle is to vim.
 # https://github.com/zsh-users/antigen
 
-source /home/linuxbrew/.linuxbrew/share/antigen/antigen.zsh
+source $(brew --prefix)/share/antigen/antigen.zsh
 
 # Bundles
 # antigen bundle <name of bundle>
