@@ -16,4 +16,5 @@ source ~/.zsh/pure.zsh
 source ~/.zsh/bundles.zsh
 source ~/.zsh/dotnet.zsh
 source ~/.zsh/python.zsh
+source ~/.zsh/golang.zsh
 source ~/.zsh/nvm.zsh

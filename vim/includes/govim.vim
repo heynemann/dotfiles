@@ -37,3 +37,19 @@ function! InsertTabWrapper()
 endfunction
 inoremap <expr> <tab> InsertTabWrapper()
 inoremap <s-tab> <c-n>
+
+function! s:find_git_root()
+  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+
+function! DoctorScopeFunc()
+  let l:gp = $GOPATH
+  if l:gp == ""
+    return ""
+  endif
+
+  let l:gp = l:gp."/src/"
+  let l:gr = s:find_git_root()
+
+  return substitute(l:gr, l:gp, "", "")
+endfunction

@@ -30,8 +30,9 @@ Plug 'nickspoons/vim-sharpenup'
 " Autocompletion
 Plug 'prabirshrestha/asyncomplete.vim'
 
-" Junegunn Choi
-" Plug 'junegunn/goyo.vim'
-" Plug 'junegunn/vim-slash'
+" JSON
+Plug 'elzr/vim-json'
 
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Golang
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'godoctor/godoctor.vim'

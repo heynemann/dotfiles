@@ -25,9 +25,10 @@ let g:ale_linters = {
   \   'html': ['tidy'],
   \   'htmldjango': ['tidy'],
   \   'hack': ['hack', 'hhast'],
-  \   'python': ['flake8', 'mypy', 'pyright'],
+  \   'python': ['flake8', 'mypy', 'pylsp'],
   \   'help': [],
   \   'perl': ['perlcritic'],
+  \   'json': ['jq'],
   \   'javascript': ['eslint'],
   \   'typescript': ['tslint', 'typecheck', 'tsserver'],
   \   'typescript.tsx': ['tslint', 'typecheck', 'tsserver'],
@@ -48,6 +49,11 @@ let g:ale_fixers = {
 \   ],
 \   'hack': [
 \       'hackfmt',
+\   ],
+\   'json': [
+\       'jq',
+\       'remove_trailing_lines',
+\       'trim_whitespace'
 \   ],
 \   'javascript': [
 \       'prettier',
@@ -97,3 +103,21 @@ let g:ale_completion_autoimport = 1
 nnoremap <silent> gr :ALEFindReferences<CR>
 nnoremap <silent> gd :ALEGoToDefinition<CR>
 nnoremap <silent> gt :ALEGoToTypeDefinition<CR>
+
+let g:ale_python_pyls_executable = "pylsp"
+
+let g:ale_python_pyls_config = {
+\   'pylsp': {
+\     'plugins': {
+\       'pycodestyle': {
+\         'enabled': v:false,
+\       },
+\       'pyflakes': {
+\         'enabled': v:false,
+\       },
+\       'pydocstyle': {
+\         'enabled': v:false,
+\       },
+\     },
+\   },
+\}
