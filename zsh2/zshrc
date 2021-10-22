@@ -18,3 +18,4 @@ source ~/.zsh/dotnet.zsh
 source ~/.zsh/python.zsh
 source ~/.zsh/golang.zsh
 source ~/.zsh/nvm.zsh
+source ~/.zsh/golang.zsh
