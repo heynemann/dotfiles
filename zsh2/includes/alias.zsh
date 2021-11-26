@@ -14,3 +14,9 @@ alias docker-clean='docker volume rm $(docker volume ls -qf dangling=true) && do
 alias docker-nuke='echo "Removing all docker images..." && docker rmi -f $(docker images -q)'
 
 alias ccat="bat"
+
+function workon() {
+    readonly workspace=${1:?"The workspace must be specified."}
+    source ~/.pyenv/versions/$workspace/bin/activate
+    echo "$workspace has been activated"
+}

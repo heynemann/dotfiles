@@ -1,5 +1,6 @@
 " ALE
 
+let g:ale_linters_explicit = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_insert_leave = 1
@@ -12,6 +13,8 @@ highlight link ALEErrorSign Title
 nmap <silent> Q <Plug>(ale_previous_wrap)
 nmap <silent> q <Plug>(ale_next_wrap)
 
+source ~/.vim/includes/clojure-ale-fixer.vim
+
 let g:ale_cpp_clang_executable = 'clang++-6.0'
 let g:ale_c_clangformat_executable = 'clang-format-6.0'
 let g:ale_cpp_gcc_options = "-std=c++14 -I./node_modules/node-addon-api/ -I$HOME/.node-gyp/11.8.0/include/node/"
@@ -21,11 +24,11 @@ let g:ale_linters = {
   \   'csh': ['shell'],
   \   'cs': ['OmniSharp'],
   \   'cpp': ['gcc', 'cpplint', 'cppcheck', 'flawfinder'],
-  \   'go': ['gofmt', 'gometalinter', 'gopls', 'gotype', 'govet', 'revive'],
+  \   'go': ['gofmt', 'gometalinter', 'gopls', 'govet', 'revive'],
   \   'html': ['tidy'],
   \   'htmldjango': ['tidy'],
   \   'hack': ['hack', 'hhast'],
-  \   'python': ['flake8', 'mypy', 'pylsp'],
+  \   'python': ['flake8', 'mypy', 'pylsp', 'pylint'],
   \   'help': [],
   \   'perl': ['perlcritic'],
   \   'json': ['jq'],
@@ -34,6 +37,7 @@ let g:ale_linters = {
   \   'typescript.tsx': ['tslint', 'typecheck', 'tsserver'],
   \   'javascript.jsx': ['eslint'],
   \   'rust': ['cargo'],
+  \   'clojure': ['clj-kondo', 'joker'],
   \   'spec': [],
   \   'text': [],
   \   'sh': [],
@@ -80,10 +84,13 @@ let g:ale_fixers = {
 \       'remove_trailing_lines',
 \       'trim_whitespace'
 \   ],
+\   'clojure': [
+\       'remove_trailing_lines',
+\       'cljfmt'
+\   ],
 \   'sh': [],
 \   'go': ['gofmt', 'goimports'],
 \   'cs': [
-\       'dotnet-format',
 \       'remove_trailing_lines',
 \       'trim_whitespace'
 \   ]

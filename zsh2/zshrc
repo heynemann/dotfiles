@@ -12,10 +12,18 @@ source ~/.zsh/alias.zsh
 source ~/.zsh/network.zsh
 
 # Plugins
-source ~/.zsh/pure.zsh
+# source ~/.zsh/pure.zsh
 source ~/.zsh/bundles.zsh
 source ~/.zsh/dotnet.zsh
 source ~/.zsh/python.zsh
 source ~/.zsh/golang.zsh
 source ~/.zsh/nvm.zsh
 source ~/.zsh/golang.zsh
+source ~/.zsh/clojure.zsh
+
+if [ -f ~/.extras.zsh ]; then
+    source ~/.extras.zsh
+fi
+
+# Created by `pipx` on 2021-11-21 15:58:13
+export PATH="$PATH:/home/heynemann/.local/bin"

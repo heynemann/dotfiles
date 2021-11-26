@@ -5,3 +5,7 @@ nnoremap <buffer> ga :OmniSharpGetCodeActions<CR>
 vnoremap <buffer> ga :OmniSharpGetCodeActions<CR>
 nnoremap <buffer> ge :OmniSharpRename<CR>
 nnoremap <buffer> <F3> :OmniSharpRename<CR>
+
+setlocal shiftwidth=4 softtabstop=4 expandtab
+
+" autocmd BufWritePost *.cs :OmniSharpCodeFormat

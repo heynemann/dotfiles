@@ -16,3 +16,7 @@ setopt histignorealldups
 
 export GIT_EDITOR=vim
 export PATH="/home/linuxbrew/.linuxbrew/opt/openjdk@8/bin:$PATH"
+
+eval "$(starship init zsh)"
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(brew --prefix)/lib

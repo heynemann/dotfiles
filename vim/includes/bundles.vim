@@ -36,3 +36,16 @@ Plug 'elzr/vim-json'
 " Golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'godoctor/godoctor.vim'
+
+" GraphQL
+Plug 'jparise/vim-graphql'
+
+" Clojure
+" Plug 'guns/vim-sexp',    {'for': 'clojure'}
+" Plug 'liquidz/vim-iced', {'for': 'clojure'}
+Plug 'tpope/vim-salve/', {'for': 'clojure'}
+Plug 'tpope/vim-fireplace/', {'for': 'clojure'}
+Plug 'venantius/vim-cljfmt', {'for': 'clojure'}
+" Plug 'clojure-vim/clojure.vim', {'for': 'clojure'}
+Plug 'guns/vim-clojure-static', {'for': 'clojure'}
+

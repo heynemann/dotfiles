@@ -23,6 +23,7 @@ if v:version >= 801
   let g:ale_set_balloons = 1
 endif
 
+source ~/.vim/includes/clojure.vim
 source ~/.vim/includes/general.vim
 source ~/.vim/includes/plug.vim
 source ~/.vim/includes/fzf.vim
@@ -33,11 +34,12 @@ source ~/.vim/includes/easy-motion.vim
 
 " Language Support
 " source ~/.vim/includes/coc.vim
-" source ~/.vim/includes/python.vim
+source ~/.vim/includes/python.vim
 " source ~/.vim/includes/typescript.vim
 " source ~/.vim/includes/flow.vim
 " source ~/.vim/includes/csharp.vim
 source ~/.vim/includes/govim.vim
+" source ~/.vim/includes/clojure.vim
 
 " Junegunn
 " source ~/.vim/includes/goyo.vim
