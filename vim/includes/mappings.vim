@@ -34,15 +34,14 @@ inoremap <F7> :tabp<CR>
 inoremap <F6> :tabn<CR>
 
 " please no help ever
-inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
-vnoremap <F1> <ESC>
+inoremap <F1> :set invnumber<CR>
+nnoremap <F1> :set invnumber<CR>
+vnoremap <F1> :set invnumber<CR>
 
 " use ; as leader as well
 nnoremap ; :
 
 " linux CTRL+T
-map <F1> :tabnew<CR>
 map tt :tabnew<CR>
 
 " show and hide errors

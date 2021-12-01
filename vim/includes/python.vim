@@ -20,8 +20,6 @@
 " let g:python_highlight_all = 1
 
 
-com! -complete=file -nargs=* Edit silent! exec "!vim --servername " . v:servername . " --remote-tab-silent <args>"
-
 function! PylintOpen()
   let l:rootpath = trim(system("git rev-parse --show-toplevel"))
   let l:module = trim(system("basename " . l:rootpath))
