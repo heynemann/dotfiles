@@ -52,11 +52,12 @@ if g:os == "Windows"
 end
 
 " gotta be last thing because bundles must be loaded
-if g:os == "Windows"
-    colorscheme molokai
-else
-    colorscheme molokai
-end
+" if g:os == "Windows"
+    " colorscheme molokai
+" else
+    " colorscheme molokai
+" end
+colorscheme dracula
 if filereadable("$HOME/.extras.vim") == 1
     source ~/.extras.vim
 endif

@@ -1,7 +1,8 @@
 " Colors
-Plug 'vim-scripts/Colour-Sampler-Pack'
-Plug 'tomasr/molokai'
-Plug 'vim-scripts/ScrollColors'
+" Plug 'vim-scripts/Colour-Sampler-Pack'
+" Plug 'tomasr/molokai'
+" Plug 'vim-scripts/ScrollColors'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " General Functionality
 Plug 'mg979/vim-visual-multi'
