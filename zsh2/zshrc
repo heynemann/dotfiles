@@ -21,9 +21,8 @@ source ~/.zsh/nvm.zsh
 source ~/.zsh/golang.zsh
 source ~/.zsh/clojure.zsh
 
-if [ -f ~/.extras.zsh ]; then
-    source ~/.extras.zsh
-fi
+[ -f ~/.extras.zsh ] && source ~/.extras.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Created by `pipx` on 2021-11-21 15:58:13
 export PATH="$PATH:/home/heynemann/.local/bin"

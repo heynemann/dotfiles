@@ -22,3 +22,7 @@ eval "$(starship init zsh)"
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(brew --prefix)/lib
 setopt prompt_subst
+
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char

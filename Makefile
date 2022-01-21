@@ -71,8 +71,8 @@ vim-setup:
 	@ln -s `pwd`/vim/ ~/.vim
 	@ln -s `pwd`/vim/vimrc ~/.vimrc
 	@touch ~/.extras.vim
-	@curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	@${LINUXBREW}/vim +PlugInstall +qall
+	# @curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	# @${LINUXBREW}/vim +PlugInstall +qall
 
 zsh-setup:
 	@echo
