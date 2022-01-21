@@ -24,3 +24,4 @@ zsh/includes/last-bundles.zsh
 /vim/vendor
 vim/autoload/plug.vim
 *.zwc
+zsh/includes/bundles.zsh.bak
