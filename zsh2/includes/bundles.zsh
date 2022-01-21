@@ -16,5 +16,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # https://github.com/zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-autosuggestions
 
+# https://draculatheme.com/zsh
+antigen bundle dracula/zsh
+
 # Apply bundles
 antigen apply
