@@ -17,6 +17,10 @@ alias ccat="bat"
 
 function workon() {
     readonly workspace=${1:?"The workspace must be specified."}
+    pyenv activate $workspace
     source ~/.pyenv/versions/$workspace/bin/activate
     echo "$workspace has been activated"
 }
+
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o' 

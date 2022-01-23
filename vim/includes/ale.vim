@@ -32,6 +32,7 @@ let g:ale_linters = {
   \   'help': [],
   \   'perl': ['perlcritic'],
   \   'json': ['jq'],
+  \   'yaml': ['yamllint'],
   \   'javascript': ['eslint'],
   \   'typescript': ['tslint', 'typecheck', 'tsserver'],
   \   'typescript.tsx': ['tslint', 'typecheck', 'tsserver'],
@@ -84,6 +85,11 @@ let g:ale_fixers = {
 \       'remove_trailing_lines',
 \       'trim_whitespace'
 \   ],
+\   'yaml': [
+\       'yamlfix',
+\       'remove_trailing_lines',
+\       'trim_whitespace'
+\   ],
 \   'clojure': [
 \       'remove_trailing_lines',
 \       'cljfmt'
@@ -111,13 +117,11 @@ nnoremap <silent> gr :ALEFindReferences<CR>
 nnoremap <silent> gd :ALEGoToDefinition<CR>
 nnoremap <silent> gt :ALEGoToTypeDefinition<CR>
 
-let g:ale_python_pyls_executable = "pylsp"
-
-let g:ale_python_pyls_config = {
+let g:ale_python_pylsp_config={
 \   'pylsp': {
 \     'plugins': {
 \       'pycodestyle': {
-\         'enabled': v:false,
+\         'enabled': v:false
 \       },
 \       'pyflakes': {
 \         'enabled': v:false,
@@ -125,6 +129,24 @@ let g:ale_python_pyls_config = {
 \       'pydocstyle': {
 \         'enabled': v:false,
 \       },
-\     },
+\     }
 \   },
-\}
+\ }
+
+" let g:ale_python_pyls_executable = "pylsp"
+
+" let g:ale_python_pyls_config = {
+" \   'pylsp': {
+" \     'plugins': {
+" \       'pycodestyle': {
+" \         'enabled': v:false,
+" \       },
+" \       'pyflakes': {
+" \         'enabled': v:false,
+" \       },
+" \       'pydocstyle': {
+" \         'enabled': v:false,
+" \       },
+" \     },
+" \   },
+" \}

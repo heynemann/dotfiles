@@ -195,6 +195,7 @@ autocmd FileType typescript set formatprg=prettier\ --single-quote\ --trailing-c
 autocmd Filetype python setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype json setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype yaml setlocal ts=2 sw=2 sts=0 expandtab
+autocmd Filetype yaml.docker-compose setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype html setlocal ts=2 sw=2 sts=0 expandtab
 autocmd Filetype htmldjango setlocal ts=2 sw=2 sts=0 expandtab
 autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
